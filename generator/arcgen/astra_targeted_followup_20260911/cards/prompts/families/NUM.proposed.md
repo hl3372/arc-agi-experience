@@ -1,0 +1,1 @@
+Within the intended episode requirements, explore an elementary quantitative relationship grounded in quantities available from the depicted structures, with an intelligible role in the task. If this direction prevents a fair realization of those requirements, preserve the worthwhile task without forcing this direction. Do not narrate this invitation in ordinary task content.

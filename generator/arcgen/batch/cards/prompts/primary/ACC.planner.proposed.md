@@ -1,0 +1,3 @@
+Preserve the kernel's moderate, legible route to discovery and manageable application while constructing a fair concrete episode. Do not add components solely to reach an elaborate-composition threshold.
+
+Check the complete solving burden, including inferring conventions, finding a solution, and carrying intermediate state. Keep the test's search and bookkeeping manageable; output size alone is not this check. Prefer a clearer embodiment or smaller consequential instance of the same insight when it reduces that burden without removing the task's teaching value. If the kernel inherently requires a demanding discovery or execution, report that mismatch honestly rather than describing it as accessible because the final drawing is short.

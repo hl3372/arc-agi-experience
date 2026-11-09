@@ -1,0 +1,2 @@
+<!-- prompt-version: weakness-v1-relax-JUDGE-decoy-1 -->
+Calibration form for this idea (it holds over the judgement line above where they differ): make the two readings equally natural at the judgement point, so that careful people would split between them and no shared preference settles it; take either as the intended answer. Keep everything else the judgement line asks, including every recorded field, naming after "Prior:" the listed preference that comes closest.

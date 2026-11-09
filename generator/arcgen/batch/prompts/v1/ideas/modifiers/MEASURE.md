@@ -1,0 +1,2 @@
+<!-- prompt-version: diversity-v1-idea-modifier-MEASURE-1 -->
+Additional requirement for this call: in each idea, a quantity read from the picture must help decide the answer: a count, length, distance, area or ratio that the human solver measures on depicted structures and then uses, by comparing or matching quantities or by letting one set the size, position or number of something in the output. The quantity must be readable by looking and counting small numbers, never by long tallies, and reporting a count as the answer is not enough. Colour numbers carry no meaning.

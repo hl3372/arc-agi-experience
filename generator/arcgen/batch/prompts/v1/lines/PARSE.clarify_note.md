@@ -1,0 +1,2 @@
+<!-- prompt-version: weakness-v1-structure-PARSE-clarify-1 -->
+Both blind solvers answered the test with the competing parse: {SHORTCUT} Make the right unit plainer, with one added or replaced training pair in which the competing parse visibly gives a wrong output, keeping the rule, the tests and their answers, and every frozen invariant. Do not add clutter or a new kind of unit. If that cannot work, return unrepairable.

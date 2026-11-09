@@ -1,0 +1,1 @@
+Preserve the strongest compact embodiment, preferably at most one hundred cells per grid, without dense encoding that defeats legibility. An optional enlargement may be declined. If a larger embodiment is necessary for fairness, retain it and record the unfulfilled extent privately.

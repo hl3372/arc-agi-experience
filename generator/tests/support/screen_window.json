@@ -1,0 +1,247 @@
+{
+ "id": "screen-window-fixture",
+ "block": "A",
+ "context": "c01",
+ "account": "main",
+ "seed": 2026090840,
+ "interim_half": 1,
+ "calls": [
+  {
+   "arm": "C",
+   "invitation": null,
+   "replicate": 1,
+   "kernels": 4,
+   "effort": "high",
+   "private_id": "screen_a_c01_01",
+   "opaque_id": "pf04c1cd3a608ff30",
+   "opaque_kernel_ids": [
+    "k0a2dfffe98044e51",
+    "k2e912cb92ead4ab3",
+    "kb8399843e13dd3de",
+    "k8578210ff0adfb86"
+   ],
+   "account": "main"
+  },
+  {
+   "arm": "I1",
+   "invitation": null,
+   "replicate": 1,
+   "kernels": 4,
+   "effort": "xhigh",
+   "private_id": "screen_a_c01_02",
+   "opaque_id": "p1bc0d8098ac05ac0",
+   "opaque_kernel_ids": [
+    "k74a1038a38710740",
+    "k8746a442ae58a912",
+    "ka071f72e02176432",
+    "kb4f618e812f9acf3"
+   ],
+   "account": "main"
+  },
+  {
+   "arm": "J",
+   "invitation": null,
+   "replicate": 1,
+   "kernels": 4,
+   "effort": "xhigh",
+   "private_id": "screen_a_c01_03",
+   "opaque_id": "p3317e7c56a91706e",
+   "opaque_kernel_ids": [
+    "k4355532452204cab",
+    "kf63207481279d7a5",
+    "k4298e3f832a7b4ea",
+    "k68d123b84cab63ef"
+   ],
+   "account": "main"
+  },
+  {
+   "arm": "T",
+   "invitation": null,
+   "replicate": 1,
+   "kernels": 4,
+   "effort": "xhigh",
+   "private_id": "screen_a_c01_04",
+   "opaque_id": "p6d5be53c948d5fd0",
+   "opaque_kernel_ids": [
+    "ke5b934aebf80fb8f",
+    "ka63f6774c5ef28d1",
+    "k8b6d7ac938f449b6",
+    "k99873651f9674587"
+   ],
+   "account": "main"
+  },
+  {
+   "arm": "ACC",
+   "invitation": null,
+   "replicate": 1,
+   "kernels": 4,
+   "effort": "xhigh",
+   "private_id": "screen_a_c01_05",
+   "opaque_id": "pe8d9bcf0518104b2",
+   "opaque_kernel_ids": [
+    "k25fdb0355f955fab",
+    "kb3864777c95b1703",
+    "k87e2d261862a6dcb",
+    "k4a3a49788d2b342f"
+   ],
+   "account": "main"
+  },
+  {
+   "arm": "ACC",
+   "invitation": null,
+   "replicate": 2,
+   "kernels": 4,
+   "effort": "xhigh",
+   "private_id": "screen_a_c01_06",
+   "opaque_id": "pe0a6baa0c3c2cb27",
+   "opaque_kernel_ids": [
+    "kaee6cb22b74e6e1d",
+    "k8fba3849904bc59a",
+    "k38c27635d078fd24",
+    "ka7eb2d4e0d4da1e0"
+   ],
+   "account": "main"
+  },
+  {
+   "arm": "ACC",
+   "invitation": null,
+   "replicate": 3,
+   "kernels": 4,
+   "effort": "xhigh",
+   "private_id": "screen_a_c01_07",
+   "opaque_id": "pdba5638c91d80240",
+   "opaque_kernel_ids": [
+    "k68af50dfc36a0c57",
+    "k0724a6f4a90aa23c",
+    "k3a76a360c3342b9b",
+    "k246cbc378c073b0c"
+   ],
+   "account": "main"
+  },
+  {
+   "arm": "ACC",
+   "invitation": "PER",
+   "replicate": 4,
+   "kernels": 4,
+   "effort": "xhigh",
+   "private_id": "screen_a_c01_08",
+   "opaque_id": "p650c9dff92f4146d",
+   "opaque_kernel_ids": [
+    "k3bd72a0aebe4684e",
+    "k2b32deed52af1e7e",
+    "kafcf25d09cabebaa",
+    "k6d80d1a4665fa6e3"
+   ],
+   "account": "main"
+  },
+  {
+   "arm": "ABS",
+   "invitation": null,
+   "replicate": 1,
+   "kernels": 4,
+   "effort": "xhigh",
+   "private_id": "screen_a_c01_09",
+   "opaque_id": "p23f5de3827eb54c2",
+   "opaque_kernel_ids": [
+    "k4857b0852d30d8be",
+    "k45be1b949a43898a",
+    "k8bb57c0feedf7e23",
+    "k8eab964ed8b31220"
+   ],
+   "account": "main"
+  },
+  {
+   "arm": "ABS",
+   "invitation": null,
+   "replicate": 2,
+   "kernels": 4,
+   "effort": "xhigh",
+   "private_id": "screen_a_c01_10",
+   "opaque_id": "p1491736d87197007",
+   "opaque_kernel_ids": [
+    "k25cbadc1ed32a071",
+    "ka62684713f16ce0a",
+    "kbe43aeda9701fa4b",
+    "k2ad61779390de109"
+   ],
+   "account": "main"
+  },
+  {
+   "arm": "ABS",
+   "invitation": null,
+   "replicate": 3,
+   "kernels": 4,
+   "effort": "xhigh",
+   "private_id": "screen_a_c01_11",
+   "opaque_id": "p198791314dc46541",
+   "opaque_kernel_ids": [
+    "k1e3bc8596276deaf",
+    "k01ac1e6752180edb",
+    "k9610ae66a20cdb0d",
+    "kfa36b32f5becf643"
+   ],
+   "account": "main"
+  },
+  {
+   "arm": "ABS",
+   "invitation": "INV",
+   "replicate": 4,
+   "kernels": 4,
+   "effort": "xhigh",
+   "private_id": "screen_a_c01_12",
+   "opaque_id": "p42735414d32f1724",
+   "opaque_kernel_ids": [
+    "k43d1222c06d2b488",
+    "k18310be397b4070a",
+    "kba3c901ea86379d4",
+    "k34daa973c2057abc"
+   ],
+   "account": "main"
+  }
+ ],
+ "protected_targets": [
+  {
+   "arm": "C",
+   "invitation": null,
+   "call_id": "screen_a_c01_01",
+   "maximum_nominees": 1
+  },
+  {
+   "arm": "I1",
+   "invitation": null,
+   "call_id": "screen_a_c01_02",
+   "maximum_nominees": 1
+  },
+  {
+   "arm": "ACC",
+   "invitation": null,
+   "call_id": "screen_a_c01_05",
+   "maximum_nominees": 1
+  },
+  {
+   "arm": "ACC",
+   "invitation": "PER",
+   "call_id": "screen_a_c01_08",
+   "maximum_nominees": 1
+  },
+  {
+   "arm": "ABS",
+   "invitation": null,
+   "call_id": "screen_a_c01_09",
+   "maximum_nominees": 1
+  },
+  {
+   "arm": "ABS",
+   "invitation": "INV",
+   "call_id": "screen_a_c01_12",
+   "maximum_nominees": 1
+  }
+ ],
+ "merit_positions": 2,
+ "maximum_developments": 8,
+ "maximum_uncertain_diagnostics": 1,
+ "minimum_selector_eligible_kernels": 32,
+ "maximum_selector_input_kernels": 48,
+ "conditional_cap": 5,
+ "actual_board_cap": 3
+}

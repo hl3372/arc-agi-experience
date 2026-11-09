@@ -1,0 +1,2 @@
+<!-- prompt-version: weakness-v1-relax-RELATION-distortion-1 -->
+Relaxed fence for this idea: distortion. The relation matches copies by their topology and layout under stretching or re-proportioning (the same parts in the same order and connections, with lengths changed), shown in at least two pairs, and a rigid-only match (the same shape up to turns and mirrors) fits some pairs and fails others. Put as the "Shortcut:" entry the rigid-only matching. Everything else above stands.

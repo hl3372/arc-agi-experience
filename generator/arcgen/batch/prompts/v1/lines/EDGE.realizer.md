@@ -1,0 +1,2 @@
+<!-- prompt-version: weakness-v1-overlay-EDGE-realizer-2 -->
+Border points: the plan's strongest_simple_shortcuts entry whose rule begins "Edge shortcut:" ignores things cut by the grid's border. Give in weakness_outputs.overlay_points one point per test where a cut thing matters (kind "cut thing"): the answer with that reading applied to the cut things only. If no entry begins "Edge shortcut:", set overlay_points to null.

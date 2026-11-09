@@ -1,0 +1,2 @@
+<!-- prompt-version: weakness-v1-line-CONTROL-planner-3 -->
+Episode shape for this idea (binding; it comes last of the binding lines and holds over every line above, the development notes and any invitation below). Use three to five training pairs; this holds over "One training pair is allowed" and any request for the fewest pairs. If a scale line above asks for a large scene, let the size come from more of the scene the rule acts on, never from more bookkeeping. List strongest_simple_shortcuts strongest first: the first is the shortcut a solver is most likely to take.

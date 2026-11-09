@@ -1,0 +1,65 @@
+# Base factory configuration (the reduced r4 release of 2026-09-08). The batch layer (arcgen/batch) overrides the
+# models, efforts, Codex home, executable, timeout and output folder per call; this file supplies the fixed policy.
+version: '1.0'
+pipeline: arcgen-factory
+seed: 2026090801
+model_profile:
+  model: gpt-6-astra
+  efforts:
+    idea_conditioned: high
+    idea_unconditioned: xhigh
+    idea_logical_leap: xhigh
+    idea_episode_joint: xhigh
+    shard_selection: high
+    global_selection: high
+    planning: xhigh
+    realization: high
+    technical_verification: high
+    primary_blind: xhigh
+    conditional_blind: xhigh
+    ambiguity_adjudication: high
+    targeted_repair: xhigh
+    editorial_board: high
+    logical_leap_audit: high
+    structural_transfer_audit: high
+    mechanism_audit: high
+    diversity_audit: high
+    transport_probe: high
+    full_window_selection: high
+execution:
+  minimum_idea_kernels: 32
+transport:
+  provider: codex_cli
+  executable: codex
+  timeout_seconds: 1800
+  maximum_attempts: 2
+paths:
+  output_directory: runs/base-factory-config
+  historical_registry: committed_tasks/registry.json
+  active_registry: committed_tasks/active_registry.json
+  quarantine_registry: committed_tasks/quarantine_registry.json
+  basic_valid_registry: committed_tasks/basic_valid_registry.json
+  production_reservoir: reservoirs/v4_control.json
+references:
+  base_v4_control: config/v4_control.yaml
+  downstream_adapter: config/v4_4_functional_scale_fresh_integrated.yaml
+  i1_prompt:
+    path: prompts/e20_u_i1_diverge_discard_commit.md
+    sha256: d57888cb31f0c5853db8f51ad9bbc63430901c836974fcae820aa60fdae27039
+policy:
+  ordinary_unconditioned_i1: true
+run:
+  id: base-factory-config
+  account: main
+  replicate: release-r4-01
+  slates: 2
+  maximum_slates: 2
+  mock: false
+  automatic_task_commit: false
+  automatic_feature_promotion: false
+  production_state_mutation_allowed: false
+  production_reservoir_mutation_allowed: false
+commit:
+  enabled: false
+pipeline_profile: astra_reduced_v1
+contract_profile: astra_authoring_contract_r2

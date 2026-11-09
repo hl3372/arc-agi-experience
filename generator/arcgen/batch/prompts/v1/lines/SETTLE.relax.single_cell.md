@@ -1,0 +1,2 @@
+<!-- prompt-version: weakness-v1-relax-SETTLE-single-cell-2 -->
+Relaxed fence for this idea: a single-cell refutation. The settling pair may refute the default with a single cell when that cell sits on open ground (nothing else changes within two cells of it), its cause is a local shape visible elsewhere in the same grid, and the test needs the same point in two or more separate places. Everything else above stands.

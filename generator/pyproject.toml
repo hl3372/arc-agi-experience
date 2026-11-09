@@ -1,0 +1,26 @@
+[project]
+name = "arc-taskgen"
+version = "0.1.0"
+description = "Generate, verify and bank new ARC-style tasks with language models through the Codex CLI"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { file = "LICENSE" }
+dependencies = [
+  "numpy==2.5.2",
+  "PyYAML==6.0.1",
+  "jsonschema==4.10.3",
+  "pillow==10.2.0",
+  "tiktoken==0.14.0",
+]
+
+[project.optional-dependencies]
+test = ["pytest==9.1.1"]
+# Converting the published task bank into a bank folder (python -m arcgen.batch.bank_from_hf); not needed otherwise.
+hf = ["pyarrow==26.0.1", "huggingface_hub==2.4.0"]
+
+[tool.setuptools.packages.find]
+include = ["arcgen*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-p no:cacheprovider"

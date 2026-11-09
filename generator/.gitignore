@@ -1,0 +1,7 @@
+# Everything a batch writes lives in the workspace (ARCGEN_WORKSPACE, default workspace/).
+/workspace/
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+*.egg-info/

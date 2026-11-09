@@ -1,0 +1,2 @@
+<!-- prompt-version: weakness-v1-structure-SHAPE-idea-1 -->
+Additional requirement for this call: in each idea, the output's size, crop or layout is set by a quantity the solver reads from the input (a count, a chosen thing's box, the number of things or panels, a key, or a ratio); that quantity changes across the examples, giving at least three different output sizes, and the test's output size is none of the obvious ones: the input's size, an example's output size, or the largest thing's box.

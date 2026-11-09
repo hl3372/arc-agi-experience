@@ -1,0 +1,48 @@
+{
+  "revision": "astra-repetition-quality-r8-20260912",
+  "role_overrides": {
+    "full_window_selection": {
+      "model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh"
+    },
+    "realization": {
+      "model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh"
+    }
+  },
+  "conditional_calls_per_window": 5,
+  "maximum_attempts": 2,
+  "editorial_mode": "bypass",
+  "adjudicator_policy": "grounded-difficulty-retention-v1",
+  "ordinary_technical_stage": "astra_technical_retention_v4",
+  "launches": 1,
+  "automatic_continuation": false,
+  "automatic_commit": false,
+  "author_pinning": {
+    "mode": "pinned_conditioned_and_inspired",
+    "count": 10,
+    "reason": "Bounded continuation after r6 semantic review; exact old pin suppression is promising, broader procedure repetition remains. Not production adoption."
+  },
+  "new_arms": [
+    "H_DISC",
+    "H_REASON",
+    "JUDG"
+  ],
+  "accounts": [
+    "main"
+  ],
+  "allowed_accounts": [
+    "main"
+  ],
+  "allocation_policy": {
+    "eligibility": "quality_and_useful_contribution",
+    "rank_cutoff": null,
+    "family_cap": null,
+    "development_group_size": 6,
+    "uncertain_diagnostics": 0
+  },
+  "idea_models": [
+    "gpt-6-astra",
+    "gpt-5.6-sol"
+  ]
+}

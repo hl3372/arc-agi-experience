@@ -1,0 +1,2 @@
+<!-- prompt-version: weakness-v1-idea-modifier-RELATION-1 -->
+Additional requirement for this call: in each idea, whether a thing acts, what it becomes, or what it pairs with is set by its relation to other things in the same grid, never by its own colour, shape, size or position alone. Every grid holds look-alikes: things that share the obvious features but differ in that relation, and so get different outcomes. The relation is visible and cheap to see for each thing; comparing things with each other, not judging each one alone, is the insight.

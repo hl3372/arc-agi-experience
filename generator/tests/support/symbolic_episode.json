@@ -1,0 +1,721 @@
+{
+  "plan": {
+    "contract_version": "astra-authoring-v3",
+    "candidate_id": "local-symbolic",
+    "status": "ready",
+    "abort_reason": "",
+    "public_contract": {
+      "semantic_core": {
+        "central_rule": "Move @signal exactly 2 columns right through @background. Keep @marker fixed.",
+        "central_conceptual_insight": "Translation preserves identity.",
+        "why_worth_realizing": "Movement and a fixed marker are visible.",
+        "what_must_remain_visible_after_rendering": "The displacement and fixed marker."
+      },
+      "episode_overview": {
+        "training_pair_count": 2,
+        "test_pair_count": 1,
+        "intended_difficulty_and_inferability": "Two examples show a fixed displacement.",
+        "background_treatment": "@background fills unoccupied cells.",
+        "functional_color_roles": [
+          {
+            "role": "background",
+            "color": 0,
+            "functional_meaning": "Empty space."
+          },
+          {
+            "role": "signal",
+            "color": 1,
+            "functional_meaning": "Moving cell."
+          },
+          {
+            "role": "marker",
+            "color": 8,
+            "functional_meaning": "Fixed cell."
+          }
+        ],
+        "palette_contract": {
+          "mode": "symbolic",
+          "background_role": "background",
+          "opt_out_reason": ""
+        }
+      },
+      "training_pairs": [
+        {
+          "exact_input_construction": "4 by 8 @background grid. @signal at (1,0), @marker at (3,7). Coordinates are zero based.",
+          "exact_output_construction": "@signal at (1,2); @marker stays at (3,7); all other cells @background.",
+          "precise_placements_quantities_relations_or_states": "Preserve @marker; move @signal by 2 columns through @background.",
+          "output_derivation": "Preserve @marker; move @signal by 2 columns through @background.",
+          "what_it_helps_communicate": "Preserve @marker; move @signal by 2 columns through @background.",
+          "deliberate_overlap_with_other_pairs": "Preserve @marker; move @signal by 2 columns through @background.",
+          "why_overlap_is_harmless": "Preserve @marker; move @signal by 2 columns through @background.",
+          "pair_number": 1,
+          "pair_purpose": "establish",
+          "input_dimensions": {
+            "height": 4,
+            "width": 8
+          },
+          "output_dimensions": {
+            "height": 4,
+            "width": 8
+          }
+        },
+        {
+          "exact_input_construction": "4 by 8 @background grid. @signal at (1,2), @marker at (3,7). Coordinates are zero based.",
+          "exact_output_construction": "@signal at (1,4); @marker stays at (3,7); all other cells @background.",
+          "precise_placements_quantities_relations_or_states": "Preserve @marker; move @signal by 2 columns through @background.",
+          "output_derivation": "Preserve @marker; move @signal by 2 columns through @background.",
+          "what_it_helps_communicate": "Preserve @marker; move @signal by 2 columns through @background.",
+          "deliberate_overlap_with_other_pairs": "Preserve @marker; move @signal by 2 columns through @background.",
+          "why_overlap_is_harmless": "Preserve @marker; move @signal by 2 columns through @background.",
+          "pair_number": 2,
+          "pair_purpose": "vary",
+          "input_dimensions": {
+            "height": 4,
+            "width": 8
+          },
+          "output_dimensions": {
+            "height": 4,
+            "width": 8
+          }
+        }
+      ],
+      "test_inputs": [
+        {
+          "pair_number": 1,
+          "input_dimensions": {
+            "height": 4,
+            "width": 8
+          },
+          "exact_input_construction": "4 by 8 @background grid, @signal at (1,1) and @marker at (3,7).",
+          "what_is_new_relative_to_training": "The starting column is between the two examples.",
+          "training_support": "Both examples establish the same 2-column displacement."
+        }
+      ],
+      "invariants": [
+        "Move by 2 columns; preserve all dimensions and @marker."
+      ],
+      "allowed_realizer_freedom": []
+    },
+    "private_execution": {
+      "test_outputs": [
+        {
+          "pair_number": 1,
+          "output_dimensions": {
+            "height": 4,
+            "width": 8
+          },
+          "exact_expected_output_construction": "4 by 8 @background grid, @signal at (1,3), @marker at (3,7). Row 1 is @background @background @background @signal @background @background @background @background.",
+          "precise_placements_quantities_relations_or_states": "The exact saved array is private execution evidence.",
+          "output_derivation": "Apply the public rule to the specified input.",
+          "test_only_semantics_audit": "No new semantic choice is authorized by these workings.",
+          "why_one_output_is_best_supported": "Use the public training evidence and rule."
+        }
+      ],
+      "cross_pair_concrete_audit": {
+        "output_relevant_properties": [
+          "The public rule and input relations."
+        ],
+        "incidental_properties": [],
+        "relevant_and_incidental_variation": "See the retained training constructions.",
+        "strongest_simple_shortcuts": [],
+        "remaining_ambiguity_risk": "To be independently verified."
+      },
+      "canvas_plan": [
+        {
+          "pair": "train_1",
+          "why_dimensions_are_needed": "The specified construction fits these dimensions.",
+          "functionally_used_areas": "The constructed cells and their relationships.",
+          "empty_space_role": "Separates the construction.",
+          "smaller_grid_audit": "Preserve specified coordinates.",
+          "larger_grid_audit": "No padding is authorized."
+        },
+        {
+          "pair": "train_2",
+          "why_dimensions_are_needed": "The specified construction fits these dimensions.",
+          "functionally_used_areas": "The constructed cells and their relationships.",
+          "empty_space_role": "Separates the construction.",
+          "smaller_grid_audit": "Preserve specified coordinates.",
+          "larger_grid_audit": "No padding is authorized."
+        },
+        {
+          "pair": "test_1",
+          "why_dimensions_are_needed": "The specified construction fits these dimensions.",
+          "functionally_used_areas": "The constructed cells and their relationships.",
+          "empty_space_role": "Separates the construction.",
+          "smaller_grid_audit": "Preserve specified coordinates.",
+          "larger_grid_audit": "No padding is authorized."
+        }
+      ],
+      "deterministic_realization_procedure": "Apply the authoritative public rule exactly; these arrays are the stored execution.",
+      "axis_self_assessment": {
+        "novel_concept": "solid",
+        "functional_composition": "solid"
+      }
+    }
+  },
+  "realization": {
+    "contract_version": "astra-authoring-v3",
+    "candidate_id": "local-symbolic",
+    "status": "realized",
+    "refusal_reason": "",
+    "task": {
+      "train": [
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              8
+            ]
+          ],
+          "output": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              8
+            ]
+          ]
+        },
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              8
+            ]
+          ],
+          "output": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              8
+            ]
+          ]
+        }
+      ],
+      "test": [
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              8
+            ]
+          ]
+        }
+      ]
+    },
+    "authoring_metadata": {
+      "intended_rule": "Move @signal exactly 2 columns right through @background. Keep @marker fixed.",
+      "expected_test_outputs": [
+        [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            8
+          ]
+        ]
+      ],
+      "construction_witness": "Move @signal by 2 columns; leave @marker fixed.",
+      "pair_construction_trace": [
+        {
+          "pair": "train_1",
+          "trace": "Applied the displacement to @signal and retained @marker."
+        },
+        {
+          "pair": "train_2",
+          "trace": "Applied the displacement to @signal and retained @marker."
+        },
+        {
+          "pair": "test_1",
+          "trace": "Applied the displacement to @signal and retained @marker."
+        }
+      ],
+      "plan_fidelity": {
+        "statement": "Checked coordinates and dimensions.",
+        "preserved_frozen_decisions": [
+          "Move by 2 columns; preserve all dimensions and @marker."
+        ],
+        "allowed_freedoms_used": [],
+        "deviations": []
+      },
+      "concrete_shortcut_audit": "The @signal displacement is constant across examples.",
+      "canvas_use_classification": "compact_and_appropriate"
+    },
+    "deviations": []
+  },
+  "complete_task": {
+    "train": [
+      {
+        "input": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            8
+          ]
+        ],
+        "output": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            8
+          ]
+        ]
+      },
+      {
+        "input": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            8
+          ]
+        ],
+        "output": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            8
+          ]
+        ]
+      }
+    ],
+    "test": [
+      {
+        "input": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            8
+          ]
+        ],
+        "output": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            8
+          ]
+        ]
+      }
+    ]
+  }
+}

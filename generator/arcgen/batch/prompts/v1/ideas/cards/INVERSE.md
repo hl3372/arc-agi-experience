@@ -1,0 +1,4 @@
+<!-- prompt-version: diversity-v1-idea-card-INVERSE-3 -->
+## Direction for this call
+
+Seek a task in which the input presents a result and the answer recovers information about what produced it. The human solver must infer a relation from the examples and reason backwards through it, using constraints in the observed result to determine the requested answer. The backward direction must matter to the reasoning, rather than redescribe an ordinary transformation. Working backwards should rest on seeing what in the result could only have come from one cause, not on solving a puzzle whose answer appears only after combining many constraints. The examples must make both the relation and the requested information clear; details left unresolved are acceptable only when they cannot change the answer. The test should require this backward reasoning in a situation the examples did not literally show. Nothing may rest on colour numbers or an arbitrary code.

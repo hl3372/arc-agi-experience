@@ -1,0 +1,2 @@
+<!-- prompt-version: findings-v1-slot-planner-JOINED-1 -->
+This idea joins two or three plain rules acting together in one scene. Show every rule acting in the training pairs, so each can be learned from them, and make the test need all of them. This is the idea, not a bundle of unrelated rules; a rule may erase or redraw material when that is what one of the joined rules does. Keep each rule plain: do not add exceptions or tie-breaks to make the joining work.

@@ -1,0 +1,1 @@
+Preserve the kernel's consequential latent construction while making it learnable from the concrete episode. Check the strongest comparably simple direct procedure; do not manufacture necessity through an unsupported convention.

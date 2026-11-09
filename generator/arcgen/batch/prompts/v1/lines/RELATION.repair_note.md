@@ -1,0 +1,2 @@
+<!-- prompt-version: weakness-v1-line-RELATION-repair-1 -->
+A relation to other things decides each thing's outcome in this episode; an invariant names it ("Relation: …"); keep it true. Keep the look-alikes: every pair keeps things that look alike with different outcomes, at least one pair keeps two with the same colour, shape and size, and no feature of a thing on its own may come to predict every outcome.

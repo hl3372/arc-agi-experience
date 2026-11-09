@@ -1,0 +1,4 @@
+<!-- prompt-version: diversity-v1-idea-card-LEVELS-3 -->
+## Direction for this call
+
+Seek a task in which the organisation within parts and the organisation among those parts both help determine the answer. The human solver must discover how the two levels relate: reading either level alone leaves something essential unresolved, and a change at either level can change the answer. The parts should be things within one picture whose own form matters, not separately framed panels joined by lines or adjacency. Presenting the same structure at two scales is not enough unless the relation between the levels decides the result. The examples should provide evidence for this dependence, and the test should require the connection in a situation the examples did not literally show. Nothing may rest on colour numbers or an arbitrary code.

@@ -1,0 +1,2 @@
+<!-- prompt-version: weakness-v1-relax-TRACE-route-choice-1 -->
+Relaxed fence for this idea: a chosen route. The trace may be the route between two marked ends through a network drawn in the grid, chosen by one visual criterion the pairs teach, with at least one training pair in which that criterion picks a different route from the one that looks most direct. This holds over "never a known puzzle redrawn" for a drawn network with a taught criterion only: no search beyond what the pairs teach, and everything else above stands.

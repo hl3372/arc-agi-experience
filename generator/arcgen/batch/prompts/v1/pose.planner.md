@@ -1,0 +1,2 @@
+<!-- prompt-version: diversity-v1-pose-2 -->
+Pose instruction for this idea: where the rule allows, let the instances the rule acts on appear turned, mirrored or at different sizes across the examples and the test, so the human solver must recognise what stays the same and carry each instance's pose through to the answer. Do not vary pose where it would change what the rule means or leave the answer underdetermined.

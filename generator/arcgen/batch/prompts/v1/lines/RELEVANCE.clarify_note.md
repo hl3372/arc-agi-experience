@@ -1,0 +1,2 @@
+<!-- prompt-version: weakness-v1-structure-RELEVANCE-clarify-1 -->
+Both blind solvers used every such element, or ignored them all: {SHORTCUT} Make the deciding feature plainer, with one added or replaced training pair in which an acting element and an inert look-alike sit side by side, keeping the rule, the tests and their answers, and every frozen invariant. If that cannot work, return unrepairable.

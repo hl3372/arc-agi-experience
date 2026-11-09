@@ -1,0 +1,2 @@
+<!-- prompt-version: b17-depart-repair-2 -->
+This episode's plan reserves for the first test one situation that no training pair shows; an invariant names it ("No training pair shows …"). Do not add or change a training pair so that it shows that situation, or its kind anywhere, at any size or colour; keep that invariant true. If the concern cannot be resolved without showing it, return unrepairable.

@@ -1,0 +1,2 @@
+<!-- prompt-version: diversity-v1-idea-modifier-PAYLOAD-3 -->
+Additional requirement for this call: each idea must carry exact multi-coloured content into the answer, and the rule must depend on that content: where each colour sits, which colours meet, or how the arrangement is transformed must help decide the answer, not merely travel with a part that is moved or copied. Vary that content across the examples and keep each required colour where the rule places it. An idea whose rule treats all colours alike does not qualify. Colour numbers carry no meaning.

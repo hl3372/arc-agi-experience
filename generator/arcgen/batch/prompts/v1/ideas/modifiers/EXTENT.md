@@ -1,0 +1,2 @@
+<!-- prompt-version: diversity-v1-idea-modifier-EXTENT-3 -->
+Additional requirement for this call: the human solver must infer each idea's output dimensions from the same relation that determines its contents, so the training outputs should differ in size. Keeping the input's dimensions, or varying an incidental frame or margin, does not qualify. The dimensions should follow from structure the human solver can see, not from working out how many repetitions or steps pass before something recurs or runs out.

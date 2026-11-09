@@ -1,0 +1,2 @@
+<!-- prompt-version: weakness-v1-idea-modifier-QUIET-1 -->
+Additional requirement for this call: in each idea, every example has an obvious change and, beside it, a quiet second change that a glance can miss (strays cleaned up, a case at a rim or border, an erasure, a small correction). The quiet change follows one law of its own, acts in at least two examples, and the test needs both changes: the obvious change alone gives a wrong answer.

@@ -1,0 +1,2 @@
+<!-- prompt-version: weakness-v1-structure-RECOMBINE-repair-2 -->
+This episode teaches its laws apart and combines them only in the test ("Combination: …"); keep that invariant true. Do not add or change a training pair so that it shows the combination the test needs: the laws on one thing, one acting on what the other produced, or the two meeting. Keep at least one pair where each law acts without the other, so that law alone still reproduces that pair's output. If the concern cannot be resolved without showing the combination, return unrepairable.

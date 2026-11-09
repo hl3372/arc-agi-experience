@@ -1,0 +1,4 @@
+<!-- prompt-version: diversity-v1-idea-card-SPREAD-2 -->
+## Direction for this call
+
+Seek a task with a larger training episode than usual, typically six to nine pairs, in which the governing relation has several parts and each pair reveals only some of them: different pairs show different cases, interactions or exceptions of one system. The human solver must gather the parts across the pairs and combine them, and the test needs a combination that no single pair shows. Each part must be learnable from the pairs that show it and belong to one coherent system that itself needs insight, not an arbitrary lookup table or a familiar mechanism with its boundary cases spread across the pairs, and pairs should add parts rather than repeat each other. Keep every grid small enough that the whole episode can be read by hand. Nothing may rest on colour numbers or an arbitrary code.

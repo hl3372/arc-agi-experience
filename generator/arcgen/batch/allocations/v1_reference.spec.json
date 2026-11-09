@@ -1,0 +1,554 @@
+{
+ "revision": "arcgen-v1",
+ "seed": 2026101001,
+ "windows": {
+  "supply-01": {
+   "account": "main",
+   "wave": "A",
+   "reference_wave": "A",
+   "context": "c01",
+   "commit": "explore"
+  },
+  "supply-02": {
+   "account": "main",
+   "wave": "A",
+   "reference_wave": "A",
+   "context": "c01",
+   "commit": "explore"
+  },
+  "supply-03": {
+   "account": "main",
+   "wave": "A",
+   "reference_wave": "A",
+   "context": "c02",
+   "commit": "explore"
+  },
+  "supply-04": {
+   "account": "main",
+   "wave": "A",
+   "reference_wave": "A",
+   "context": "c02",
+   "commit": "explore"
+  },
+  "supply-05": {
+   "account": "main",
+   "wave": "A",
+   "reference_wave": "A",
+   "context": "c03",
+   "commit": "explore"
+  },
+  "supply-06": {
+   "account": "main",
+   "wave": "A",
+   "reference_wave": "A",
+   "context": "c03",
+   "commit": "explore"
+  },
+  "supply-07": {
+   "account": "main",
+   "wave": "A",
+   "reference_wave": "B",
+   "context": "c04",
+   "commit": "explore"
+  },
+  "supply-08": {
+   "account": "main",
+   "wave": "A",
+   "reference_wave": "B",
+   "context": "c04",
+   "commit": "explore"
+  },
+  "supply-09": {
+   "account": "main",
+   "wave": "A",
+   "reference_wave": "B",
+   "context": "c01",
+   "commit": "explore"
+  },
+  "supply-10": {
+   "account": "main",
+   "wave": "A",
+   "reference_wave": "B",
+   "context": "c01",
+   "commit": "explore"
+  },
+  "supply-11": {
+   "account": "main",
+   "wave": "A",
+   "reference_wave": "B",
+   "context": "c02",
+   "commit": "explore"
+  },
+  "supply-12": {
+   "account": "main",
+   "wave": "A",
+   "reference_wave": "B",
+   "context": "c02",
+   "commit": "explore"
+  },
+  "supply-13": {
+   "account": "main",
+   "wave": "A",
+   "reference_wave": "B",
+   "context": "c03",
+   "commit": "explore"
+  },
+  "supply-14": {
+   "account": "main",
+   "wave": "A",
+   "reference_wave": "B",
+   "context": "c03",
+   "commit": "explore"
+  }
+ },
+ "rows": [
+  [
+   "supply-01",
+   "SEE",
+   null,
+   "L",
+   "sol",
+   "high"
+  ],
+  [
+   "supply-01",
+   "LEVELS",
+   null,
+   "L",
+   "sol",
+   "high"
+  ],
+  [
+   "supply-01",
+   "JUDG",
+   null,
+   "L",
+   "sol",
+   "max"
+  ],
+  [
+   "supply-01",
+   "INVERSE",
+   null,
+   "L",
+   "sol",
+   "xhigh"
+  ],
+  [
+   "supply-02",
+   "J",
+   null,
+   "L",
+   "sol",
+   "high"
+  ],
+  [
+   "supply-02",
+   "ABS",
+   null,
+   "L",
+   "sol",
+   "high"
+  ],
+  [
+   "supply-02",
+   "SIGNAL",
+   null,
+   "L",
+   "sol",
+   "max"
+  ],
+  [
+   "supply-02",
+   "DISC",
+   null,
+   "L",
+   "sol",
+   "xhigh"
+  ],
+  [
+   "supply-03",
+   "AIM",
+   null,
+   "L",
+   "sol",
+   "high"
+  ],
+  [
+   "supply-03",
+   "ACROSS",
+   null,
+   "L",
+   "sol",
+   "high"
+  ],
+  [
+   "supply-03",
+   "GEO",
+   null,
+   "L",
+   "sol",
+   "max"
+  ],
+  [
+   "supply-03",
+   "STAGES",
+   null,
+   "L",
+   "sol6",
+   "xhigh"
+  ],
+  [
+   "supply-04",
+   "CONTRAST",
+   null,
+   "L",
+   "sol",
+   "high"
+  ],
+  [
+   "supply-04",
+   "VIEWS",
+   null,
+   "L",
+   "sol",
+   "max"
+  ],
+  [
+   "supply-04",
+   "RHYTHM",
+   null,
+   "L",
+   "sol",
+   "xhigh"
+  ],
+  [
+   "supply-04",
+   "EXEMPLAR",
+   null,
+   "L",
+   "sol6",
+   "xhigh"
+  ],
+  [
+   "supply-05",
+   "SEM",
+   null,
+   "L",
+   "sol",
+   "high"
+  ],
+  [
+   "supply-05",
+   "WORLD",
+   null,
+   "L",
+   "sol",
+   "max"
+  ],
+  [
+   "supply-05",
+   "SPREAD",
+   null,
+   "L",
+   "sol",
+   "xhigh"
+  ],
+  [
+   "supply-05",
+   "SEE",
+   null,
+   "L",
+   "sol6",
+   "xhigh"
+  ],
+  [
+   "supply-06",
+   "LEVELS",
+   null,
+   "L",
+   "sol",
+   "high"
+  ],
+  [
+   "supply-06",
+   "JUDG",
+   null,
+   "L",
+   "sol",
+   "high"
+  ],
+  [
+   "supply-06",
+   "INVERSE",
+   null,
+   "L",
+   "sol",
+   "max"
+  ],
+  [
+   "supply-06",
+   "J",
+   null,
+   "L",
+   "sol",
+   "xhigh"
+  ],
+  [
+   "supply-07",
+   "ABS",
+   null,
+   "L",
+   "sol",
+   "high"
+  ],
+  [
+   "supply-07",
+   "SIGNAL",
+   null,
+   "L",
+   "sol",
+   "high"
+  ],
+  [
+   "supply-07",
+   "T",
+   null,
+   "L",
+   "sol",
+   "max"
+  ],
+  [
+   "supply-07",
+   "FORM",
+   null,
+   "L",
+   "sol",
+   "xhigh"
+  ],
+  [
+   "supply-08",
+   "INTERACT",
+   null,
+   "L",
+   "sol",
+   "high"
+  ],
+  [
+   "supply-08",
+   "BOARD",
+   null,
+   "L",
+   "sol",
+   "high"
+  ],
+  [
+   "supply-08",
+   "D1",
+   null,
+   "L",
+   "sol",
+   "max"
+  ],
+  [
+   "supply-08",
+   "H_REASON",
+   null,
+   "L",
+   "sol6",
+   "xhigh"
+  ],
+  [
+   "supply-09",
+   "H_COMPOSE",
+   null,
+   "L",
+   "sol",
+   "high"
+  ],
+  [
+   "supply-09",
+   "TEMPLATE",
+   null,
+   "L",
+   "sol",
+   "max"
+  ],
+  [
+   "supply-09",
+   "DIRECT",
+   null,
+   "L",
+   "sol",
+   "xhigh"
+  ],
+  [
+   "supply-09",
+   "RESTORE",
+   null,
+   "L",
+   "sol6",
+   "xhigh"
+  ],
+  [
+   "supply-10",
+   "OPEN",
+   null,
+   "L",
+   "sol",
+   "high"
+  ],
+  [
+   "supply-10",
+   "DISC",
+   null,
+   "L",
+   "sol",
+   "max"
+  ],
+  [
+   "supply-10",
+   "AIM",
+   null,
+   "L",
+   "sol",
+   "xhigh"
+  ],
+  [
+   "supply-10",
+   "ACROSS",
+   null,
+   "L",
+   "sol6",
+   "xhigh"
+  ],
+  [
+   "supply-11",
+   "GEO",
+   null,
+   "L",
+   "sol",
+   "high"
+  ],
+  [
+   "supply-11",
+   "STAGES",
+   null,
+   "L",
+   "sol",
+   "high"
+  ],
+  [
+   "supply-11",
+   "CONTRAST",
+   null,
+   "L",
+   "sol",
+   "max"
+  ],
+  [
+   "supply-11",
+   "VIEWS",
+   null,
+   "L",
+   "sol",
+   "xhigh"
+  ],
+  [
+   "supply-12",
+   "RHYTHM",
+   null,
+   "L",
+   "sol",
+   "high"
+  ],
+  [
+   "supply-12",
+   "EXEMPLAR",
+   null,
+   "L",
+   "sol",
+   "high"
+  ],
+  [
+   "supply-12",
+   "SEM",
+   null,
+   "L",
+   "sol",
+   "max"
+  ],
+  [
+   "supply-12",
+   "WORLD",
+   null,
+   "L",
+   "sol",
+   "xhigh"
+  ],
+  [
+   "supply-13",
+   "SPREAD",
+   null,
+   "L",
+   "sol",
+   "high"
+  ],
+  [
+   "supply-13",
+   "SEE",
+   null,
+   "L",
+   "sol",
+   "high"
+  ],
+  [
+   "supply-13",
+   "LEVELS",
+   null,
+   "L",
+   "sol",
+   "max"
+  ],
+  [
+   "supply-13",
+   "JUDG",
+   null,
+   "L",
+   "sol6",
+   "xhigh"
+  ],
+  [
+   "supply-14",
+   "INVERSE",
+   null,
+   "L",
+   "sol",
+   "high"
+  ],
+  [
+   "supply-14",
+   "J",
+   null,
+   "L",
+   "sol",
+   "max"
+  ],
+  [
+   "supply-14",
+   "ABS",
+   null,
+   "L",
+   "sol",
+   "xhigh"
+  ],
+  [
+   "supply-14",
+   "SIGNAL",
+   null,
+   "L",
+   "sol6",
+   "xhigh"
+  ]
+ ]
+}

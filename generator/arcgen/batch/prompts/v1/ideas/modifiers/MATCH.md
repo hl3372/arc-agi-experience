@@ -1,0 +1,2 @@
+<!-- prompt-version: blindspot-v1-idea-modifier-MATCH-2 -->
+Additional requirement for this call: in each idea, the human solver must recognise the same shape in different guises (turned, mirrored, resized or recoloured), and that recognition decides the answer: what pairs with what, where a copy goes and how it must be turned or sized to fit there, or which candidate is the true match. Wrong candidates differ from true matches in shape, not merely in colour, and the answer is drawn from the pairing.

@@ -1,0 +1,1 @@
+Within the intended episode requirements, explore a relation that transfers between situations through an inferred correspondence. The mapping itself should contribute to determining the answer. If this direction prevents a fair realization of those requirements, preserve the worthwhile task without forcing this direction. Do not narrate this invitation in ordinary task content.

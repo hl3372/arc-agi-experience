@@ -1,0 +1,2 @@
+<!-- prompt-version: weakness-v1-clarify-repair-1 -->
+Both blind solvers answered the test with a shortcut this episode's plan names: {SHORTCUT} The evidence against it is in the grids but not plain enough to a person looking at them. With one added or replaced training pair, make the evidence that this shortcut is wrong plainer, keeping the rule, the tests and their answers, and every frozen invariant. Do not add clutter, a new convention or a special case.

@@ -1,0 +1,2 @@
+<!-- prompt-version: blindspot-v1-slot-planner-EMIT-2 -->
+This idea draws courses from sources, each shaped by what it meets. Draw every course in full; make courses long enough to cross much of the grid; use only the kinds of meeting the idea needs (such as stopping, turning, reflecting, passing through or splitting), each acting in at least two training pairs; and keep it one pass, each course settled by the picture rather than by rounds of updates.

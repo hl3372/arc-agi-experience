@@ -1,0 +1,2 @@
+<!-- prompt-version: b17-idea-modifier-MINIMAL-2 -->
+Additional requirement for this call: each idea's training pairs must include a controlled comparison: things that stay alike except where it matters, inside one picture or across pairs whose scenes otherwise differ, so that a plausible rival reading predicts differently and the examples show which reading is right. Incidental changes must not explain the different results, and the comparison should test the idea's own insight, not a side detail. Other examples may vary freely.

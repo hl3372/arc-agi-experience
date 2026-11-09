@@ -1,0 +1,2 @@
+<!-- prompt-version: weakness-v1-line-JUDGE-realizer-1 -->
+Rival: the plan's strongest_simple_shortcuts entry whose rule begins "Rival:". Apply it, exactly as its rule states it, to every training input and give the grids in weakness_outputs.training_outputs, one per training pair, in order: it reproduces every training output; give what it actually produces, cell for cell. Then give in weakness_outputs.points one point (kind "rival"): the rival's answer to the first test, applied at the judgement point. If no entry begins "Rival:", set training_outputs and points to null.

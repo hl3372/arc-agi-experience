@@ -1,0 +1,2 @@
+<!-- prompt-version: weakness-v1-line-INGRID-repair-1 -->
+Each input of this episode holds one worked instance of its own change; an invariant names it ("Worked instance …"); keep it true. Do not add or change a pair so that its instance shows the change the test's instance does, and keep each pair's instance complete and different from the others. If the concern cannot be resolved without that, return unrepairable.

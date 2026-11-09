@@ -1,0 +1,1 @@
+Within the intended episode requirements, explore a relation or invariant that unifies materially different visible forms and contributes beyond selecting already corresponding parts. If this direction prevents a fair realization of those requirements, preserve the worthwhile task without forcing this direction. Do not narrate this invitation in ordinary task content.

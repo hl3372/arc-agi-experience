@@ -1,0 +1,2 @@
+<!-- prompt-version: weakness-v1-relax-SETTLE-two-pairs-1 -->
+Relaxed fence for this idea: two training pairs. Use exactly two training pairs: the default reading reproduces one of them exactly (begin its what_it_helps_communicate with "Consistent:") and differs from the other only where the settled point acts (begin it with "Settles:"). This holds over the three-to-five-pair rule above; everything else above stands.

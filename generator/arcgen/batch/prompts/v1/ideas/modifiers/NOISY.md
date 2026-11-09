@@ -1,0 +1,2 @@
+<!-- prompt-version: blindspot-v1-idea-modifier-NOISY-1 -->
+Additional requirement for this call: in each idea, the inputs draw their material imperfectly (stray specks, broken or bent strokes, dents and bumps on shapes) in colours shared with what matters, and seeing the intended things through the imperfection is part of the insight. The answer keeps, cleans or repairs the imperfections as the training pairs teach, and telling an imperfection from real structure must be possible by looking.

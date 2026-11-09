@@ -1,0 +1,2 @@
+<!-- prompt-version: b17-slot-planner-INSTRUCT-1 -->
+Each input carries an ordered instruction in marks (a strip, list or path of entries) read in an order the picture makes plain; each kind of entry keeps one meaning and acts on something elsewhere in the grid. The answer applies several entries in turn, each on what the one before produced. Vary the instruction across the training pairs, and show every kind of entry acting in at least two pairs; the test's instruction is one to three entries longer than any training pair's and uses only kinds of entry the pairs teach.

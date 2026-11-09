@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Batch commands; see `bin/arcgen --help` (arcgen/batch/cli.py).
+# Runs with $ARCGEN_PYTHON if set, else python3 on PATH (activate the project's virtualenv first).
+cd "$(dirname "$0")/.." && exec "${ARCGEN_PYTHON:-python3}" -B -m arcgen.batch.cli "$@"

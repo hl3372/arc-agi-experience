@@ -1,0 +1,2 @@
+<!-- prompt-version: weakness-v1-line-DEPART-realizer-1 -->
+Points: the plan's strongest_simple_shortcuts entry whose rule begins "Shortcut:" replays the closest training pair as it stands. Give in weakness_outputs.points one point per new situation of the first test (one, or two when the plan names two; kind "situation"): that replay applied at that situation only. If no entry begins "Shortcut:", set points to null.

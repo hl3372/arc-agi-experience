@@ -1,0 +1,2 @@
+<!-- prompt-version: weakness-v1-line-COINCIDE-repair-1 -->
+In every training pair of this episode two readings agree; an invariant names the agreement ("Coincidence: …"); keep it true, and keep the first test's settling evidence as it is. Prefer a repair that keeps the agreement in every pair. A repair that breaks it in a training pair turns the task into a settling-pair task: make one only when nothing else resolves the concern, and return unrepairable rather than weaken the settling evidence.

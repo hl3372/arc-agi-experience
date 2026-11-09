@@ -1,0 +1,2 @@
+<!-- prompt-version: blindspot-v1-idea-modifier-SYMMETRY-2 -->
+Additional requirement for this call: in each idea, a symmetry the human solver must find decides the answer: a mirror line or a centre of turning that the picture obeys or should obey, which the solver locates and then uses to complete, repair, extend or judge what is drawn. Finding where the symmetry lies and what it covers is part of the insight, so it should not sit in the same place in every example; the answer is drawn in full.

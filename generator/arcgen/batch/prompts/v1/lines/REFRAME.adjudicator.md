@@ -1,0 +1,2 @@
+<!-- prompt-version: weakness-v1-line-REFRAME-adjudicator-1 -->
+Review policy for this episode. Its rule is simple in another frame than rows and columns from the corner; an invariant names the frame and its anchor ("Frame: …"). First check, as always, that the intended rule reproduces every training output cell for cell; if it does not, this policy does not apply. A rival that reads positions or directions in rows and columns from the corner is contradicted_by_training where a pair turns or moves the frame's anchor; cite that pair. Judge all other concerns as usual.

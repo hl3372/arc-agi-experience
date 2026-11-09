@@ -1,0 +1,2 @@
+<!-- prompt-version: weakness-v1-line-SETTLE-repair-1 -->
+This episode's plan settles one point in one training pair (or two of five); an invariant names it ("Settled point: …"); keep it true. Resolve the concern either by adding one pair that the simpler reading reproduces exactly, or by changing the settling pair so that the feature that decides it is plainer, with nothing else setting it apart. Never add a pair that also refutes the simpler reading, and never change a consistent pair so that it does. If the concern cannot be resolved this way, return unrepairable.

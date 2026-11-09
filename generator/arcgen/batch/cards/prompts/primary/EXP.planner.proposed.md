@@ -1,0 +1,1 @@
+Preserve the kernel's functional need for spatial extent and its public evidence. The preferred area is greater than 196 cells in at least one input, when it serves the concept. Explain the actual functional extent in the existing private canvas-plan audit fields. An optional scale route cannot remove evidence or override the intended relation.

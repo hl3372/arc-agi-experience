@@ -1,0 +1,2 @@
+<!-- prompt-version: weakness-v1-line-INGRID-realizer-1 -->
+Points: the plan's strongest_simple_shortcuts entry whose rule begins "Shortcut:" carries the most similar training pair's change to the test instead of the test's own instance. Give in weakness_outputs.points one point per test (kind "instance"): the answer with that borrowed change applied where the instance's change applies. If no entry begins "Shortcut:", set points to null.

@@ -1,0 +1,62 @@
+version: "4.1"
+pipeline: arcgen-v4.1-control
+seed: 20260803
+extends_v4_control: v4_control.yaml
+
+paths:
+  v4_1_parent_manifest: config/v4_1_parent_manifest.json
+  v4_1_feature_manifest: config/v4_1_feature_manifest.json
+  frozen_v4_qualification: runs/v4-control-qualification-20260802
+
+v4_1_features:
+  palette_scheduler: false
+  supported_departure_planning: false
+  episode_joint_reservoir_stream: false
+  abstraction_led_reservoir_stream: false
+
+palette_experiment:
+  conservative_modal_fraction: 0.5
+  require_consistent_input_mode: true
+  allowed_background_colors: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  real_reference_weight: 0.90
+  diversity_weight: 0.10
+  replay_sample_size: 12
+  technical_subset_size: 4
+  blind_subset_size: 4
+  editorial_subset_size: 6
+  simulated_future_slate_count: 8
+  simulated_tasks_per_slate: 8
+  keep_black_eligible: true
+
+semantic_experiments:
+  minimum_independent_slates: 3
+  minimum_treatment_authoring_candidates: 12
+  minimum_genuine_completed_tasks: 8
+  minimum_matched_control_completed_tasks: 8
+  minimum_mechanism_clusters: 3
+  maximum_largest_cluster_fraction: 0.5
+  concept_control_kernel_count: 24
+  treatment_kernel_count: 24
+  supported_departure_maximum_selected: 3
+  ordinary_planning_minimum_selected: 6
+  episode_joint_maximum_selected: 1
+  abstraction_led_maximum_selected: 1
+  total_specialized_source_maximum_selected: 2
+
+experimental:
+  enabled: false
+  feature: none
+  non_gating: true
+  auto_promote: false
+  production_state_mutation_allowed: false
+  inherit_explicitly_accepted_features: false
+  arm_id: control
+
+integration:
+  enabled: false
+  stage: none
+
+run:
+  id: v4-1-control-freeze-20260803
+  mock: false
+  automatically_commit_generated_tasks: false

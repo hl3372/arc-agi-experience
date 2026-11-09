@@ -1,0 +1,187 @@
+{
+  "type": "object",
+  "properties": {
+    "selector_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "candidate_assessments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "candidate_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "eligibility": {
+            "type": "string",
+            "enum": [
+              "plausible",
+              "uncertain",
+              "ineligible"
+            ]
+          },
+          "conceptual_potential": {
+            "type": "string",
+            "enum": [
+              "weak",
+              "solid",
+              "standout",
+              "uncertain"
+            ]
+          },
+          "coherence_potential": {
+            "type": "string",
+            "enum": [
+              "insufficient",
+              "solid",
+              "standout",
+              "uncertain"
+            ]
+          },
+          "fair_realization_potential": {
+            "type": "string",
+            "enum": [
+              "plausible",
+              "uncertain",
+              "infeasible"
+            ]
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          },
+          "redundant_with": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "maxItems": 47,
+            "uniqueItems": true
+          },
+          "same_procedure_family_with": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "maxItems": 47,
+            "uniqueItems": true
+          },
+          "useful_contribution": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "bank_comparisons": {
+            "type": "array",
+            "maxItems": 28,
+            "items": {
+              "type": "object",
+              "properties": {
+                "reference_id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "relationship": {
+                  "type": "string",
+                  "enum": [
+                    "redundant",
+                    "useful_relative",
+                    "distinct",
+                    "uncertain"
+                  ]
+                },
+                "reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "reference_id",
+                "relationship",
+                "reason"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "candidate_id",
+          "eligibility",
+          "conceptual_potential",
+          "coherence_potential",
+          "fair_realization_potential",
+          "reason",
+          "redundant_with",
+          "same_procedure_family_with",
+          "useful_contribution",
+          "bank_comparisons"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 48
+    },
+    "ranked_plausible": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "candidate_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "development_priority": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 48
+          },
+          "development_brief": {
+            "type": "string",
+            "minLength": 1
+          },
+          "optional_development_suggestion": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "candidate_id",
+          "development_priority",
+          "development_brief",
+          "optional_development_suggestion"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 48
+    },
+    "window_observations": {
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "selector_id",
+    "candidate_assessments",
+    "ranked_plausible",
+    "window_observations"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,2 @@
+<!-- prompt-version: b17-slot-planner-MINIMAL-2 -->
+Preserve at least one decisive controlled comparison: plausible readings predict different answers and the grids resolve the difference, with incidental changes unable to explain the result. The test must depend on the distinction. Make the comparison inside one grid (two things alike except for the deciding feature) or across training pairs whose scenes otherwise differ in their other objects, positions and sizes; no two training inputs may share nine in ten of their cells.

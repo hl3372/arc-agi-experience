@@ -1,0 +1,2 @@
+<!-- prompt-version: blindspot-v1-idea-modifier-CUED-2 -->
+Additional requirement for this call: in each idea, several things in each picture each carry a small feature of their own form or situation (something on or about the thing itself, or what it touches or lines up with), and that feature decides what happens to that thing alone. Different things in the same picture carry different values, so the solver must read each one. What each kind of feature means is taught by what the training pairs show it doing, never by a colour's number.

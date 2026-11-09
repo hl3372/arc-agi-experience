@@ -1,0 +1,2 @@
+<!-- prompt-version: weakness-v1-line-PROCESS-realizer-1 -->
+Points: the plan's strongest_simple_shortcuts entry whose rule begins "Shortcut:" applies a rule to each place separately. Give in weakness_outputs.points one point per test (kind "per place"): the answer that rule gives, as the cells where it differs from the true answer. If no entry begins "Shortcut:", set points to null. The kept quantity is checked by code on the grids.

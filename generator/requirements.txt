@@ -1,0 +1,11 @@
+# Tested versions (Python 3.12).
+numpy==2.5.2
+PyYAML==6.0.1
+jsonschema==4.10.3
+pillow==10.2.0
+# The context guard counts prompt tokens with tiktoken, as the published batches did (it downloads its encoding file
+# once). Without it the guard falls back to its own conservative estimate.
+tiktoken==0.14.0
+pytest==9.1.1
+# Optional, only to start from the published task bank (python -m arcgen.batch.bank_from_hf; README, "Starting from
+# our task bank"): pyarrow==26.0.1 to read it, huggingface_hub==2.4.0 to download it (pip install '.[hf]').

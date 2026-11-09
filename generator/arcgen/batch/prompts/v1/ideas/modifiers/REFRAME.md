@@ -1,0 +1,2 @@
+<!-- prompt-version: weakness-v1-idea-modifier-REFRAME-1 -->
+Additional requirement for this call: in each idea, the rule is simple only when positions or directions are read in another frame than rows and columns from the corner: along diagonals, by distance or phase from a visible marker or edge, or relative to a mover's heading or a thing's own orientation. Read in rows and columns from the corner it looks irregular or fits only some examples. Something visible anchors the frame, and the examples vary it.

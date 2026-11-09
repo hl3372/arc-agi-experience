@@ -1,0 +1,52 @@
+version: "1.0"
+pipeline: arcgen-v4.4-functional-scale-fresh-integrated-qualification
+base_integrated_config: v4_integrated_qualification_replication.yaml
+seed: 2026080829
+
+fresh_scale_integration:
+  independent_slates: 8
+  eligible_window_size: 48
+  scale_target_slates: [1, 2, 3, 4, 5, 6]
+  minimum_assigned_invitations: 6
+  maximum_scale_invitations_per_slate: 1
+  embedded_controls_after_scale_reservation: 2
+  semantic_route_cycle:
+    - logical_leap
+    - structural_transfer
+  maximum_interventions_per_candidate: 1
+  maximum_special_source_per_slate: 1
+  maximum_development_per_slate: 8
+  audit_batch_size: 16
+  escalation_calls_per_slate: 5
+
+  quality_gates:
+    minimum_genuine_expansions: 3
+    minimum_genuine_blind_clear_core_or_reserve: 3
+    maximum_hidden_output_mismatches: 0
+    maximum_artificially_inflated: 0
+    maximum_additional_ambiguity_cases: 1
+    maximum_ambiguity_rate_increase: 0.10
+    maximum_technical_pass_rate_drop: 0.10
+    core_yield_ratio_floor: 0.80
+    core_or_reserve_yield_ratio_floor: 0.90
+
+  selector_quality_precedes_routing: true
+  source_and_route_hidden_downstream: true
+  forced_feature_stacking: false
+  palette_is_only_orthogonal_treatment: true
+  full_v4_verification: true
+  full_editorial_review: true
+  one_answer_policy: true
+  automatic_promotion: false
+  automatic_task_commit: false
+  production_state_mutation_allowed: false
+
+repair_policy:
+  allow_mechanical_test_input_restoration: true
+  require_consistent_deviation_ledgers: true
+
+run:
+  id: v4-4-functional-scale-fresh-integrated-20260808
+  mock: false
+  automatically_commit_generated_tasks: false
+

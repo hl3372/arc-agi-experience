@@ -1,0 +1,2 @@
+<!-- prompt-version: weakness-v1-relax-PRECISE-periodic-phase-1 -->
+Relaxed fence for this idea: a periodic phase. The decisions may be where a repeating pattern's phase is anchored at a marker and where a window cuts it: those decisions, each kind acting in at least two training pairs, may carry the episode in place of ten or more decision points, and the six-place, different-configuration rule above does not apply. List them as the decision points in each test's output_derivation. Everything else above stands.

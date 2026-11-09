@@ -1,0 +1,2 @@
+<!-- prompt-version: weakness-v1-relax-TRACE-chained-once-1 -->
+Relaxed fence for this idea: a chained use. A convention applied twice in a row along a trace (its result meeting the same kind of junction again at once) may act chained in only one training pair, provided its single use acts in at least two pairs. This holds over "every convention ... acts in at least two training pairs" for the chained use only; everything else above stands.

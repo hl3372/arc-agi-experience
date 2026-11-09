@@ -1,0 +1,2 @@
+<!-- prompt-version: diversity-v1-idea-modifier-CONSTRUCT-2 -->
+Additional requirement for this call: the answer to each idea must be produced, not pointed at. The human solver should have to build the output picture, and how much of it there is should follow from the rule. An idea whose consequence is naturally a mark on a selected item, a recolouring of existing cells or a count does not meet this call's requirement.

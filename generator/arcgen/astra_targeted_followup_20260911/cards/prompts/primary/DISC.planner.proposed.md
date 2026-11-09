@@ -1,0 +1,1 @@
+Preserve the kernel's balance of substantive conceptual discovery and concise application. Strengthen public evidence without turning the insight into an explicit complete instruction or adding unnecessary execution.

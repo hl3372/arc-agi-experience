@@ -1,0 +1,2 @@
+<!-- prompt-version: weakness-v1-line-MARKS-repair-1 -->
+This episode's plan has a few small marks set a number or choice the rule uses; an invariant names them ("Marks: …"); keep it true. Keep the marks the same kind and size: resolve the concern by changing the marks' value in one pair, never by enlarging, framing, boxing or recolouring them, and never make their value the same in every pair. If the concern cannot be resolved this way, return unrepairable.

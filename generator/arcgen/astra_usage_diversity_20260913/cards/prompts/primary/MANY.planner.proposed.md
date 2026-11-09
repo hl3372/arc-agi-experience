@@ -1,0 +1,1 @@
+Build five to eight useful training pairs if they serve the intended relation. Contrasts and confirmation are both legitimate. Do not add rerolls to meet a count or remove necessary evidence to meet a payload target.

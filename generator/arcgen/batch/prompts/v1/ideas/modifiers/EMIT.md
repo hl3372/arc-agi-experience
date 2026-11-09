@@ -1,0 +1,2 @@
+<!-- prompt-version: blindspot-v1-idea-modifier-EMIT-1 -->
+Additional requirement for this call: in each idea, the answer draws courses that travel out from sources across the canvas, each course shaped by what it meets on the way. The insight is what decides each course's path; every course is drawn in full across a large canvas in a single pass, settled by the picture, not run as rounds of a machine.

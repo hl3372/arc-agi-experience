@@ -1,0 +1,2 @@
+<!-- prompt-version: weakness-v1-overlay-EDGE-adjudicator-1 -->
+Review policy for things cut by the grid's border; an invariant names how the rule treats them ("Edge: …"). A thing cut by the border is still a thing: where a training pair shows a cut thing handled like an uncut one, a rival that skips, drops or refuses cut things is contradicted_by_training, citing that pair. Never write a repair_instruction that removes the cut things from the pairs or the test. Judge all other concerns as usual.

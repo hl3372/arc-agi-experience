@@ -1,0 +1,2 @@
+<!-- prompt-version: weakness-v1-line-QUIET-realizer-1 -->
+Obvious-only reading: the plan's strongest_simple_shortcuts entry whose rule begins "Obvious only:". Apply it, exactly as its rule states it, to every training input and give the grids in weakness_outputs.training_outputs, one per training pair, in order; give what it actually produces, cell for cell. Then give in weakness_outputs.points one point per test (kind "obvious only"): its answer, as the cells where it differs from the true answer. If no entry begins "Obvious only:", set training_outputs and points to null.

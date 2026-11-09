@@ -1,0 +1,362 @@
+{
+ "profile": "v1",
+ "description": "Reference v1 profile: the property-arm and property-slot design of the latest batches, with a single Codex account. `bin/arcgen new` copies it (with allocations/v1_reference.spec.json) for each new batch.",
+ "revision": "arcgen-v1",
+ "phase": "arcgen_batch",
+ "seed": 2026093023,
+ "default_run": "runs/arcgen-v1",
+ "science": {
+  "models": {
+   "astra": "gpt-6-astra",
+   "sol": "gpt-6.1-sol",
+   "sol6": "gpt-6-sol"
+  },
+  "roles": {
+   "full_window_selection": [
+    "sol",
+    "xhigh"
+   ],
+   "planning": [
+    "sol",
+    "xhigh"
+   ],
+   "realization": [
+    "sol",
+    "xhigh"
+   ],
+   "technical_verification": [
+    "sol",
+    "high"
+   ],
+   "primary_blind": [
+    "sol",
+    "xhigh"
+   ],
+   "conditional_blind": [
+    "astra",
+    "xhigh"
+   ],
+   "ambiguity_adjudication": [
+    "astra",
+    "high"
+   ],
+   "targeted_repair": [
+    "astra",
+    "xhigh"
+   ],
+   "mechanism_audit": [
+    "astra",
+    "xhigh"
+   ]
+  },
+  "call_overrides": {
+   "technical_conditional": [
+    "astra",
+    "high"
+   ],
+   "mechanical_repair": [
+    "sol",
+    "xhigh"
+   ],
+   "ambiguity_repair": [
+    "astra",
+    "xhigh"
+   ],
+   "repaired_primary_blind": [
+    "sol",
+    "xhigh"
+   ],
+   "second_blind": [
+    "astra",
+    "xhigh"
+   ]
+  },
+  "idea_efforts": {
+   "sol": [
+    "high",
+    "xhigh",
+    "max"
+   ],
+   "sol6": [
+    "xhigh"
+   ]
+  },
+  "planners": {
+   "sol": [
+    "sol",
+    "xhigh"
+   ],
+   "astra": [
+    "astra",
+    "xhigh"
+   ]
+  },
+  "planner_assignment": {
+   "default_planner": "sol",
+   "multi_planners": [],
+   "multi_planner_fraction": 0.0,
+   "policy_id": "single-planner-v1"
+  },
+  "allocation": "arcgen/batch/allocations/v1_reference.json",
+  "selector": {
+   "accepted_neighbors_per_candidate": 51,
+   "prompt_token_budget": 225000,
+   "minimum_accepted_neighbors": 32
+  },
+  "routes": {
+   "scale_overlay": {
+    "assignment": "per_idea_seeded",
+    "rate": 0.6,
+    "kinds": [
+     "MANY",
+     "XFER",
+     "XFER"
+    ]
+   }
+  },
+  "review_calls_per_task": 2,
+  "author_pinning_count": 18,
+  "prompt_set": "v1",
+  "idea_stage": "v1_loop",
+  "colour_roles": "mix",
+  "colour_vary_rate": 0.65,
+  "idea_modifiers": {
+   "CONSTRUCT": 0.1,
+   "DIGEST": 0.05,
+   "EXTENT": 0.09,
+   "PACKED": 0.18,
+   "BUSY": 0.06,
+   "VACANCY": 0.12,
+   "KEY": 0.12,
+   "CHAINED": 0.05,
+   "MINIMAL": 0.04,
+   "DISTRIBUTED": 0.04,
+   "IGNORE": 0.2,
+   "COLOURFUL": 0.1,
+   "PAYLOAD": 0.1,
+   "MONO": 0.08,
+   "EASIER": 0.15,
+   "LIGHT": 0.15,
+   "DERIVED": 0.12,
+   "MEASURE": 0.08,
+   "SCENE": 0.18,
+   "JOINED": 0.0,
+   "INSTRUCT": 0.0,
+   "ONE": 0.0
+  },
+  "pose_rate": 0.3,
+  "modifier_assignment": "exact",
+  "modifier_slots": {
+   "output": [
+    "CONSTRUCT",
+    "DIGEST",
+    "EXTENT",
+    "SCENE"
+   ],
+   "scene": [
+    "PACKED",
+    "BUSY"
+   ],
+   "evidence": [
+    "VACANCY"
+   ],
+   "episode": [
+    "KEY",
+    "CHAINED",
+    "MINIMAL",
+    "DISTRIBUTED",
+    "INSTRUCT",
+    "ONE"
+   ],
+   "relevance": [
+    "IGNORE"
+   ],
+   "colour": [
+    "COLOURFUL",
+    "PAYLOAD",
+    "MONO"
+   ],
+   "demand": [
+    "EASIER",
+    "LIGHT"
+   ],
+   "test": [
+    "DERIVED"
+   ],
+   "content": [
+    "MEASURE"
+   ],
+   "structure": [
+    "JOINED"
+   ]
+  },
+  "modifier_cap": 3,
+  "modifier_exclusions": {
+   "LIGHT": [
+    "FORM",
+    "H_REASON",
+    "H_COMPOSE",
+    "MONO",
+    "BUSY",
+    "PACKED"
+   ],
+   "DIGEST": [
+    "WORLD",
+    "INTERACT",
+    "TEMPLATE",
+    "EXEMPLAR",
+    "DIRECT",
+    "STAGES",
+    "BUSY",
+    "AIM",
+    "CHAINED",
+    "MEASURE"
+   ],
+   "PACKED": [
+    "WORLD",
+    "DISTRIBUTED"
+   ],
+   "BUSY": [
+    "CONSTRUCT",
+    "DISTRIBUTED",
+    "MEASURE"
+   ],
+   "KEY": [
+    "EXEMPLAR",
+    "TEMPLATE",
+    "STAGES",
+    "CONTRAST",
+    "SPREAD",
+    "J",
+    "D1"
+   ],
+   "CHAINED": [
+    "ACROSS",
+    "CONTRAST",
+    "D1",
+    "EXEMPLAR",
+    "EXTENT",
+    "IGNORE",
+    "J",
+    "SPREAD",
+    "STAGES",
+    "TEMPLATE"
+   ],
+   "MINIMAL": [
+    "STAGES",
+    "CONTRAST",
+    "SPREAD",
+    "J",
+    "D1",
+    "ACROSS"
+   ],
+   "DISTRIBUTED": [
+    "CONTRAST",
+    "D1",
+    "H_COMPOSE",
+    "H_REASON",
+    "INTERACT",
+    "J",
+    "SPREAD",
+    "STAGES",
+    "WORLD"
+   ],
+   "DERIVED": [
+    "T",
+    "SPREAD",
+    "DISTRIBUTED",
+    "AIM"
+   ],
+   "IGNORE": [
+    "SPREAD",
+    "DISTRIBUTED"
+   ],
+   "COLOURFUL": [
+    "FORM"
+   ],
+   "MONO": [
+    "ACROSS"
+   ],
+   "MEASURE": [
+    "AIM"
+   ],
+   "EASIER": [
+    "DISTRIBUTED",
+    "SPREAD"
+   ],
+   "SCENE": [
+    "CHAINED",
+    "DIRECT",
+    "EXEMPLAR",
+    "INTERACT",
+    "RESTORE",
+    "RHYTHM",
+    "STAGES",
+    "TEMPLATE",
+    "WORLD"
+   ],
+   "ONE": [
+    "ACROSS",
+    "AIM",
+    "CHAINED",
+    "CONTRAST",
+    "D1",
+    "DERIVED",
+    "DIGEST",
+    "DISC",
+    "DISTRIBUTED",
+    "EXEMPLAR",
+    "EXTENT",
+    "IGNORE",
+    "INSTRUCT",
+    "INTERACT",
+    "J",
+    "JOINED",
+    "KEY",
+    "LEGEND",
+    "MINIMAL",
+    "PAYLOAD",
+    "SCENE",
+    "SPREAD",
+    "STAGES",
+    "SYMSEQ",
+    "T"
+   ]
+  },
+  "modifier_arm_caps": {
+   "LEVELS": 2,
+   "INVERSE": 2,
+   "AIM": 2,
+   "ACROSS": 2,
+   "STAGES": 2,
+   "CONTRAST": 2,
+   "VIEWS": 2,
+   "SPREAD": 2
+  },
+  "modifier_bare": {
+   "LEVELS": 1,
+   "INVERSE": 1,
+   "AIM": 1,
+   "ACROSS": 1,
+   "STAGES": 1,
+   "CONTRAST": 1,
+   "VIEWS": 1,
+   "SPREAD": 1,
+   "*": 2
+  },
+  "batch_references": true
+ },
+ "operations": {
+  "codex_home": null,
+  "codex_executable": "codex",
+  "codex_sha256": null,
+  "workers": 30,
+  "timeout_seconds": 5400,
+  "group_size": 1,
+  "continuous_supply": true,
+  "supply_windows": 3,
+  "allow_concurrent_activity": false,
+  "usage_credits": false
+ },
+ "policy_id": "arcgen-multi-planner-v1"
+}

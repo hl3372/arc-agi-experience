@@ -1,0 +1,2 @@
+<!-- prompt-version: diversity-v1-bridge-AIM-4 -->
+Preserve selection by a condition of success among genuine alternatives, governing how several parts or a substantial region fit together. The training pairs must teach the condition and what may change; together these must leave one test answer that the human solver can build and check by looking, without searching combinations or minimising a quantity.

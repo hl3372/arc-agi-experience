@@ -1,0 +1,99 @@
+{
+  "revision": "astra-usage-diversity-r10-20260913",
+  "palette_policy": {
+    "id": "batch-background-mixture-v1",
+    "target_percentages": {
+      "0": 30,
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5,
+      "5": 10,
+      "6": 5,
+      "7": 15,
+      "8": 15,
+      "9": 5
+    },
+    "preferred_colors": [
+      0,
+      7,
+      8
+    ],
+    "preferred_combined_target_percent": 60,
+    "preferred_combined_desired_range_percent": [
+      50,
+      70
+    ],
+    "scope": "meaningful backgrounds of newly realized episodes across both accounts",
+    "allocation_time": "after realization and native palette eligibility validation",
+    "historical_deficit_catch_up": false,
+    "unsafe_recoloring": "preserve original and count its known background",
+    "unresolved_backgrounds": "report separately",
+    "resume": "persist each task decision atomically before returning it",
+    "allocation_rule": "individual_color_deficit_with_preferred_upper_bound"
+  },
+  "role_overrides": {
+    "full_window_selection": {
+      "model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh"
+    },
+    "realization": {
+      "model": "gpt-5.6-sol",
+      "reasoning_effort": "xhigh"
+    }
+  },
+  "conditional_calls_per_window": 5,
+  "maximum_attempts": 2,
+  "editorial_mode": "bypass",
+  "adjudicator_policy": "grounded-difficulty-retention-v1",
+  "ordinary_technical_stage": "astra_technical_retention_v4",
+  "launches": 1,
+  "automatic_continuation": false,
+  "automatic_commit": false,
+  "author_pinning": {
+    "mode": "pinned_conditioned_and_inspired",
+    "count": 15
+  },
+  "new_arms": [
+    "H_DISC",
+    "H_REASON",
+    "JUDG"
+  ],
+  "accounts": [
+    "main"
+  ],
+  "allowed_accounts": [
+    "main"
+  ],
+  "allocation_policy": {
+    "eligibility": "quality_and_useful_contribution",
+    "rank_cutoff": null,
+    "family_cap": null,
+    "development_group_size": 6,
+    "uncertain_diagnostics": 0
+  },
+  "idea_models": [
+    "gpt-6-astra",
+    "gpt-5.6-sol"
+  ],
+  "author_bank": {
+    "entries": 400,
+    "broad": 150,
+    "relevant_maximum": 120,
+    "recent_maximum": 100,
+    "provisional_maximum": 25,
+    "recent_admission_pool": 300,
+    "prompt_token_budget": 200000,
+    "size_tuning_optional": true
+  },
+  "idea_efforts": [
+    "high",
+    "xhigh",
+    "max"
+  ],
+  "quota_policy": {
+    "remaining_reserve_percent": 6,
+    "minimum_launch_remaining_percent": 26,
+    "per_account_consumption_cap_points": 24
+  }
+}

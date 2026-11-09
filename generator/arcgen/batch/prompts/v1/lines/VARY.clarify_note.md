@@ -1,0 +1,2 @@
+<!-- prompt-version: weakness-v1-structure-VARY-clarify-1 -->
+Both blind solvers carried a surface over from a training pair: {SHORTCUT} Make the roles plainer to identify by structure, with one added or replaced training pair whose surface differs in the dimension the solvers held fixed, keeping the rule, the tests and their answers, and every frozen invariant. If that cannot work, return unrepairable.

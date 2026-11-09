@@ -1,0 +1,2 @@
+<!-- prompt-version: weakness-v1-structure-SHAPE-clarify-1 -->
+Both blind solvers gave the test an answer of an obvious size (the input's, a training output's, or the largest thing's box) instead of the size the rule sets. Make the quantity that sets the output's size plainer, with one added or replaced training pair in which it sets a further size, keeping the rule, the tests and their answers, and every frozen invariant. If that cannot work, return unrepairable.

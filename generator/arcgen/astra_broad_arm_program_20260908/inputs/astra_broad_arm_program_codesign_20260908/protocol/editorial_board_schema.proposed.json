@@ -1,0 +1,159 @@
+{
+  "type": "object",
+  "properties": {
+    "board_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "judgments": {
+      "type": "array",
+      "minItems": 7,
+      "maxItems": 12,
+      "items": {
+        "type": "object",
+        "properties": {
+          "task_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "novel_concept": {
+            "type": "string",
+            "enum": [
+              "weak",
+              "solid",
+              "standout"
+            ]
+          },
+          "functional_composition": {
+            "type": "string",
+            "enum": [
+              "thin",
+              "solid",
+              "standout"
+            ]
+          },
+          "overall_quality": {
+            "type": "string",
+            "enum": [
+              "below_real_bar",
+              "real_quality",
+              "exceptional"
+            ]
+          },
+          "discoverability": {
+            "type": "string",
+            "minLength": 1
+          },
+          "conceptual_compression": {
+            "type": "string",
+            "minLength": 1
+          },
+          "pair_sufficiency": {
+            "type": "string",
+            "minLength": 1
+          },
+          "composition_grid_evidence": {
+            "type": "string",
+            "minLength": 1
+          },
+          "scale_and_canvas_observation": {
+            "type": "string",
+            "minLength": 1
+          },
+          "same_minimal_procedure": {
+            "type": "boolean"
+          },
+          "theme_is_common": {
+            "type": "boolean"
+          },
+          "addition_is_excessive": {
+            "type": "boolean"
+          },
+          "intrinsic_recommendation": {
+            "type": "string",
+            "enum": [
+              "core_quality",
+              "reserve_quality",
+              "rejected_quality"
+            ]
+          },
+          "portfolio_recommendation": {
+            "type": "string",
+            "enum": [
+              "include_now",
+              "hold_crowded",
+              "same_procedure_duplicate"
+            ]
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          },
+          "conceptual_coherence": {
+            "type": "string",
+            "enum": [
+              "insufficient",
+              "solid",
+              "standout"
+            ]
+          },
+          "coherence_grid_evidence": {
+            "type": "string",
+            "minLength": 1
+          },
+          "q2_intrinsic_recommendation": {
+            "type": "string",
+            "enum": [
+              "core_quality",
+              "reserve_quality",
+              "rejected_quality"
+            ]
+          },
+          "q2_quality_reason": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "task_id",
+          "novel_concept",
+          "functional_composition",
+          "overall_quality",
+          "discoverability",
+          "conceptual_compression",
+          "pair_sufficiency",
+          "composition_grid_evidence",
+          "scale_and_canvas_observation",
+          "same_minimal_procedure",
+          "theme_is_common",
+          "addition_is_excessive",
+          "intrinsic_recommendation",
+          "portfolio_recommendation",
+          "reason",
+          "conceptual_coherence",
+          "coherence_grid_evidence",
+          "q2_intrinsic_recommendation",
+          "q2_quality_reason"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "batch_observations": {
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "board_id",
+    "judgments",
+    "batch_observations"
+  ],
+  "additionalProperties": false
+}

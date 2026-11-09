@@ -1,0 +1,124 @@
+version: "4.0"
+pipeline: arcgen-v4-control
+seed: 20260802
+
+paths:
+  annotations: annotations
+  tasks: evaluation
+  prompts: prompts
+  runs: runs
+  cache: .arcgen_cache
+  fixed_anchor_manifest: config/lean_authoring_v1_anchors.json
+  parent_manifest: config/v4_parent_manifest.json
+  committed_task_registry: committed_tasks/registry.json
+  generated_reference_policy: config/generated_reference_policy_v1.json
+  reservoir: reservoirs/v4_control.json
+  historical_case_manifest: config/v4_answer_aware_cases.json
+
+model:
+  provider: codex_cli
+  executable: codex
+  name: gpt-5.6-sol
+  reasoning_effort: max
+  timeout_seconds: 1800
+  retries: 1
+  concurrency: 8
+  stage_overrides: {}
+  roles:
+    idea_search:
+      model: gpt-5.6-sol
+      reasoning_effort: max
+    batch_selector:
+      model: gpt-5.6-sol
+      reasoning_effort: max
+    concrete_planner:
+      model: gpt-5.6-sol
+      reasoning_effort: max
+    task_realizer:
+      model: gpt-5.6-sol
+      reasoning_effort: max
+    technical_verifier:
+      model: gpt-5.6-sol
+      reasoning_effort: high
+    blind_solver:
+      model: gpt-5.6-sol
+      reasoning_effort: xhigh
+    ambiguity_adjudicator:
+      model: gpt-5.6-sol
+      reasoning_effort: high
+    targeted_repair:
+      model: gpt-5.6-sol
+      reasoning_effort: max
+    editorial_board:
+      model: gpt-5.6-sol
+      reasoning_effort: max
+
+embedding:
+  provider: openrouter
+  model: openai/text-embedding-3-large
+  api_key_env: OPENROUTER_API_KEY
+  base_url: https://openrouter.ai/api/v1
+  batch_size: 64
+  timeout_seconds: 120
+  retries: 2
+  app_name: arcgen-v4-control
+
+reservoir:
+  low_watermark: 48
+  high_watermark: 96
+  hard_capacity: 144
+  lease_seconds: 259200
+  replenishment_cycles_per_command: 4
+  ideas_per_call: 4
+  calibration_examples_per_call: 4
+  generator_visible_pool_count: 90
+  calibration_version: v4-real-descriptions-disjoint-v1
+  per_mode_supply_calls:
+    open: 1
+    concept_led: 1
+    composition_led: 1
+
+selection:
+  search_modes:
+    - open
+    - concept_led
+    - composition_led
+  eligible_window_size: 48
+  shard_size: 12
+  shard_selector_max_selected: 5
+  global_selector_max_selected: 10
+  max_plans: 10
+  max_realizations: 8
+  references_per_candidate: 3
+  fixed_anchor_count: 6
+  maximum_optional_development_suggestions: 2
+
+editorial_queue:
+  minimum_generated_tasks: 4
+  maximum_generated_tasks: 6
+  maximum_wait_seconds: 1800
+
+budget:
+  normal_stage_limits:
+    batch_selector: 5
+    concrete_planner: 10
+    task_realizer: 8
+    technical_verifier: 8
+    blind_solver: 8
+    editorial_board: 16
+  normal_control_maximum: 55
+  escalation_call_limit: 5
+  hard_control_maximum: 60
+  reservoir_calls_per_cycle: 3
+
+experimental:
+  enabled: false
+  kind: none
+  gating: false
+  auto_promote: false
+  arm_id: control
+
+run:
+  id: v4-control-qualification-20260802
+  mock: false
+  automatically_commit_generated_tasks: false

@@ -1,0 +1,2 @@
+<!-- prompt-version: weakness-v1-relax-RELATION-across-grids-1 -->
+Relaxed fence for this idea: the contrast across grids. The two look-alikes with the same colour, shape and size and different outcomes may sit in two different training grids instead of one; every grid still holds look-alikes, and no feature of a thing on its own predicts every outcome. This holds over "at least one training grid holds two look-alikes" only; everything else above stands.

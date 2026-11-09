@@ -1,0 +1,2 @@
+<!-- prompt-version: weakness-v1-structure-ELIMINATE-clarify-1 -->
+Both blind solvers answered the test with a rival rule this episode's pairs rule out: {SHORTCUT} Make the pair that refutes it plainer: change that pair so that the difference the rival gets wrong is easier to see, with nothing else setting it apart, keeping every other rival's refuting pair, the rule, the tests and their answers, and every frozen invariant. If that cannot work, return unrepairable.

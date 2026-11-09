@@ -1,0 +1,2 @@
+<!-- prompt-version: diversity-v1-slot-planner-DIGEST-4 -->
+Keep the output small and its meaning grounded in the relevant input and the learned relation; the training pairs must determine its exact form, and it should picture the conclusion in the scene's own visual terms. Do not expand it into a reproduction or edited copy of the input, replace it with an arbitrary label or a chart of colour swatches, or reduce it to a cell that could be guessed from the colours present.

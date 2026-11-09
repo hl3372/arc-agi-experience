@@ -1,0 +1,479 @@
+{
+  "status": "implemented_for_next_run_not_launched",
+  "primary_arm_count": 18,
+  "arms": [
+    {
+      "id": "C",
+      "label": "Open conditioned generation",
+      "role": "open_comparator",
+      "parent": "C_Q",
+      "private_source_class": "ordinary_conditioned",
+      "idea_effort": "high",
+      "shared_policy": "q2-proposed-v1",
+      "near_overlaps": [],
+      "recipe_id": "bap_c_none_h_q2_r1",
+      "intervention_stages": [
+        "common_quality_policy"
+      ]
+    },
+    {
+      "id": "I1",
+      "label": "Independent exploration",
+      "role": "open_comparator",
+      "parent": "I1_Q",
+      "private_source_class": "ordinary_unconditioned",
+      "idea_effort": "xhigh",
+      "shared_policy": "q2-proposed-v1",
+      "near_overlaps": [],
+      "recipe_id": "bap_i1_none_xh_q2_r1",
+      "intervention_stages": [
+        "common_quality_policy"
+      ],
+      "additional_invitations": [
+        "ANA"
+      ]
+    },
+    {
+      "id": "J",
+      "label": "Episode-joint reasoning",
+      "role": "existing_specialist",
+      "parent": "J_Q",
+      "private_source_class": "episode_joint_inference",
+      "idea_effort": "xhigh",
+      "shared_policy": "q2-proposed-v1",
+      "near_overlaps": [],
+      "recipe_id": "bap_j_none_xh_q2_r1",
+      "intervention_stages": [
+        "common_quality_policy"
+      ]
+    },
+    {
+      "id": "T",
+      "label": "Grounded logical leap",
+      "role": "existing_specialist",
+      "parent": "T_Q",
+      "private_source_class": "logical_leap",
+      "idea_effort": "xhigh",
+      "shared_policy": "q2-proposed-v1",
+      "near_overlaps": [],
+      "recipe_id": "bap_t_none_xh_q2_r1",
+      "intervention_stages": [
+        "common_quality_policy"
+      ]
+    },
+    {
+      "id": "ACC",
+      "label": "Relatively accessible",
+      "role": "broad_research",
+      "parent": "I1_Q",
+      "private_source_class": "ordinary_unconditioned",
+      "idea_effort": "xhigh",
+      "shared_policy": "q2-proposed-v1",
+      "near_overlaps": [
+        "DISC",
+        "COMPACT",
+        "REF_STYLE"
+      ],
+      "idea_card": "prompts/primary/ACC.idea.proposed.md",
+      "planner_bridge": "prompts/primary/ACC.planner.proposed.md",
+      "intervention_stages": [
+        "idea",
+        "planning"
+      ],
+      "recipe_id": "bap_acc_none_xh_q2_r1"
+    },
+    {
+      "id": "ABS",
+      "label": "Necessary abstraction",
+      "role": "broad_research",
+      "parent": "I1_Q",
+      "private_source_class": "ordinary_unconditioned",
+      "idea_effort": "xhigh",
+      "shared_policy": "q2-proposed-v1",
+      "near_overlaps": [
+        "DISC",
+        "REL"
+      ],
+      "idea_card": "prompts/primary/ABS.idea.proposed.md",
+      "planner_bridge": "prompts/primary/ABS.planner.proposed.md",
+      "intervention_stages": [
+        "idea",
+        "planning"
+      ],
+      "recipe_id": "bap_abs_none_xh_q2_r1"
+    },
+    {
+      "id": "DISC",
+      "label": "Demanding discovery, concise execution",
+      "role": "broad_research",
+      "parent": "I1_Q",
+      "private_source_class": "ordinary_unconditioned",
+      "idea_effort": "xhigh",
+      "shared_policy": "q2-proposed-v1",
+      "near_overlaps": [
+        "ABS",
+        "ACC"
+      ],
+      "idea_card": "prompts/primary/DISC.idea.proposed.md",
+      "planner_bridge": "prompts/primary/DISC.planner.proposed.md",
+      "intervention_stages": [
+        "idea",
+        "planning"
+      ],
+      "recipe_id": "bap_disc_none_xh_q2_r1",
+      "additional_invitations": [
+        "PER"
+      ]
+    },
+    {
+      "id": "EXEC",
+      "label": "Accessible rule, substantive execution",
+      "role": "broad_research",
+      "parent": "I1_Q",
+      "private_source_class": "ordinary_unconditioned",
+      "idea_effort": "xhigh",
+      "shared_policy": "q2-proposed-v1",
+      "near_overlaps": [
+        "EXP",
+        "FORM"
+      ],
+      "idea_card": "prompts/primary/EXEC.idea.proposed.md",
+      "planner_bridge": "prompts/primary/EXEC.planner.proposed.md",
+      "intervention_stages": [
+        "idea",
+        "planning"
+      ],
+      "recipe_id": "bap_exec_none_xh_q2_r1",
+      "additional_invitations": [
+        "CAUSE"
+      ]
+    },
+    {
+      "id": "D1",
+      "label": "Exactly one demonstration",
+      "role": "broad_research",
+      "parent": "I1_Q",
+      "private_source_class": "ordinary_unconditioned",
+      "idea_effort": "xhigh",
+      "shared_policy": "q2-proposed-v1",
+      "near_overlaps": [
+        "MANY",
+        "J"
+      ],
+      "idea_card": "prompts/primary/D1.idea.proposed.md",
+      "planner_bridge": "prompts/primary/D1.planner.proposed.md",
+      "intervention_stages": [
+        "idea",
+        "planning"
+      ],
+      "recipe_id": "bap_d1_none_xh_q2_r1"
+    },
+    {
+      "id": "MANY",
+      "label": "Many useful demonstrations",
+      "role": "broad_research",
+      "parent": "I1_Q",
+      "private_source_class": "ordinary_unconditioned",
+      "idea_effort": "xhigh",
+      "shared_policy": "q2-proposed-v1",
+      "near_overlaps": [
+        "D1",
+        "J"
+      ],
+      "idea_card": "prompts/primary/MANY.idea.proposed.md",
+      "planner_bridge": "prompts/primary/MANY.planner.proposed.md",
+      "intervention_stages": [
+        "idea",
+        "planning"
+      ],
+      "recipe_id": "bap_many_none_xh_q2_r1"
+    },
+    {
+      "id": "COMPACT",
+      "label": "Compact embodiment",
+      "role": "broad_research",
+      "parent": "I1_Q",
+      "private_source_class": "ordinary_unconditioned",
+      "idea_effort": "xhigh",
+      "shared_policy": "q2-proposed-v1",
+      "near_overlaps": [
+        "ACC",
+        "DISC"
+      ],
+      "idea_card": "prompts/primary/COMPACT.idea.proposed.md",
+      "planner_bridge": "prompts/primary/COMPACT.planner.proposed.md",
+      "intervention_stages": [
+        "idea",
+        "planning"
+      ],
+      "recipe_id": "bap_compact_none_xh_q2_r1"
+    },
+    {
+      "id": "EXP",
+      "label": "Functionally expansive embodiment",
+      "role": "broad_research",
+      "parent": "I1_Q",
+      "private_source_class": "ordinary_unconditioned",
+      "idea_effort": "xhigh",
+      "shared_policy": "q2-proposed-v1",
+      "near_overlaps": [
+        "EXEC",
+        "FIELD"
+      ],
+      "idea_card": "prompts/primary/EXP.idea.proposed.md",
+      "planner_bridge": "prompts/primary/EXP.planner.proposed.md",
+      "intervention_stages": [
+        "idea",
+        "planning"
+      ],
+      "recipe_id": "bap_exp_none_xh_q2_r1"
+    },
+    {
+      "id": "XFER",
+      "label": "Supported transfer",
+      "role": "broad_research",
+      "parent": "I1_Q",
+      "private_source_class": "ordinary_unconditioned",
+      "idea_effort": "xhigh",
+      "shared_policy": "q2-proposed-v1",
+      "near_overlaps": [
+        "T",
+        "REF_STYLE"
+      ],
+      "idea_card": "prompts/primary/XFER.idea.proposed.md",
+      "planner_bridge": "prompts/primary/XFER.planner.proposed.md",
+      "intervention_stages": [
+        "idea",
+        "planning"
+      ],
+      "recipe_id": "bap_xfer_none_xh_q2_r1"
+    },
+    {
+      "id": "REF_STYLE",
+      "label": "Evaluation task character",
+      "role": "broad_research",
+      "parent": "I1_Q",
+      "private_source_class": "ordinary_unconditioned",
+      "idea_effort": "xhigh",
+      "shared_policy": "q2-proposed-v1",
+      "near_overlaps": [
+        "ACC",
+        "ABS",
+        "EXP",
+        "XFER"
+      ],
+      "idea_card": "prompts/primary/REF_STYLE.idea.proposed.md",
+      "planner_bridge": "prompts/primary/REF_STYLE.planner.proposed.md",
+      "intervention_stages": [
+        "idea",
+        "planning"
+      ],
+      "recipe_id": "bap_ref_style_none_xh_q2_r1"
+    },
+    {
+      "id": "H_DISC",
+      "label": "Difficult discovery, manageable application",
+      "role": "new_experimental_profile",
+      "parent": "I1_Q",
+      "comparison_parent": "DISC",
+      "bank_parent_arms": [
+        "DISC"
+      ],
+      "target_profile": "H_DISC",
+      "idea_effort": "xhigh",
+      "shared_policy": "q2-proposed-v1",
+      "near_overlaps": [
+        "DISC",
+        "ABS"
+      ],
+      "idea_card": "prompts/primary/H_DISC.idea.md",
+      "planner_bridge": "prompts/primary/H_DISC.planner.md",
+      "intervention_stages": [
+        "idea",
+        "planning"
+      ],
+      "additional_invitations": [
+        "PER"
+      ],
+      "note": "Ordinary single-answer source class is derived from conditioning mode. Profile is an authoring target, never a quality or measured-difficulty label."
+    },
+    {
+      "id": "H_REASON",
+      "label": "Difficult dependent reasoning after discovery",
+      "role": "new_experimental_profile",
+      "parent": "I1_Q",
+      "comparison_parent": "EXEC",
+      "bank_parent_arms": [
+        "EXEC"
+      ],
+      "target_profile": "H_REASON",
+      "idea_effort": "xhigh",
+      "shared_policy": "q2-proposed-v1",
+      "near_overlaps": [
+        "EXEC",
+        "ABS"
+      ],
+      "idea_card": "prompts/primary/H_REASON.idea.md",
+      "planner_bridge": "prompts/primary/H_REASON.planner.md",
+      "intervention_stages": [
+        "idea",
+        "planning"
+      ],
+      "additional_invitations": [
+        "CAUSE"
+      ],
+      "note": "Ordinary single-answer source class is derived from conditioning mode. Profile is an authoring target, never a quality or measured-difficulty label."
+    },
+    {
+      "id": "JUDG",
+      "label": "Contextual judgment",
+      "role": "new_experimental_profile",
+      "parent": "I1_Q",
+      "comparison_parent": "I1",
+      "bank_parent_arms": [],
+      "target_profile": "JUDG",
+      "idea_effort": "xhigh",
+      "shared_policy": "q2-proposed-v1",
+      "near_overlaps": [
+        "DISC",
+        "EXEC",
+        "XFER"
+      ],
+      "idea_card": "prompts/primary/JUDG.idea.md",
+      "planner_bridge": "prompts/primary/JUDG.planner.md",
+      "intervention_stages": [
+        "idea",
+        "planning"
+      ],
+      "additional_invitations": [
+        "ANA"
+      ],
+      "note": "Ordinary single-answer source class is derived from conditioning mode. Profile is an authoring target, never a quality or measured-difficulty label."
+    },
+    {
+      "id": "FORM",
+      "label": "Taught formal systems",
+      "role": "bounded_specialist",
+      "parent": "I1_Q",
+      "bank_parent_arms": [],
+      "target_profile": "FORM",
+      "idea_effort": "xhigh",
+      "idea_card": "prompts/primary/FORM.idea.md",
+      "planner_bridge": "prompts/primary/FORM.planner.md",
+      "intervention_stages": [
+        "idea",
+        "planning"
+      ],
+      "note": "The episode teaches its conventions; no external specialist knowledge. Actual audited formal content may supply relevance without relabeling source arms."
+    }
+  ],
+  "family_variant_count": 11,
+  "families": [
+    {
+      "id": "PER",
+      "card": "prompts/families/PER.proposed.md",
+      "stage": "idea",
+      "status": "minority_variant",
+      "declinable": true
+    },
+    {
+      "id": "GEO",
+      "card": "prompts/families/GEO.proposed.md",
+      "stage": "idea",
+      "status": "minority_variant",
+      "declinable": true
+    },
+    {
+      "id": "REL",
+      "card": "prompts/families/REL.proposed.md",
+      "stage": "idea",
+      "status": "minority_variant",
+      "declinable": true
+    },
+    {
+      "id": "FIELD",
+      "card": "prompts/families/FIELD.proposed.md",
+      "stage": "idea",
+      "status": "minority_variant",
+      "declinable": true
+    },
+    {
+      "id": "SEM",
+      "card": "prompts/families/SEM.proposed.md",
+      "stage": "idea",
+      "status": "minority_variant",
+      "declinable": true
+    },
+    {
+      "id": "CAUSE",
+      "card": "prompts/families/CAUSE.proposed.md",
+      "stage": "idea",
+      "status": "minority_variant",
+      "declinable": true
+    },
+    {
+      "id": "ANA",
+      "card": "prompts/families/ANA.proposed.md",
+      "stage": "idea",
+      "status": "minority_variant",
+      "declinable": true
+    },
+    {
+      "id": "INV",
+      "card": "prompts/families/INV.proposed.md",
+      "stage": "idea",
+      "status": "minority_variant",
+      "declinable": true
+    },
+    {
+      "id": "NUM",
+      "card": "prompts/families/NUM.proposed.md",
+      "stage": "idea",
+      "status": "minority_variant",
+      "declinable": true
+    },
+    {
+      "id": "MAKE",
+      "card": "prompts/families/MAKE.proposed.md",
+      "stage": "idea",
+      "status": "minority_variant",
+      "declinable": true
+    },
+    {
+      "id": "PAT",
+      "card": "prompts/families/PAT.proposed.md",
+      "stage": "idea",
+      "status": "minority_variant",
+      "declinable": true
+    }
+  ],
+  "shared_quality_card": "prompts/shared_quality.proposed.md",
+  "no_separate_profile_schedule": true,
+  "family_invited_fraction_within_active_arm_cycle": [
+    1,
+    4
+  ],
+  "maximum_families_per_idea_call": 1,
+  "conditional_budget_per_context": 5,
+  "new_task_launch_authorized": false,
+  "notes": [
+    "18 primary arms; 11 declinable minority invitations. Every arm supports all three bank settings; the bounded batch covers a subset.",
+    "The 400-reference pack preserves accepted/provisional status and same-arm/variant priority.",
+    "Bounded ambiguity remains separate."
+  ],
+  "initial_skip_pairs": [
+    {
+      "arm": "ABS",
+      "family": "REL",
+      "reason": "Current broad wording substantially restates the primary target."
+    },
+    {
+      "arm": "REF_STYLE",
+      "family": "SEM",
+      "reason": "Current interpretation-learning wording substantially restates the primary card."
+    }
+  ],
+  "accounts": [
+    "main"
+  ]
+}

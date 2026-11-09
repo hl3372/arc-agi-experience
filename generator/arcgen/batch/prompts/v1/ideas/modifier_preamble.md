@@ -1,0 +1,2 @@
+<!-- prompt-version: diversity-v1-idea-modifier-preamble-2 -->
+The requirements below apply to every idea in this call. Meet them within one coherent, learnable task: they may play different roles, and connected steps or representations are allowed, but none may be met by an unrelated addition. In each kernel's `why_coherent`, explain in ordinary task terms how the parts work together, without naming these requirements.

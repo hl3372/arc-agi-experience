@@ -1,0 +1,1 @@
+Preserve two or three meaningfully different supported test applications of the same relation. Include every test in the plan and realization. Do not obtain variation by introducing an unsupported clause.

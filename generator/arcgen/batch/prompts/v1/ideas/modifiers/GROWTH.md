@@ -1,0 +1,2 @@
+<!-- prompt-version: blindspot-v1-idea-modifier-GROWTH-2 -->
+Additional requirement for this call: in each idea, a regularity steps from one term to the next across the canvas, not along a single strip (what is drawn grows, moves, turns or changes its spacing as it goes), and the answer carries the regularity further or completes it, drawn in full. Finding how each step changes is the insight, so the training pairs show it with different starting points or step sizes.

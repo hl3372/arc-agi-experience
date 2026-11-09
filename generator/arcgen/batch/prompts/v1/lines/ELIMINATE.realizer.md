@@ -1,0 +1,2 @@
+<!-- prompt-version: weakness-v1-structure-ELIMINATE-realizer-1 -->
+Rival records: give weakness_outputs.alternatives with one record per strongest_simple_shortcuts entry beginning "Rival", in order: id r1, r2 or r3, line "ELIMINATE", kind "rival", note (the rival rule in a few words), train (that rival applied exactly as its rule states it to every training input, in order: the whole output grid it gives), and test (its whole answer for every test input, in order). Give what each rival actually produces, cell for cell, including the pair where it fails.

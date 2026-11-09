@@ -1,0 +1,4 @@
+<!-- prompt-version: diversity-v1-idea-card-VIEWS-3 -->
+## Direction for this call
+
+Seek a task in which the same visual material supports two distinct, compatible readings, and the answer depends on both. Each reading must settle something the other leaves unresolved, so neither alone determines the result, and both remain valid in the solution: the human solver should not discard one as a mistaken interpretation. Attending to two features or doing independent jobs on one grid is not enough. Once both readings are seen, the answer should follow directly, without trying arrangements of pieces until one satisfies both. The examples should teach both readings and their connection, and the test should require that connection in a situation the examples did not literally show. Nothing may rest on colour numbers or an arbitrary code.

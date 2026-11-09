@@ -1,0 +1,2 @@
+<!-- prompt-version: diversity-v1-bridge-FORM-2 -->
+Preserve the kernel's logic. Make every convention, state and tie rule learnable from the public episode, and keep the reasoning something a careful human could carry out by hand, step by step. Do not add registers, legends, bookkeeping or intermediate calculations the logic does not need, and do not require recognising a named puzzle, game, algorithm or formula. Retain the ordinary single-answer evidence contract.

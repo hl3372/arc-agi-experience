@@ -1,0 +1,2 @@
+<!-- prompt-version: weakness-v1-line-REFRAME-realizer-1 -->
+Points: the plan's strongest_simple_shortcuts entry whose rule begins "Shortcut:" reads positions or directions in rows and columns from the corner. Give in weakness_outputs.points one point per test (kind "default frame"): the answer that reading gives, as the cells where it differs from the true answer. If no entry begins "Shortcut:", set points to null.

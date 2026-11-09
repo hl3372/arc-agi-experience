@@ -1,0 +1,2 @@
+<!-- prompt-version: weakness-v1-relax-PROCESS-contact-1 -->
+Relaxed fence for this idea: contact. Moving or spreading things change when they meet: they merge, deflect, stop or split. Contacts happen at a minority of places, in at least two training pairs and in the test, and the test's answer depends on them. Put as the "Shortcut:" entry the simulation in which nothing interacts. Everything else above stands.

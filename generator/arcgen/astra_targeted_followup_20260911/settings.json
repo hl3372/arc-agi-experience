@@ -1,0 +1,40 @@
+{
+  "revision": "astra-targeted-followup-r3-20260911",
+  "selector": {
+    "accepted_neighbors_per_candidate": 25,
+    "real_neighbors_per_candidate": 3,
+    "maximum_candidates": 48,
+    "maximum_family_developments": 2,
+    "maximum_redundant_group_developments": 1,
+    "prompt_token_budget": 200000,
+    "reference_token_budget": 160000,
+    "context_limit": 272000,
+    "response_headroom": 32768,
+    "neighbor_tuning_optional": true,
+    "source_ceilings": "replaced_by_explicit_coverage_targets",
+    "natural_frontier": 18
+  },
+  "author_bank": {
+    "entries": 300,
+    "broad": 150,
+    "relevant_maximum": 90,
+    "rotating_remainder": true,
+    "prompt_token_budget": 200000,
+    "size_tuning_optional": true
+  },
+  "downstream": {
+    "editorial_modes": [
+      "enabled",
+      "bypass"
+    ],
+    "default_editorial_mode": "bypass",
+    "next_batch_editorial_mode": "bypass",
+    "evidence_consistency": "explicit_retention_decision_v3"
+  },
+  "launch_authorized": false,
+  "new_experiment_allocations": null,
+  "new_experiment_call_budget": null,
+  "allowed_accounts": [
+    "main"
+  ]
+}

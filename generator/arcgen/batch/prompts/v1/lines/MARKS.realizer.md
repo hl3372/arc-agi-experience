@@ -1,0 +1,2 @@
+<!-- prompt-version: weakness-v1-line-MARKS-realizer-1 -->
+Points: the plan's strongest_simple_shortcuts entry whose rule begins "Shortcut:" carries the most common training value of the marks to the test. Give in weakness_outputs.points one point per place in each test where marks set a value (kind "mark value"): that reading applied there only. If no entry begins "Shortcut:", set points to null.

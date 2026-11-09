@@ -1,0 +1,2 @@
+<!-- prompt-version: weakness-v1-relax-MARKS-inside-1 -->
+Relaxed fence for this idea: marks inside the governed things. The marks may sit inside the things they govern, rather than apart from them, when their number or position (not their shape or colour) carries the value, the value differs among things in the same grid, and some grid holds two things of the same kind with different mark values and different outcomes. The shortcut is then the reading that treats things alike when they look alike. Everything else above stands.

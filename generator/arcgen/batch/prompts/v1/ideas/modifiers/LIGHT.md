@@ -1,0 +1,2 @@
+<!-- prompt-version: diversity-v1-idea-modifier-LIGHT-3 -->
+Additional requirement for this call: each idea may be hard to discover, but applying its insight should be brief and direct: once the rule is understood, the human solver should be able to produce the answer with little bookkeeping, no extended search and no long chain of dependent decisions. Application effort is separate from output size. An answer defined as the fewest, smallest or best of many possibilities qualifies only when the winner can be seen without trying the others.

@@ -1,14 +1,16 @@
-# outputs of rounds, pilots and validation (model call records, dossiers, private answers)
-runs/
-# environments and caches
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
 .venv/
 venv/
-__pycache__/
-*.pyc
-*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
 build/
 dist/
-.pytest_cache/
-# keys: never commit an OpenRouter key file
+
+# Local data, caches and secrets
+.env
 *.key
-.openrouter_key
+.DS_Store

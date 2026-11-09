@@ -1,0 +1,2 @@
+<!-- prompt-version: diversity-v1-slot-planner-PACKED-5 -->
+Keep the inputs dense, with organised visual material across most of each grid, and keep the insight dependent on structure formed by that material. Do not satisfy density with a uniform fill or unread texture around sparse marks, with a grid that is dense only because it is small, with an array of separately framed panels, or with bands repeating one colour sequence.
