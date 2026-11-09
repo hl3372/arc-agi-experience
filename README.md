@@ -18,9 +18,10 @@ Hugging Face (CC BY 4.0).
 
 **Paper.** Link to come.
 
-> **Release status.** This is a cleaned-up version of our research code, prepared for release. Each module passes its
-> offline test suite, but the cleaned-up code has not yet been run end to end against live models. If something
-> breaks, please open an issue; we're happy to fix bugs.
+> **Release status.** Most of the code here is a cleaned-up version of the research code we ran, prepared for
+> release. We didn't have the chance to test the cleaned-up version end to end before the deadline. Each module
+> passes its offline test suite, and it should work. The code we ran locally is available on request. Please report
+> any bugs you find, by opening an issue, so we can fix them.
 
 ## Licence
 
