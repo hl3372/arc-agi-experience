@@ -1,0 +1,6 @@
+# generators
+numpy>=2.0
+# packing (token lengths through the model's chat template)
+transformers>=5.0
+# tests
+pytest>=8.0

@@ -1,0 +1,4 @@
+# Python 3.12. GPU generation (run_eval.py):
+vllm==0.30.0
+transformers==5.2.0
+# Scoring and re-scoring (scoring.py, score.py) need only the Python standard library.

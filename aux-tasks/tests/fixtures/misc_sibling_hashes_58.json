@@ -1,0 +1,51 @@
+{
+  "_note": "Aggregate sha1 over per-seed sha1(json.dumps(generate(tid, s), sort_keys=True)) for s in range(seeds), captured from the ORIGINAL generators/misc.py before the task-58 overhaul. Tasks 13/56/57 are omitted on purpose (edited concurrently on other branches).",
+  "59": {
+    "seeds": 500,
+    "sha1": "c5c45e0df25a20421d4cf8cd1d6f9cca5d1c5a73"
+  },
+  "26": {
+    "seeds": 200,
+    "sha1": "8bf55fc83bf87cb42bdaed41defa43035d7ff52a"
+  },
+  "27": {
+    "seeds": 200,
+    "sha1": "840065f630a3911d6bfcc1620f4c966f518960f9"
+  },
+  "28": {
+    "seeds": 200,
+    "sha1": "9da0a3e17eb40ecb64b5726cb57093b7bc161ef3"
+  },
+  "31": {
+    "seeds": 200,
+    "sha1": "2b511310d44feee1983a1a875a941cdc81443da8"
+  },
+  "35": {
+    "seeds": 200,
+    "sha1": "89f576caceb8690061cf1003408212c0866e7935"
+  },
+  "80": {
+    "seeds": 200,
+    "sha1": "babc2445123a15d48717618c01844eb373556295"
+  },
+  "82": {
+    "seeds": 200,
+    "sha1": "a22991c1d60bf1df1f70092f39f00a31eb317c25"
+  },
+  "83": {
+    "seeds": 200,
+    "sha1": "250b967b929c23c3e45c27fd3ec906e501681fdc"
+  },
+  "90": {
+    "seeds": 200,
+    "sha1": "45e13fe6fbd2b853f92bcfa87c570ad683cdc85d"
+  },
+  "91": {
+    "seeds": 200,
+    "sha1": "db37c1ba128cdb480bc5927703d27a4848cd128c"
+  },
+  "92": {
+    "seeds": 200,
+    "sha1": "71ddcd8735bd0a4ff73d59f0ece09c08930db93c"
+  }
+}

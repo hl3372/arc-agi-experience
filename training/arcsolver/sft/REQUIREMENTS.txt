@@ -1,0 +1,26 @@
+# arcsolver.sft + arcsolver.tools dependencies (versions = the training environment our runs used).
+# Python 3.12. Install torch from the CUDA 12.8 index: --index-url https://download.pytorch.org/whl/cu128
+
+# required (trainer + data pipeline)
+torch==2.10.0+cu128
+transformers==5.2.0
+tokenizers==0.22.2
+safetensors==0.8.0
+numpy==2.5.2
+accelerate==1.15.0
+# Gated DeltaNet kernels for Qwen3.5 (without fla, transformers falls back to a very slow torch path)
+flash-linear-attention==0.5.0
+fla-core==0.5.0
+triton==3.6.0
+# fla's TileLang backend on Hopper; on Blackwell set FLA_TILELANG=0 (see README.md)
+tilelang==0.1.14
+
+# optional
+wandb==0.26.1            # --wandb-project (reads WANDB_API_KEY from the environment)
+kernels                   # --attn fa3 without --fa3-dir (downloads kernels-community/flash-attn3; any recent version)
+liger-kernel==0.8.5      # --fused-kernels liger
+torchao==0.18.0          # --fp8 rowwise|tensorwise (experimental)
+# --attn fa4 (Blackwell): flash-attn-4==4.0.0b36 nvidia-cutlass-dsl==4.7.1 nvidia-cutlass-dsl-libs-base==4.7.1
+#   nvidia-cutlass-dsl-libs-core==4.7.1 nvidia-cutlass-dsl-libs-cu12==4.7.1 apache-tvm-ffi torch-c-dlpack-ext
+#   quack-kernels==0.6.5, installed with `pip install --no-deps --target DIR ...` and passed as --fa4-dir DIR
+#   (kept out of the training venv)

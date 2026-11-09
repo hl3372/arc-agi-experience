@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "tasks": {
+    "30": [
+      {
+        "id": "30_v001",
+        "template": "Return the count of cells whose color is {ci_any:query_color|query_color_index}.",
+        "note": "count color cells"
+      },
+      {
+        "id": "30_v002",
+        "template": "How many grid cells have color {ci_any:query_color|query_color_index}?",
+        "note": "same answer format"
+      }
+    ]
+  }
+}

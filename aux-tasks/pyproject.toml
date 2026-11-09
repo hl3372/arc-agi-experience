@@ -1,0 +1,18 @@
+[project]
+name = "arc-aux-tasks"
+version = "0.1.0"
+description = "Procedural generators for auxiliary ARC-style grid tasks, and the SFT row packing built on them"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { file = "LICENSE" }
+dependencies = ["numpy>=2.0"]
+
+[project.optional-dependencies]
+packing = ["transformers>=5.0"]
+test = ["pytest>=8.0"]
+
+# The modules import each other by top-level name (registry, prompts, generators, common) and are run from
+# this folder; there is no installed package.
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-p no:cacheprovider"

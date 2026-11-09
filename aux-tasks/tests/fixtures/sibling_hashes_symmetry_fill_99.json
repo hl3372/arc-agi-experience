@@ -1,0 +1,13 @@
+{
+ "_note": "Tasks 99 and 100 left generators/core2_extra/batch_symmetry_f.py on 2026-09-15 (merged into generators/symmetry_fill_99.py), and tasks 101 and 102 left it on 2026-09-16 (rebuilt as generators/symmetry_violations_101.py and generators/symmetry_report_102.py); these seven siblings stayed byte-identical.",
+ "n_seeds": 100,
+ "sha1": {
+  "103": "d135b703c072febc1c9996fd5e1d4a8fa8f712fb",
+  "104": "b8495c70b223c1d663e60805a52e89fe43d58a3b",
+  "107": "62a390995279d55a11da6554500ac77bbc733409",
+  "120": "edc4e63e2c47045cd1b596442d164ee3ca4aa735",
+  "127": "bd4ca63576559e3f5f48f6ba05a94a6f69246ca8",
+  "130": "f4f08e42052c76eafc10a42ddd1725cf27057a1f",
+  "281": "917dda48fc2dc8800ecbd82a98654eabe54d673b"
+ }
+}

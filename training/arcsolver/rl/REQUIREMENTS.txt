@@ -1,0 +1,32 @@
+# The RL trainer runs in TWO Python environments (both Python 3.12, Linux, NVIDIA GPUs):
+#   1. the training environment: runs `torchrun -m arcsolver.rl.train` and the node services;
+#   2. the vLLM environment: runs the sampler engines (arcsolver/rl/vllm_worker.py, a standalone script that imports
+#      no arcsolver code), passed to the trainer as --vllm-python /path/to/vllm-env/bin/python.
+# Pinned versions (==) are the ones the released runs used. Unpinned entries were not recorded; a release compatible
+# with the pinned packages should work.
+
+# ---- 1. training environment ----------------------------------------------------------------------------------------
+# torch 2.10.0 built for CUDA 12.8:  pip install torch==2.10.0 --index-url https://download.pytorch.org/whl/cu128
+torch==2.10.0
+transformers==5.2.0
+accelerate==1.15.0
+triton==3.6.0
+safetensors
+numpy
+# Qwen3.5 GatedDeltaNet kernels (fla). On Hopper with Triton >= 3.4 the gated-delta-rule backward needs tilelang;
+# on Blackwell set FLA_TILELANG=0 (much faster there).
+flash-linear-attention~=0.5          # fla 0.5.x
+tilelang
+# optional: --trainer-attn fa3 (Hopper) loads FlashAttention-3 from the HF kernels hub (or $ARC_FA3_DIR, filled by
+# `python -m arcsolver.rl.attn_backends fetch-fa3`)
+kernels
+# optional: --trainer-attn fa4 (Blackwell) uses FlashAttention-4 (flash_attn.cute, CuTe DSL), installed or from $ARC_FA4_DIR
+# flash-attn-4 / nvidia-cutlass-dsl==4.7.1
+# optional: W&B logging (only when WANDB_API_KEY is set and --no-wandb is absent)
+wandb
+# tests: pytest
+
+# ---- 2. vLLM environment ----------------------------------------------------------------------------------------------
+# vllm==0.30.0   (brings its own torch/CUDA build and flashinfer-python; FlashInfer JIT on very new GPUs needs a CUDA
+#                 toolkit matching the GPU: see scripts/rl/engine_env.sh)
+# ninja must be on PATH for FlashInfer's JIT.

@@ -1,0 +1,31 @@
+# Tested versions (Python 3.12, Linux, NVIDIA GPUs). Install torch from the CUDA 12.8 index first:
+#   pip install torch==2.10.0 --index-url https://download.pytorch.org/whl/cu128
+# Per-part details: arcsolver/sft/REQUIREMENTS.txt, arcsolver/rl/REQUIREMENTS.txt, arcsolver/eval/REQUIREMENTS.txt.
+
+# ---- training environment (SFT trainer, data pipeline, tools, RL trainer) ----
+torch==2.10.0
+transformers==5.2.0
+tokenizers==0.22.2
+safetensors==0.8.0
+numpy==2.5.2
+accelerate==1.15.0
+triton==3.6.0
+# Qwen3.5 Gated DeltaNet kernels. On Hopper the gated-delta-rule backward needs tilelang; on Blackwell set FLA_TILELANG=0.
+flash-linear-attention==0.5.0
+fla-core==0.5.0
+tilelang==0.1.14
+# optional: FA3 from the HF kernels hub (--attn fa3 / --trainer-attn fa3 without a local copy)
+kernels
+# optional: W&B logging (reads WANDB_API_KEY from the environment)
+wandb==0.26.1
+# optional: --fused-kernels liger (SFT)
+liger-kernel==0.8.5
+# FA4 (Blackwell, --attn fa4): flash-attn-4==4.0.0b36 with nvidia-cutlass-dsl==4.7.1 (+ libs-base/core/cu12),
+#   apache-tvm-ffi, torch-c-dlpack-ext, quack-kernels==0.6.5, installed into a side directory (SFT README).
+
+# ---- tests ----
+pytest==9.1.1
+
+# ---- vLLM environment (RL sampler engines and arcsolver.eval generation); a separate venv is recommended ----
+# vllm==0.30.0  (brings its own torch build and flashinfer-python; FlashInfer JIT needs ninja on PATH and, on very new
+#                GPUs, a CUDA toolkit matching the GPU: scripts/rl/engine_env.sh)

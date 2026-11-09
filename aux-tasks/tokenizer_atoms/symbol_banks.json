@@ -1,0 +1,18 @@
+{
+  "cjk_hangul_top80": {
+    "description": "CJK/Hangul top-80 symbol bank for compact ARC auxiliary task symbol remapping.",
+    "text": "이로을한은해습세입호할체록된래과여재오게러간름되환능작출비든른져글메구턴내복류튼的在经合关之务司保提展程更入题很技么限基己果企容项求告没备记认研委让治些运创推达",
+    "size": 80,
+    "source_report": "tokenizer_atoms/cjk_hangul_symbols_report.json",
+    "compact_tokenization_audit": {
+      "all_ordered_pairs_passed": true,
+      "repeat_runs_passed": true,
+      "random_long_strings_passed": true
+    },
+    "notes": [
+      "Use with compact grid representation.",
+      "Do not normalize with NFD or NFKD; keep characters as precomposed codepoints.",
+      "Generated from common CJK/Hangul candidates while excluding obvious numeric, color, and spatial/grid semantics."
+    ]
+  }
+}
