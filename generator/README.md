@@ -6,7 +6,7 @@ on one logged-in account.
 
 **Data.** The bank our batches built, 17,470 verified tasks with the records of how each was designed and checked, is
 published as the [ARC Task Bank](https://huggingface.co/datasets/hl3372/arc-agi-task-bank) dataset on Hugging Face
-(CC BY 4.0). New batches can start from it instead of an empty bank (see
+(CC0 1.0, public domain). New batches can start from it instead of an empty bank (see
 [Starting from our task bank](#starting-from-our-task-bank)).
 
 > **Release status.** This is a cleaned-up version of our research code, prepared for release. It passes its offline
@@ -146,8 +146,8 @@ export ARCGEN_BANK=<folder>                                   # when --out is no
 - **First commit.** The dataset has no renders, so the first `bin/arcgen commit` into the bank draws one per bank task
   (about 30 ms each, in worker processes). Every commit also rebuilds the bank's contact sheet, which is about 3 GB for
   the full bank.
-- **Licence.** The bank folder includes the dataset's licence. If you share the bank or tasks from it, credit the
-  dataset as CC BY 4.0 requires.
+- **Licence.** The bank folder includes the dataset's licence, CC0 1.0 (public domain): you may share the bank or
+  tasks from it without giving credit, though a citation is welcome.
 
 ## Configuration
 

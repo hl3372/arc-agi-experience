@@ -15,7 +15,7 @@ Each module is self-contained: it has its own README, install instructions, requ
 
 **Data.** The task bank built by the generator, 17,470 verified tasks with the records of how each was designed and
 checked, is published as [hl3372/arc-agi-task-bank](https://huggingface.co/datasets/hl3372/arc-agi-task-bank) on
-Hugging Face (CC BY 4.0).
+Hugging Face (CC0 1.0, public domain).
 
 **Paper.** Link to come.
 
@@ -27,10 +27,10 @@ Hugging Face (CC BY 4.0).
 ## Licence
 
 The code is released under the MIT No Attribution License (MIT-0; see [`LICENSE`](LICENSE)); copyright 2026 Hazem
-Lashen. You may use, copy, modify and distribute it without keeping the notice. The dataset is CC BY 4.0.
+Lashen. You may use, copy, modify and distribute it without keeping the notice. The dataset is dedicated to the public domain under CC0 1.0.
 
 **Model outputs.** The tasks, records and examples were produced with third-party models: OpenAI models through the
-Codex CLI, and DeepSeek and Qwen models through OpenRouter. Our licences cover our rights. The model providers' terms
+Codex CLI, and DeepSeek and Qwen models through OpenRouter. Our licence and dedication cover our rights. The model providers' terms
 may also apply to model-generated content, for example terms on using outputs to develop competing models. Check them
 for your use.
 

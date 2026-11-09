@@ -67,7 +67,7 @@ def dataset(tmp_path, monkeypatch):
         with zipfile.ZipFile(folder / 'arc/arc_tasks.zip', 'w') as archive:
             for tid, text in (arc if arc is not None else {r['task_id']: arc_file(r) for r in tasks}).items():
                 archive.writestr(tid + '.json', text)
-        (folder / 'LICENSE').write_text('Creative Commons Attribution 4.0 International (test copy)\n')
+        (folder / 'LICENSE').write_text('CC0 1.0 Universal (test copy)\n')
         return folder
     return build
 

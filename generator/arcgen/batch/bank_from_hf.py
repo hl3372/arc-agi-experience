@@ -11,7 +11,7 @@
   --with-lifecycle            put each task's lifecycle record in its dossier (about 1.3 GB for the full bank)
   --revision R, --cache-dir D with --repo: a dataset revision, and the huggingface_hub cache folder
 
-The dataset (https://huggingface.co/datasets/hl3372/arc-agi-task-bank, CC BY 4.0) holds the bank in three forms, all
+The dataset (https://huggingface.co/datasets/hl3372/arc-agi-task-bank, CC0 1.0) holds the bank in three forms, all
 read here: `data/tasks/*.parquet` (one row per task: grids, rule texts, design summary, flags),
 `data/records/lifecycle-*.parquet` (each task's original registry entry and review record) and `arc/arc_tasks.zip`
 (the ARC files). The folder written is a bank as `bank_inputs.prepare` and `bin/arcgen commit` expect it:
@@ -50,7 +50,7 @@ import zipfile
 
 DATASET = 'hl3372/arc-agi-task-bank'
 DATASET_URL = 'https://huggingface.co/datasets/' + DATASET
-LICENSE = 'CC-BY-4.0'
+LICENSE = 'CC0-1.0'
 # What a conversion reads (the `records` config's model-call file is not needed).
 PATTERNS = ('data/tasks/*.parquet', 'data/records/lifecycle-*.parquet', 'arc/arc_tasks.zip', 'README.md', 'LICENSE')
 # Provenance flags of the dataset card that can exclude a task: column -> the values that count as flagged.
@@ -221,8 +221,8 @@ def bank_readme(meta):
         '# Task bank: ARC Task Bank', '',
         f'{meta["tasks"]:,} of the {meta["dataset_tasks"]:,} tasks of the ARC Task Bank dataset ({meta["url"]}){revision}'
         + (', ' + '; '.join(filters) if filters else '') + f', converted by `python -m arcgen.batch.bank_from_hf` on '
-        f'{meta["converted_on"]}. The dataset is licensed CC BY 4.0 (see LICENSE): credit it when you share this bank or '
-        'tasks from it.', '',
+        f'{meta["converted_on"]}. The dataset is in the public domain under CC0 1.0 (see LICENSE); a citation is welcome '
+        'when you share this bank or tasks from it.', '',
         '- `tasks/<id>.json`: the ARC tasks, byte for byte as in the original bank (`arc_sha256` in the registry).',
         '- `registry.json`, `active_registry.json`: one entry per task (the original registry entry, plus the dataset\'s '
         '`eval_near_twin` and `excluded_from_training` flags).',
