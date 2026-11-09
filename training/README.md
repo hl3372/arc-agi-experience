@@ -84,4 +84,4 @@ This is a cleaned-up version of the research code we ran, prepared for release.
 
 ## License
 
-MIT (see [`LICENSE`](LICENSE)), copyright (c) 2026 Hazem Lashen. Model weights and data have their own licences.
+MIT No Attribution (MIT-0; see [`LICENSE`](LICENSE)), copyright 2026 Hazem Lashen. Model weights and data have their own licences.

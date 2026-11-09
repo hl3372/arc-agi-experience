@@ -247,9 +247,9 @@ the gate that `start` checks.
 
 ## License
 
-The code is released under the MIT License (see `LICENSE`). Copyright (c) 2026 Hazem Lashen.
+The code is released under the MIT No Attribution License (MIT-0; see `LICENSE`). Copyright 2026 Hazem Lashen.
 
 **Model outputs.** The pipeline drives third-party models: OpenAI models through the Codex CLI, and embeddings
-through OpenRouter. The tasks, plans and records it produces are outputs of those models. The MIT License covers
+through OpenRouter. The tasks, plans and records it produces are outputs of those models. The MIT-0 licence covers
 this code only. When you generate or use such outputs, the model providers' terms may also apply, for example
 terms on using outputs to develop competing models. Check them for your use.

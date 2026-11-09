@@ -216,11 +216,11 @@ name or folder); none ships with data.
 
 ## Licence and citation
 
-The code is released under the MIT License (see `LICENSE`). Copyright (c) 2026 Hazem Lashen.
+The code is released under the MIT No Attribution License (MIT-0; see `LICENSE`). Copyright 2026 Hazem Lashen.
 
 **Model outputs.** The example worlds and problems in `examples/` were written by a model (gpt-6.1-sol through the
 Codex CLI) and checked by this code. Solver comparisons can also call DeepSeek and Qwen models through
-OpenRouter. We release the examples under the same MIT terms, as far as our rights go. The model providers' terms
+OpenRouter. We release the examples under the same MIT-0 terms, as far as our rights go. The model providers' terms
 may also apply to model-generated content, for example terms on using outputs to develop competing models.
 Check them for your use.
 

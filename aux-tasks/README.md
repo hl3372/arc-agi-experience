@@ -190,4 +190,4 @@ move this folder.
 
 ## Licence
 
-MIT (see [`LICENSE`](LICENSE)).
+MIT No Attribution (MIT-0; see [`LICENSE`](LICENSE)), copyright 2026 Hazem Lashen.

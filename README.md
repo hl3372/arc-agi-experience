@@ -26,8 +26,8 @@ Hugging Face (CC BY 4.0).
 
 ## Licence
 
-The code is released under the MIT License (see [`LICENSE`](LICENSE)); copyright (c) 2026 Hazem Lashen. The dataset is
-CC BY 4.0.
+The code is released under the MIT No Attribution License (MIT-0; see [`LICENSE`](LICENSE)); copyright 2026 Hazem
+Lashen. You may use, copy, modify and distribute it without keeping the notice. The dataset is CC BY 4.0.
 
 **Model outputs.** The tasks, records and examples were produced with third-party models: OpenAI models through the
 Codex CLI, and DeepSeek and Qwen models through OpenRouter. Our licences cover our rights. The model providers' terms
