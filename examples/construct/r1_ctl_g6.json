@@ -1,0 +1,311 @@
+{
+ "format": "research-envs/construct-problem/1",
+ "id": "r1_ctl_g6",
+ "title": "Many unique three-way geodesic junctions",
+ "object": "graph",
+ "request": {
+  "demand": null
+ },
+ "source_run": "round1_b",
+ "settings": {
+  "battery_budget": 20000,
+  "quality_bar": false,
+  "round_registry": false,
+  "improver": false
+ },
+ "public": {
+  "statement": "Construct a connected simple undirected graph on vertices 0 through 33, with every vertex having degree three. Maximize the number of unordered triples {a,b,c} of distinct vertices having exactly one proper median. A proper median is a vertex v outside {a,b,c} satisfying d(a,v)+d(v,b)=d(a,b), d(a,v)+d(v,c)=d(a,c), and d(b,v)+d(v,c)=d(b,c), where d denotes shortest-path distance.",
+  "spec": {
+   "object": "graph",
+   "kind": "optimize",
+   "params": {
+    "n": 34
+   },
+   "constraints": [
+    {
+     "name": "connected",
+     "expr": "connected()"
+    },
+    {
+     "name": "cubic",
+     "expr": "all(deg(v) == 3 for v in V)"
+    }
+   ],
+   "objective": {
+    "expr": "sum(1 for a, b, c in combinations(V, 3) if sum(1 for v in V if v != a and v != b and v != c and dist(a, v) + dist(b, v) == dist(a, b) and dist(a, v) + dist(c, v) == dist(a, c) and dist(b, v) + dist(c, v) == dist(b, c)) == 1)",
+    "direction": "max"
+   }
+  }
+ },
+ "private": {
+  "sibling": {
+   "n": 6
+  },
+  "search_hint": {},
+  "witness_program": "import json\nfrom itertools import combinations\n\nedges = [(0, i) for i in range(1, 4)]\nfor k in range(6):\n    b = 4 + 5 * k\n    edges.extend(\n        (b + i, b + j)\n        for i, j in combinations(range(4), 2)\n        if (i, j) != (0, 1)\n    )\n    edges.extend([\n        (b, b + 4),\n        (b + 1, b + 4),\n        (1 + k // 2, b + 4),\n    ])\n\nprint(json.dumps({\"n\": 34, \"edges\": sorted(edges)}))\n",
+  "witness_is_construction": true,
+  "witness": {
+   "n": 34,
+   "edges": [
+    [
+     0,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     0,
+     3
+    ],
+    [
+     1,
+     8
+    ],
+    [
+     1,
+     13
+    ],
+    [
+     2,
+     18
+    ],
+    [
+     2,
+     23
+    ],
+    [
+     3,
+     28
+    ],
+    [
+     3,
+     33
+    ],
+    [
+     4,
+     6
+    ],
+    [
+     4,
+     7
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     5,
+     6
+    ],
+    [
+     5,
+     7
+    ],
+    [
+     5,
+     8
+    ],
+    [
+     6,
+     7
+    ],
+    [
+     9,
+     11
+    ],
+    [
+     9,
+     12
+    ],
+    [
+     9,
+     13
+    ],
+    [
+     10,
+     11
+    ],
+    [
+     10,
+     12
+    ],
+    [
+     10,
+     13
+    ],
+    [
+     11,
+     12
+    ],
+    [
+     14,
+     16
+    ],
+    [
+     14,
+     17
+    ],
+    [
+     14,
+     18
+    ],
+    [
+     15,
+     16
+    ],
+    [
+     15,
+     17
+    ],
+    [
+     15,
+     18
+    ],
+    [
+     16,
+     17
+    ],
+    [
+     19,
+     21
+    ],
+    [
+     19,
+     22
+    ],
+    [
+     19,
+     23
+    ],
+    [
+     20,
+     21
+    ],
+    [
+     20,
+     22
+    ],
+    [
+     20,
+     23
+    ],
+    [
+     21,
+     22
+    ],
+    [
+     24,
+     26
+    ],
+    [
+     24,
+     27
+    ],
+    [
+     24,
+     28
+    ],
+    [
+     25,
+     26
+    ],
+    [
+     25,
+     27
+    ],
+    [
+     25,
+     28
+    ],
+    [
+     26,
+     27
+    ],
+    [
+     29,
+     31
+    ],
+    [
+     29,
+     32
+    ],
+    [
+     29,
+     33
+    ],
+    [
+     30,
+     31
+    ],
+    [
+     30,
+     32
+    ],
+    [
+     30,
+     33
+    ],
+    [
+     31,
+     32
+    ]
+   ]
+  },
+  "reference": 3230,
+  "best_known": null,
+  "stated_bound": null,
+  "bound_argument": null,
+  "degenerate_exprs": []
+ },
+ "results": {
+  "class": "accepted",
+  "reasons": [],
+  "audit_mode": null,
+  "audit_passes": true,
+  "pilot_outcomes": [
+   {
+    "arm": "object",
+    "class": "matches_reference",
+    "objective": 3230
+   },
+   {
+    "arm": "code",
+    "class": "matches_reference",
+    "objective": 3230
+   }
+  ],
+  "naturalness_rater_score": 4,
+  "sibling": {
+   "objects": 32768,
+   "valid": 70,
+   "optimum": 0,
+   "optimal_classes": 2,
+   "redundant_constraints": [
+    "connected"
+   ]
+  },
+  "probe_adequacy": 0.963,
+  "novelty": {
+   "textbook_matches": [],
+   "zoo_match": null
+  },
+  "battery_best": {
+   "battery_20000": {
+    "anneal": null,
+    "greedy_add": null,
+    "hill_climb": 1882,
+    "kick": 1938,
+    "symmetric": 1156
+   },
+   "battery_200000": {
+    "anneal": 1977,
+    "greedy_add": null,
+    "hill_climb": 1952,
+    "kick": 1952,
+    "symmetric": 1156
+   }
+  }
+ }
+}

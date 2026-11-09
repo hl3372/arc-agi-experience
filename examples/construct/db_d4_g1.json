@@ -1,0 +1,321 @@
+{
+ "format": "research-envs/construct-problem/1",
+ "id": "db_d4_g1",
+ "title": "Can equally situated vertices be excluded from every optimal pair of facilities?",
+ "object": "graph",
+ "request": {
+  "demand": "D4"
+ },
+ "source_run": "demo_b",
+ "settings": {
+  "battery_budget": 20000,
+  "quality_bar": true,
+  "round_registry": true,
+  "improver": true
+ },
+ "public": {
+  "statement": "For distinct vertices x and y of a connected simple undirected graph, define their service cost as the sum, over all vertices z, of min(dist(x,z), dist(y,z)), using ordinary unweighted graph distance. A pair is optimal if its service cost is minimum among all distinct pairs. Consider the claim that, in every connected cubic graph where every vertex has the same multiset of distances to all vertices, every vertex belongs to an optimal pair. Construct a counterexample on vertices 0 through 35.",
+  "spec": {
+   "object": "graph",
+   "kind": "counterexample",
+   "params": {
+    "n": 36
+   },
+   "constraints": [
+    {
+     "name": "connected",
+     "expr": "connected()"
+    },
+    {
+     "name": "cubic",
+     "expr": "all(deg(v) == 3 for v in V)"
+    },
+    {
+     "name": "uniform_distance_profiles",
+     "expr": "len(set(tuple(sorted(dist(v, w) for w in V)) for v in V)) == 1"
+    }
+   ],
+   "claim": {
+    "expr": "len(set(min(sum(min(dist(x, z), dist(y, z)) for z in V) for y in V if y != x) for x in V)) == 1"
+   }
+  }
+ },
+ "private": {
+  "sibling": {
+   "n": 6
+  },
+  "search_hint": {},
+  "witness_program": "import json\n\nwith open('./spec.json', encoding='utf-8') as f:\n    n = json.load(f)['params']['n']\nif n != 36:\n    raise ValueError('This reference construction requires n=36')\n\nh = n // 2\nedges = set()\nfor i in range(h):\n    for a, b in ((i, (i + 1) % h),\n                 (i, h + i),\n                 (h + i, h + (i + 5) % h)):\n        edges.add((min(a, b), max(a, b)))\n\nassert len(edges) == 54\nprint(json.dumps({'n': n, 'edges': [list(e) for e in sorted(edges)]}, separators=(',', ':')))\n",
+  "witness_is_construction": true,
+  "witness": {
+   "n": 36,
+   "edges": [
+    [
+     0,
+     1
+    ],
+    [
+     0,
+     17
+    ],
+    [
+     0,
+     18
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     1,
+     19
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     2,
+     20
+    ],
+    [
+     3,
+     4
+    ],
+    [
+     3,
+     21
+    ],
+    [
+     4,
+     5
+    ],
+    [
+     4,
+     22
+    ],
+    [
+     5,
+     6
+    ],
+    [
+     5,
+     23
+    ],
+    [
+     6,
+     7
+    ],
+    [
+     6,
+     24
+    ],
+    [
+     7,
+     8
+    ],
+    [
+     7,
+     25
+    ],
+    [
+     8,
+     9
+    ],
+    [
+     8,
+     26
+    ],
+    [
+     9,
+     10
+    ],
+    [
+     9,
+     27
+    ],
+    [
+     10,
+     11
+    ],
+    [
+     10,
+     28
+    ],
+    [
+     11,
+     12
+    ],
+    [
+     11,
+     29
+    ],
+    [
+     12,
+     13
+    ],
+    [
+     12,
+     30
+    ],
+    [
+     13,
+     14
+    ],
+    [
+     13,
+     31
+    ],
+    [
+     14,
+     15
+    ],
+    [
+     14,
+     32
+    ],
+    [
+     15,
+     16
+    ],
+    [
+     15,
+     33
+    ],
+    [
+     16,
+     17
+    ],
+    [
+     16,
+     34
+    ],
+    [
+     17,
+     35
+    ],
+    [
+     18,
+     23
+    ],
+    [
+     18,
+     31
+    ],
+    [
+     19,
+     24
+    ],
+    [
+     19,
+     32
+    ],
+    [
+     20,
+     25
+    ],
+    [
+     20,
+     33
+    ],
+    [
+     21,
+     26
+    ],
+    [
+     21,
+     34
+    ],
+    [
+     22,
+     27
+    ],
+    [
+     22,
+     35
+    ],
+    [
+     23,
+     28
+    ],
+    [
+     24,
+     29
+    ],
+    [
+     25,
+     30
+    ],
+    [
+     26,
+     31
+    ],
+    [
+     27,
+     32
+    ],
+    [
+     28,
+     33
+    ],
+    [
+     29,
+     34
+    ],
+    [
+     30,
+     35
+    ]
+   ]
+  },
+  "reference": null,
+  "best_known": null,
+  "stated_bound": null,
+  "bound_argument": "Not applicable: this is a counterexample problem, with no optimization objective.",
+  "degenerate_exprs": []
+ },
+ "results": {
+  "class": "accepted",
+  "reasons": [],
+  "audit_mode": "demand_verified",
+  "audit_passes": true,
+  "pilot_outcomes": [
+   {
+    "arm": "object",
+    "class": "matches_reference",
+    "objective": null
+   },
+   {
+    "arm": "code",
+    "class": "matches_reference",
+    "objective": null
+   }
+  ],
+  "naturalness_rater_score": 4,
+  "sibling": {
+   "objects": 32768,
+   "valid": 0,
+   "optimum": null,
+   "optimal_classes": 0,
+   "redundant_constraints": [
+    "connected",
+    "uniform_distance_profiles"
+   ]
+  },
+  "probe_adequacy": 0.909,
+  "novelty": {
+   "textbook_matches": [],
+   "zoo_match": null
+  },
+  "battery_best": {
+   "battery_20000": {
+    "greedy_add": null,
+    "margin": null
+   },
+   "battery_200000": {
+    "greedy_add": null,
+    "margin": null
+   }
+  }
+ }
+}

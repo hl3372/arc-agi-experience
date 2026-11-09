@@ -1,0 +1,578 @@
+{
+ "format": "research-envs/construct-problem/1",
+ "id": "db_d2_s3",
+ "title": "Many smallest identifying samples through every point",
+ "object": "set_system",
+ "request": {
+  "demand": "D2"
+ },
+ "source_run": "demo_b",
+ "settings": {
+  "battery_budget": 20000,
+  "quality_bar": true,
+  "round_registry": true,
+  "improver": true
+ },
+ "public": {
+  "statement": "On the ground set {0,...,18}, construct a family F of distinct ten-element blocks such that every point belongs to exactly ten blocks. These requirements force F to contain exactly 19 blocks. A five-element set T is identifying if the traces B \u2229 T, for B in F, are all distinct. Maximize the minimum, over points x, of the number of identifying five-element sets containing x. No sample of fewer than five points can distinguish 19 blocks, since 2^4 < 19. Parametrically, use ground set {0,...,m\u22121}, block size and point degree floor(m/2)+1, and identifying samples of size h, where h is the least nonnegative integer satisfying 2^h \u2265 m.",
+  "spec": {
+   "object": "set_system",
+   "kind": "optimize",
+   "params": {
+    "m": 19
+   },
+   "constraints": [
+    {
+     "name": "uniform_blocks",
+     "expr": "all(len(B) == m // 2 + 1 for B in F)"
+    },
+    {
+     "name": "regular_points",
+     "expr": "all(sum(1 for B in F if x in B) == m // 2 + 1 for x in ground)"
+    }
+   ],
+   "objective": {
+    "expr": "min(sum(1 for T in I if x in T) for I in (tuple(T for T in combinations(ground, min(t for t in range(7) if pow(2, t) >= m)) for S in (frozenset(T),) if len({B & S for B in F}) == len(F)),) for x in ground)",
+    "direction": "max"
+   }
+  }
+ },
+ "private": {
+  "sibling": {
+   "m": 5
+  },
+  "search_hint": {
+   "set_sizes": [
+    3,
+    10
+   ]
+  },
+  "witness_program": "import json\n\nwith open('spec.json', encoding='utf-8') as f:\n    m = json.load(f)['params']['m']\n\n# Zero together with the nonzero quadratic residues.\nD = sorted({a * a % m for a in range(m)})\nblocks = [sorted((d + t) % m for d in D) for t in range(m)]\n\nassert len(D) == m // 2 + 1\nassert len({tuple(B) for B in blocks}) == m\nprint(json.dumps({'m': m, 'sets': blocks}, separators=(',', ':')))\n",
+  "witness_is_construction": true,
+  "witness": {
+   "m": 19,
+   "sets": [
+    [
+     0,
+     1,
+     4,
+     5,
+     6,
+     7,
+     9,
+     11,
+     16,
+     17
+    ],
+    [
+     1,
+     2,
+     5,
+     6,
+     7,
+     8,
+     10,
+     12,
+     17,
+     18
+    ],
+    [
+     0,
+     2,
+     3,
+     6,
+     7,
+     8,
+     9,
+     11,
+     13,
+     18
+    ],
+    [
+     0,
+     1,
+     3,
+     4,
+     7,
+     8,
+     9,
+     10,
+     12,
+     14
+    ],
+    [
+     1,
+     2,
+     4,
+     5,
+     8,
+     9,
+     10,
+     11,
+     13,
+     15
+    ],
+    [
+     2,
+     3,
+     5,
+     6,
+     9,
+     10,
+     11,
+     12,
+     14,
+     16
+    ],
+    [
+     3,
+     4,
+     6,
+     7,
+     10,
+     11,
+     12,
+     13,
+     15,
+     17
+    ],
+    [
+     4,
+     5,
+     7,
+     8,
+     11,
+     12,
+     13,
+     14,
+     16,
+     18
+    ],
+    [
+     0,
+     5,
+     6,
+     8,
+     9,
+     12,
+     13,
+     14,
+     15,
+     17
+    ],
+    [
+     1,
+     6,
+     7,
+     9,
+     10,
+     13,
+     14,
+     15,
+     16,
+     18
+    ],
+    [
+     0,
+     2,
+     7,
+     8,
+     10,
+     11,
+     14,
+     15,
+     16,
+     17
+    ],
+    [
+     1,
+     3,
+     8,
+     9,
+     11,
+     12,
+     15,
+     16,
+     17,
+     18
+    ],
+    [
+     0,
+     2,
+     4,
+     9,
+     10,
+     12,
+     13,
+     16,
+     17,
+     18
+    ],
+    [
+     0,
+     1,
+     3,
+     5,
+     10,
+     11,
+     13,
+     14,
+     17,
+     18
+    ],
+    [
+     0,
+     1,
+     2,
+     4,
+     6,
+     11,
+     12,
+     14,
+     15,
+     18
+    ],
+    [
+     0,
+     1,
+     2,
+     3,
+     5,
+     7,
+     12,
+     13,
+     15,
+     16
+    ],
+    [
+     1,
+     2,
+     3,
+     4,
+     6,
+     8,
+     13,
+     14,
+     16,
+     17
+    ],
+    [
+     2,
+     3,
+     4,
+     5,
+     7,
+     9,
+     14,
+     15,
+     17,
+     18
+    ],
+    [
+     0,
+     3,
+     4,
+     5,
+     6,
+     8,
+     10,
+     15,
+     16,
+     18
+    ]
+   ]
+  },
+  "reference": 495,
+  "best_known": {
+   "objective": 610,
+   "source": "improver",
+   "object": {
+    "m": 19,
+    "sets": [
+     [
+      0,
+      1,
+      2,
+      3,
+      4,
+      6,
+      7,
+      10,
+      12,
+      14
+     ],
+     [
+      1,
+      2,
+      3,
+      4,
+      5,
+      7,
+      8,
+      11,
+      13,
+      15
+     ],
+     [
+      2,
+      3,
+      4,
+      5,
+      6,
+      8,
+      9,
+      12,
+      14,
+      16
+     ],
+     [
+      3,
+      4,
+      5,
+      6,
+      7,
+      9,
+      10,
+      13,
+      15,
+      17
+     ],
+     [
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      14,
+      16,
+      18
+     ],
+     [
+      0,
+      5,
+      6,
+      7,
+      8,
+      9,
+      11,
+      12,
+      15,
+      17
+     ],
+     [
+      1,
+      6,
+      7,
+      8,
+      9,
+      10,
+      12,
+      13,
+      16,
+      18
+     ],
+     [
+      0,
+      2,
+      7,
+      8,
+      9,
+      10,
+      11,
+      13,
+      14,
+      17
+     ],
+     [
+      1,
+      3,
+      8,
+      9,
+      10,
+      11,
+      12,
+      14,
+      15,
+      18
+     ],
+     [
+      0,
+      2,
+      4,
+      9,
+      10,
+      11,
+      12,
+      13,
+      15,
+      16
+     ],
+     [
+      1,
+      3,
+      5,
+      10,
+      11,
+      12,
+      13,
+      14,
+      16,
+      17
+     ],
+     [
+      2,
+      4,
+      6,
+      11,
+      12,
+      13,
+      14,
+      15,
+      17,
+      18
+     ],
+     [
+      0,
+      3,
+      5,
+      7,
+      12,
+      13,
+      14,
+      15,
+      16,
+      18
+     ],
+     [
+      0,
+      1,
+      4,
+      6,
+      8,
+      13,
+      14,
+      15,
+      16,
+      17
+     ],
+     [
+      1,
+      2,
+      5,
+      7,
+      9,
+      14,
+      15,
+      16,
+      17,
+      18
+     ],
+     [
+      0,
+      2,
+      3,
+      6,
+      8,
+      10,
+      15,
+      16,
+      17,
+      18
+     ],
+     [
+      0,
+      1,
+      3,
+      4,
+      7,
+      9,
+      11,
+      16,
+      17,
+      18
+     ],
+     [
+      0,
+      1,
+      2,
+      4,
+      5,
+      8,
+      10,
+      12,
+      17,
+      18
+     ],
+     [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      9,
+      11,
+      13,
+      18
+     ]
+    ]
+   }
+  },
+  "stated_bound": 2141,
+  "bound_argument": "Let G be the number of identifying five-element sets. Fix any three-element set U. Among the 19 blocks, three have the same trace on U. On the remaining 16 coordinates, classify each nonconstant column of these three blocks by which block differs from the other two. Let the three class sizes be a,b,c. Two additional coordinates distinguish these three blocks only when they come from different classes, giving at most ab+ac+bc possibilities. If a+b+c\u226415, this is at most 75. Otherwise a+b+c=16. Equal block sizes and agreement on U imply that their pairwise distances a+b, a+c and b+c are even. Hence a,b,c have the same parity; their even sum forces all three to be even. Therefore ab+ac+bc\u226484, attained numerically at class sizes 6,6,4. Consequently every U lies in at most 84 identifying five-element sets. Double-counting gives 10G\u226484\u00b7C(19,3)=81396, so G\u22648139. The sum of the point counts is 5G, hence their minimum is at most floor(5\u00b78139/19)=2141. The reference score 495 does not attain this bound; global optimality is unresolved.",
+  "degenerate_exprs": []
+ },
+ "results": {
+  "class": "calibration",
+  "reasons": [
+   "demand audit fails (easy for the named shortcut, or extra failures)"
+  ],
+  "audit_mode": "hard_unattributed",
+  "audit_passes": false,
+  "pilot_outcomes": [
+   {
+    "arm": "object",
+    "class": "beats_reference",
+    "objective": 1152,
+    "vs_best": "beats_best"
+   },
+   {
+    "arm": "code",
+    "class": "beats_reference",
+    "objective": 610,
+    "vs_best": "matches_best"
+   }
+  ],
+  "naturalness_rater_score": 4,
+  "sibling": {
+   "objects": 1024,
+   "valid": 12,
+   "optimum": 3,
+   "optimal_classes": 1,
+   "redundant_constraints": [
+    "uniform_blocks"
+   ]
+  },
+  "probe_adequacy": 1.0,
+  "novelty": {
+   "textbook_matches": [],
+   "zoo_match": null
+  },
+  "battery_best": {
+   "battery_20000": {
+    "anneal": null,
+    "greedy_add": null,
+    "kick": 34,
+    "symmetric": null
+   },
+   "battery_200000": {
+    "anneal": null,
+    "greedy_add": null,
+    "kick": 34,
+    "symmetric": 0
+   }
+  }
+ }
+}

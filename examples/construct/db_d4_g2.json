@@ -1,0 +1,182 @@
+{
+ "format": "research-envs/construct-problem/1",
+ "id": "db_d4_g2",
+ "title": "A best meeting point missed by every pairwise shortest route",
+ "object": "graph",
+ "request": {
+  "demand": "D4"
+ },
+ "source_run": "demo_b",
+ "settings": {
+  "battery_budget": 20000,
+  "quality_bar": true,
+  "round_registry": true,
+  "improver": true
+ },
+ "public": {
+  "statement": "Construct a connected simple undirected graph on vertices 0,...,16 that disproves this claim: for every set T of four distinct vertices, some vertex minimizing the sum of its distances to T lies on a shortest path between two distinct members of T. Thus your graph must have four terminals for which every optimal meeting vertex lies outside every shortest path joining any terminal pair. Distances count edges, and path endpoints count as lying on the path.",
+  "spec": {
+   "object": "graph",
+   "kind": "counterexample",
+   "params": {
+    "n": 17
+   },
+   "constraints": [
+    {
+     "name": "connected",
+     "expr": "connected()"
+    }
+   ],
+   "claim": {
+    "expr": "all(any(sum(dist(v, t) for t in T) == best and any(dist(a, v) + dist(v, b) == dist(a, b) for a, b in combinations(T, 2)) for v in V) for T in combinations(V, 4) for best in (min(sum(dist(v, t) for t in T) for v in V),))"
+   }
+  }
+ },
+ "private": {
+  "sibling": {
+   "n": 6
+  },
+  "search_hint": {},
+  "witness_program": "import json\nfrom itertools import combinations\n\nedges = []\nfor k, (i, j) in enumerate(combinations(range(4), 2)):\n    a = 4 + 2 * k\n    b = a + 1\n    edges.extend([(i, a), (a, b), (b, j)])\nedges.extend((16, v) for v in (4, 10, 14, 9))\nedges = sorted((min(u, v), max(u, v)) for u, v in edges)\nprint(json.dumps({\"n\": 17, \"edges\": edges}))\n",
+  "witness_is_construction": true,
+  "witness": {
+   "n": 17,
+   "edges": [
+    [
+     0,
+     4
+    ],
+    [
+     0,
+     6
+    ],
+    [
+     0,
+     8
+    ],
+    [
+     1,
+     5
+    ],
+    [
+     1,
+     10
+    ],
+    [
+     1,
+     12
+    ],
+    [
+     2,
+     7
+    ],
+    [
+     2,
+     11
+    ],
+    [
+     2,
+     14
+    ],
+    [
+     3,
+     9
+    ],
+    [
+     3,
+     13
+    ],
+    [
+     3,
+     15
+    ],
+    [
+     4,
+     5
+    ],
+    [
+     4,
+     16
+    ],
+    [
+     6,
+     7
+    ],
+    [
+     8,
+     9
+    ],
+    [
+     9,
+     16
+    ],
+    [
+     10,
+     11
+    ],
+    [
+     10,
+     16
+    ],
+    [
+     12,
+     13
+    ],
+    [
+     14,
+     15
+    ],
+    [
+     14,
+     16
+    ]
+   ]
+  },
+  "reference": null,
+  "best_known": null,
+  "stated_bound": null,
+  "bound_argument": "Not applicable: this is a counterexample problem.",
+  "degenerate_exprs": []
+ },
+ "results": {
+  "class": "accepted",
+  "reasons": [],
+  "audit_mode": "demand_verified",
+  "audit_passes": true,
+  "pilot_outcomes": [
+   {
+    "arm": "object",
+    "class": "matches_reference",
+    "objective": null
+   },
+   {
+    "arm": "code",
+    "class": "matches_reference",
+    "objective": null
+   }
+  ],
+  "naturalness_rater_score": 4,
+  "sibling": {
+   "objects": 32768,
+   "valid": 0,
+   "optimum": null,
+   "optimal_classes": 0,
+   "redundant_constraints": []
+  },
+  "probe_adequacy": 0.917,
+  "novelty": {
+   "textbook_matches": [],
+   "zoo_match": null
+  },
+  "battery_best": {
+   "battery_20000": {
+    "greedy_add": null,
+    "margin": null
+   },
+   "battery_200000": {
+    "greedy_add": null,
+    "margin": null
+   }
+  }
+ }
+}

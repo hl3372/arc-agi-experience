@@ -1,0 +1,750 @@
+[
+ {
+  "id": "mantel",
+  "title": "Max edges, triangle-free (Mantel)",
+  "object": "graph",
+  "kind": "optimize",
+  "constraints": [
+   {
+    "name": "triangle_free",
+    "expr": "triangles() == 0"
+   }
+  ],
+  "objective": {
+   "expr": "len(E)",
+   "direction": "max"
+  },
+  "fingerprint": {
+   "sizes": [
+    4,
+    5,
+    6,
+    7
+   ],
+   "values": [
+    [
+     4,
+     41
+    ],
+    [
+     6,
+     388
+    ],
+    [
+     9,
+     5789
+    ],
+    [
+     12,
+     133501
+    ]
+   ]
+  }
+ },
+ {
+  "id": "turan_k4",
+  "title": "Max edges, no K4 (Tur\u00e1n)",
+  "object": "graph",
+  "kind": "optimize",
+  "constraints": [
+   {
+    "name": "no_k4",
+    "expr": "clique_number() <= 3"
+   }
+  ],
+  "objective": {
+   "expr": "len(E)",
+   "direction": "max"
+  },
+  "fingerprint": {
+   "sizes": [
+    4,
+    5,
+    6,
+    7
+   ],
+   "values": [
+    [
+     5,
+     63
+    ],
+    [
+     8,
+     958
+    ],
+    [
+     12,
+     27626
+    ],
+    [
+     16,
+     1486597
+    ]
+   ]
+  }
+ },
+ {
+  "id": "ramsey_33",
+  "title": "No triangle and no independent triple (R(3,3))",
+  "object": "graph",
+  "kind": "satisfy",
+  "constraints": [
+   {
+    "name": "no_k3",
+    "expr": "clique_number() <= 2"
+   },
+   {
+    "name": "no_i3",
+    "expr": "independence_number() <= 2"
+   }
+  ],
+  "fingerprint": {
+   "sizes": [
+    4,
+    5,
+    6,
+    7
+   ],
+   "values": [
+    [
+     null,
+     18
+    ],
+    [
+     null,
+     12
+    ],
+    [
+     null,
+     0
+    ],
+    [
+     null,
+     0
+    ]
+   ]
+  }
+ },
+ {
+  "id": "ramsey_34",
+  "title": "No triangle and no independent 4-set (R(3,4))",
+  "object": "graph",
+  "kind": "satisfy",
+  "constraints": [
+   {
+    "name": "no_k3",
+    "expr": "clique_number() <= 2"
+   },
+   {
+    "name": "no_i4",
+    "expr": "independence_number() <= 3"
+   }
+  ],
+  "fingerprint": {
+   "sizes": [
+    4,
+    5,
+    6,
+    7
+   ],
+   "values": [
+    [
+     null,
+     40
+    ],
+    [
+     null,
+     322
+    ],
+    [
+     null,
+     2812
+    ],
+    [
+     null,
+     13842
+    ]
+   ]
+  }
+ },
+ {
+  "id": "ramsey_44",
+  "title": "No K4 and no independent 4-set (R(4,4))",
+  "object": "graph",
+  "kind": "satisfy",
+  "constraints": [
+   {
+    "name": "no_k4",
+    "expr": "clique_number() <= 3"
+   },
+   {
+    "name": "no_i4",
+    "expr": "independence_number() <= 3"
+   }
+  ],
+  "fingerprint": {
+   "sizes": [
+    4,
+    5,
+    6,
+    7
+   ],
+   "values": [
+    [
+     null,
+     62
+    ],
+    [
+     null,
+     892
+    ],
+    [
+     null,
+     22484
+    ],
+    [
+     null,
+     923012
+    ]
+   ]
+  }
+ },
+ {
+  "id": "girth5_max_edges",
+  "title": "Max edges with girth at least 5",
+  "object": "graph",
+  "kind": "optimize",
+  "constraints": [
+   {
+    "name": "girth_5",
+    "expr": "girth() >= 5"
+   }
+  ],
+  "objective": {
+   "expr": "len(E)",
+   "direction": "max"
+  },
+  "fingerprint": {
+   "sizes": [
+    4,
+    5,
+    6,
+    7
+   ],
+   "values": [
+    [
+     3,
+     38
+    ],
+    [
+     5,
+     303
+    ],
+    [
+     6,
+     3424
+    ],
+    [
+     8,
+     53365
+    ]
+   ]
+  }
+ },
+ {
+  "id": "c4_free",
+  "title": "Max edges with no 4-cycle (Zarankiewicz/K\u0151v\u00e1ri\u2013S\u00f3s\u2013Tur\u00e1n)",
+  "object": "graph",
+  "kind": "optimize",
+  "constraints": [
+   {
+    "name": "no_c4",
+    "expr": "all(len(nbrs(u) & nbrs(v)) <= 1 for u, v in combinations(V, 2))"
+   }
+  ],
+  "objective": {
+   "expr": "len(E)",
+   "direction": "max"
+  },
+  "fingerprint": {
+   "sizes": [
+    4,
+    5,
+    6,
+    7
+   ],
+   "values": [
+    [
+     4,
+     54
+    ],
+    [
+     6,
+     548
+    ],
+    [
+     7,
+     7984
+    ],
+    [
+     9,
+     163440
+    ]
+   ]
+  }
+ },
+ {
+  "id": "bipartite_max",
+  "title": "Max edges, bipartite",
+  "object": "graph",
+  "kind": "optimize",
+  "constraints": [
+   {
+    "name": "bipartite",
+    "expr": "is_bipartite()"
+   }
+  ],
+  "objective": {
+   "expr": "len(E)",
+   "direction": "max"
+  },
+  "fingerprint": {
+   "sizes": [
+    4,
+    5,
+    6,
+    7
+   ],
+   "values": [
+    [
+     4,
+     41
+    ],
+    [
+     6,
+     376
+    ],
+    [
+     9,
+     5177
+    ],
+    [
+     12,
+     103237
+    ]
+   ]
+  }
+ },
+ {
+  "id": "harary_2conn",
+  "title": "Min edges, 2-connected (Harary)",
+  "object": "graph",
+  "kind": "optimize",
+  "constraints": [
+   {
+    "name": "two_connected",
+    "expr": "vertex_connectivity() >= 2"
+   }
+  ],
+  "objective": {
+   "expr": "len(E)",
+   "direction": "min"
+  },
+  "fingerprint": {
+   "sizes": [
+    4,
+    5,
+    6,
+    7
+   ],
+   "values": [
+    [
+     4,
+     10
+    ],
+    [
+     5,
+     238
+    ],
+    [
+     6,
+     11368
+    ],
+    [
+     7,
+     1014888
+    ]
+   ]
+  }
+ },
+ {
+  "id": "diameter2_min_edges",
+  "title": "Min edges with diameter at most 2",
+  "object": "graph",
+  "kind": "optimize",
+  "constraints": [
+   {
+    "name": "diam2",
+    "expr": "diameter() <= 2"
+   }
+  ],
+  "objective": {
+   "expr": "len(E)",
+   "direction": "min"
+  },
+  "fingerprint": {
+   "sizes": [
+    4,
+    5,
+    6,
+    7
+   ],
+   "values": [
+    [
+     3,
+     26
+    ],
+    [
+     4,
+     368
+    ],
+    [
+     5,
+     10924
+    ],
+    [
+     6,
+     676456
+    ]
+   ]
+  }
+ },
+ {
+  "id": "degree3_diameter2",
+  "title": "Max degree 3, diameter 2 (degree-diameter)",
+  "object": "graph",
+  "kind": "satisfy",
+  "constraints": [
+   {
+    "name": "maxdeg3",
+    "expr": "all(deg(v) <= 3 for v in V)"
+   },
+   {
+    "name": "diam2",
+    "expr": "diameter() <= 2"
+   }
+  ],
+  "fingerprint": {
+   "sizes": [
+    4,
+    5,
+    6,
+    7
+   ],
+   "values": [
+    [
+     null,
+     26
+    ],
+    [
+     null,
+     112
+    ],
+    [
+     null,
+     790
+    ],
+    [
+     null,
+     2730
+    ]
+   ]
+  }
+ },
+ {
+  "id": "ekr_k2",
+  "title": "Max intersecting family of 2-sets (EKR)",
+  "object": "set_system",
+  "kind": "optimize",
+  "hint": {
+   "set_sizes": [
+    2
+   ]
+  },
+  "constraints": [
+   {
+    "name": "intersecting",
+    "expr": "all(len(A & B) >= 1 for A, B in combinations(F, 2))"
+   }
+  ],
+  "objective": {
+   "expr": "len(F)",
+   "direction": "max"
+  },
+  "fingerprint": {
+   "sizes": [
+    4,
+    5,
+    6
+   ],
+   "values": [
+    [
+     3,
+     27
+    ],
+    [
+     4,
+     76
+    ],
+    [
+     5,
+     192
+    ]
+   ]
+  }
+ },
+ {
+  "id": "ekr_k3",
+  "title": "Max intersecting family of 3-sets (EKR)",
+  "object": "set_system",
+  "kind": "optimize",
+  "hint": {
+   "set_sizes": [
+    3
+   ]
+  },
+  "constraints": [
+   {
+    "name": "intersecting",
+    "expr": "all(len(A & B) >= 1 for A, B in combinations(F, 2))"
+   }
+  ],
+  "objective": {
+   "expr": "len(F)",
+   "direction": "max"
+  },
+  "fingerprint": {
+   "sizes": [
+    4,
+    5,
+    6
+   ],
+   "values": [
+    [
+     4,
+     16
+    ],
+    [
+     10,
+     1024
+    ],
+    [
+     10,
+     59049
+    ]
+   ]
+  }
+ },
+ {
+  "id": "triple_packing",
+  "title": "Max triples meeting pairwise at most once (Steiner packing)",
+  "object": "set_system",
+  "kind": "optimize",
+  "hint": {
+   "set_sizes": [
+    3
+   ]
+  },
+  "constraints": [
+   {
+    "name": "meet_once",
+    "expr": "all(len(A & B) <= 1 for A, B in combinations(F, 2))"
+   }
+  ],
+  "objective": {
+   "expr": "len(F)",
+   "direction": "max"
+  },
+  "fingerprint": {
+   "sizes": [
+    4,
+    5,
+    6
+   ],
+   "values": [
+    [
+     1,
+     5
+    ],
+    [
+     2,
+     26
+    ],
+    [
+     4,
+     271
+    ]
+   ]
+  }
+ },
+ {
+  "id": "pair_covering_k3",
+  "title": "Min triples covering every pair (covering design)",
+  "object": "set_system",
+  "kind": "optimize",
+  "hint": {
+   "set_sizes": [
+    3
+   ]
+  },
+  "constraints": [
+   {
+    "name": "covers_pairs",
+    "expr": "all(any(a in B and b in B for B in F) for a, b in combinations(ground, 2))"
+   }
+  ],
+  "objective": {
+   "expr": "len(F)",
+   "direction": "min"
+  },
+  "fingerprint": {
+   "sizes": [
+    4,
+    5,
+    6
+   ],
+   "values": [
+    [
+     3,
+     5
+    ],
+    [
+     4,
+     388
+    ],
+    [
+     6,
+     477965
+    ]
+   ]
+  }
+ },
+ {
+  "id": "sperner",
+  "title": "Max antichain (Sperner)",
+  "object": "set_system",
+  "kind": "optimize",
+  "hint": {},
+  "constraints": [
+   {
+    "name": "antichain",
+    "expr": "all(not (A <= B or B <= A) for A, B in combinations(F, 2))"
+   }
+  ],
+  "objective": {
+   "expr": "len(F)",
+   "direction": "max"
+  },
+  "fingerprint": {
+   "sizes": [
+    2,
+    3,
+    4
+   ],
+   "values": [
+    [
+     2,
+     6
+    ],
+    [
+     3,
+     20
+    ],
+    [
+     6,
+     168
+    ]
+   ]
+  }
+ },
+ {
+  "id": "separating",
+  "title": "Min separating system",
+  "object": "set_system",
+  "kind": "optimize",
+  "hint": {},
+  "constraints": [
+   {
+    "name": "separates",
+    "expr": "all(any((a in B) != (b in B) for B in F) for a, b in combinations(ground, 2))"
+   }
+  ],
+  "objective": {
+   "expr": "len(F)",
+   "direction": "min"
+  },
+  "fingerprint": {
+   "sizes": [
+    2,
+    3,
+    4
+   ],
+   "values": [
+    [
+     1,
+     12
+    ],
+    [
+     2,
+     216
+    ],
+    [
+     2,
+     64152
+    ]
+   ]
+  }
+ },
+ {
+  "id": "pair_intersect_exactly1_k3",
+  "title": "Triples meeting pairwise exactly once (Fano-type)",
+  "object": "set_system",
+  "kind": "optimize",
+  "hint": {
+   "set_sizes": [
+    3
+   ]
+  },
+  "constraints": [
+   {
+    "name": "meet_exactly_once",
+    "expr": "all(len(A & B) == 1 for A, B in combinations(F, 2))"
+   }
+  ],
+  "objective": {
+   "expr": "len(F)",
+   "direction": "max"
+  },
+  "fingerprint": {
+   "sizes": [
+    4,
+    5,
+    6
+   ],
+   "values": [
+    [
+     1,
+     5
+    ],
+    [
+     2,
+     26
+    ],
+    [
+     4,
+     261
+    ]
+   ]
+  }
+ }
+]

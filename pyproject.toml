@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "research-envs"
+version = "0.1.0"
+description = "Research-environment demos: the ARC task-generation method transferred to discovery worlds and mathematical construction problems."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+classifiers = ["Operating System :: POSIX :: Linux", "Programming Language :: Python :: 3"]
+# numpy and networkx are imported by the pipelines; ortools is what generated witness and pilot programs are told
+# they may import inside the sandbox. Tested versions are pinned in requirements.txt.
+dependencies = [
+    "numpy>=1.26",
+    "networkx>=3.2",
+    "ortools>=9.10",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[project.scripts]
+research-envs = "research_envs.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["research_envs*"]
+
+[tool.setuptools.package-data]
+research_envs = ["archive/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+markers = ["slow: tests that take more than a few seconds"]

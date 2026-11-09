@@ -1,0 +1,2648 @@
+{
+ "format": "research-envs/discover-world/1",
+ "id": "a2_time_2",
+ "title": "Pair-Reversing Carousel",
+ "request": {
+  "demand": null,
+  "lever": "time"
+ },
+ "source_run": "demo_a3",
+ "settings": {
+  "budget": 40,
+  "interface": "v2",
+  "query_mode": "discriminating",
+  "answer_cap": 0.25,
+  "trivial_cap": 0.3,
+  "quality_bar": true
+ },
+ "public": {
+  "description": "Choose an initial integer x from 0 through 2. Available inputs are A0 through A3, B0 through B3, and C. The device reports integer r1 immediately after initialization and after every input. Every input advances one time step. Each experiment begins from a fresh reset and allows at most 10 inputs.",
+  "interface": {
+   "actions": [
+    "A(k) with k in 0..3",
+    "B(k) with k in 0..3",
+    "C"
+   ],
+   "readouts": [
+    "r1"
+   ],
+   "settable": [
+    "x in 0..2"
+   ],
+   "budget": 40,
+   "max_len": 10
+  },
+  "queries": [
+   {
+    "id": "Q1",
+    "start": {
+     "x": 2
+    },
+    "actions": [
+     "C",
+     "A1",
+     "A0",
+     "A2",
+     "B0",
+     "B0",
+     "B1",
+     "B3",
+     "A3",
+     "B2"
+    ]
+   },
+   {
+    "id": "Q2",
+    "start": {
+     "x": 1
+    },
+    "actions": [
+     "A2",
+     "A0",
+     "B1",
+     "A3",
+     "A1",
+     "B0",
+     "A1",
+     "B3",
+     "C",
+     "B2"
+    ]
+   },
+   {
+    "id": "Q3",
+    "start": {
+     "x": 2
+    },
+    "actions": [
+     "A1",
+     "A3",
+     "C",
+     "B0",
+     "B2",
+     "B1",
+     "A0",
+     "B1",
+     "B3",
+     "A2"
+    ]
+   },
+   {
+    "id": "Q4",
+    "start": {
+     "x": 2
+    },
+    "actions": [
+     "C",
+     "A1",
+     "A3",
+     "C",
+     "A1",
+     "B0",
+     "A2",
+     "B2",
+     "A1",
+     "A0"
+    ]
+   },
+   {
+    "id": "Q5",
+    "start": {
+     "x": 1
+    },
+    "actions": [
+     "A2",
+     "B1",
+     "A3",
+     "A1",
+     "B3",
+     "B2",
+     "A0",
+     "C",
+     "B1",
+     "B0"
+    ]
+   },
+   {
+    "id": "Q6",
+    "start": {
+     "x": 0
+    },
+    "actions": [
+     "A0",
+     "A1",
+     "B3",
+     "A2",
+     "B2",
+     "A3",
+     "B1",
+     "A1",
+     "C",
+     "B0"
+    ]
+   },
+   {
+    "id": "Q7",
+    "start": {
+     "x": 1
+    },
+    "actions": [
+     "B0",
+     "A2",
+     "A1",
+     "A3",
+     "A0",
+     "A2",
+     "B2",
+     "B3",
+     "B1",
+     "C"
+    ]
+   },
+   {
+    "id": "Q8",
+    "start": {
+     "x": 2
+    },
+    "actions": [
+     "A3",
+     "A2",
+     "B2",
+     "A1",
+     "C",
+     "B0",
+     "B3",
+     "B1",
+     "C",
+     "A0"
+    ]
+   },
+   {
+    "id": "Q9",
+    "start": {
+     "x": 1
+    },
+    "actions": [
+     "A2",
+     "B2",
+     "B3",
+     "B2",
+     "A0",
+     "A1",
+     "B0",
+     "B1",
+     "A3",
+     "C"
+    ]
+   },
+   {
+    "id": "Q10",
+    "start": {
+     "x": 2
+    },
+    "actions": [
+     "B3",
+     "A3",
+     "B0",
+     "A0",
+     "B1",
+     "B2",
+     "A1",
+     "C",
+     "A0",
+     "A2"
+    ]
+   },
+   {
+    "id": "Q11",
+    "start": {
+     "x": 2
+    },
+    "actions": [
+     "A2",
+     "A1",
+     "C",
+     "B0",
+     "B3",
+     "A0",
+     "B1",
+     "B2",
+     "A3",
+     "B0"
+    ]
+   },
+   {
+    "id": "Q12",
+    "start": {
+     "x": 1
+    },
+    "actions": [
+     "A0",
+     "C",
+     "B2",
+     "A3",
+     "A0",
+     "B1",
+     "C",
+     "A2"
+    ]
+   },
+   {
+    "id": "Q13",
+    "start": {
+     "x": 2
+    },
+    "actions": [
+     "A0",
+     "A3",
+     "A1",
+     "A2",
+     "B2",
+     "B3",
+     "A3",
+     "C",
+     "B1",
+     "B0"
+    ]
+   },
+   {
+    "id": "Q14",
+    "start": {
+     "x": 1
+    },
+    "actions": [
+     "A1",
+     "A1",
+     "A1",
+     "A1",
+     "A1",
+     "A1",
+     "A1",
+     "A1",
+     "A1",
+     "B0"
+    ]
+   },
+   {
+    "id": "Q15",
+    "start": {
+     "x": 2
+    },
+    "actions": [
+     "B2",
+     "A2",
+     "B1",
+     "B0",
+     "A3",
+     "A0",
+     "B3",
+     "C",
+     "A1",
+     "A1"
+    ]
+   },
+   {
+    "id": "Q16",
+    "start": {
+     "x": 2
+    },
+    "actions": [
+     "B1",
+     "A1",
+     "A2",
+     "B0",
+     "A0",
+     "A0",
+     "A0",
+     "A3",
+     "B0"
+    ]
+   },
+   {
+    "id": "Q17",
+    "start": {
+     "x": 1
+    },
+    "actions": [
+     "B2",
+     "B3",
+     "C",
+     "A3",
+     "A1",
+     "B1",
+     "A0",
+     "B0",
+     "A0",
+     "A2"
+    ]
+   },
+   {
+    "id": "Q18",
+    "start": {
+     "x": 1
+    },
+    "actions": [
+     "A1",
+     "A2",
+     "B1",
+     "A0",
+     "C",
+     "A3",
+     "B0",
+     "B3",
+     "B3",
+     "B2"
+    ]
+   },
+   {
+    "id": "Q19",
+    "start": {
+     "x": 0
+    },
+    "actions": [
+     "B1",
+     "C",
+     "A3",
+     "A1",
+     "A2",
+     "A1",
+     "B3",
+     "B0",
+     "A0",
+     "B2"
+    ]
+   },
+   {
+    "id": "Q20",
+    "start": {
+     "x": 2
+    },
+    "actions": [
+     "A2",
+     "A2",
+     "A2",
+     "A3",
+     "A2",
+     "A3",
+     "A0",
+     "C",
+     "A2"
+    ]
+   },
+   {
+    "id": "Q21",
+    "start": {
+     "x": 2
+    },
+    "actions": [
+     "A1",
+     "A0",
+     "C",
+     "A3",
+     "A0",
+     "B3",
+     "A2",
+     "B0",
+     "B1",
+     "B2"
+    ]
+   },
+   {
+    "id": "Q22",
+    "start": {
+     "x": 0
+    },
+    "actions": [
+     "A2",
+     "A3",
+     "B2",
+     "C",
+     "A0",
+     "A1",
+     "A0",
+     "B0",
+     "B3",
+     "B1"
+    ]
+   },
+   {
+    "id": "Q23",
+    "start": {
+     "x": 2
+    },
+    "actions": [
+     "B3",
+     "A1",
+     "A1",
+     "A2",
+     "A2"
+    ]
+   },
+   {
+    "id": "Q24",
+    "start": {
+     "x": 1
+    },
+    "actions": [
+     "B3",
+     "A1",
+     "B3",
+     "C",
+     "B1",
+     "B1",
+     "A1",
+     "A0",
+     "A3"
+    ]
+   },
+   {
+    "id": "Q25",
+    "start": {
+     "x": 1
+    },
+    "actions": [
+     "B1",
+     "A2",
+     "A0",
+     "A3",
+     "B3",
+     "A1",
+     "B2",
+     "C",
+     "A1",
+     "B0"
+    ]
+   },
+   {
+    "id": "Q26",
+    "start": {
+     "x": 2
+    },
+    "actions": [
+     "B0",
+     "B2",
+     "A2",
+     "A1",
+     "B2",
+     "B1"
+    ]
+   },
+   {
+    "id": "Q27",
+    "start": {
+     "x": 1
+    },
+    "actions": [
+     "A3",
+     "A3",
+     "A3",
+     "A3",
+     "A0"
+    ]
+   },
+   {
+    "id": "Q28",
+    "start": {
+     "x": 1
+    },
+    "actions": [
+     "A1",
+     "B2",
+     "A0",
+     "A3",
+     "A2",
+     "B1",
+     "B3",
+     "C",
+     "A1",
+     "B0"
+    ]
+   },
+   {
+    "id": "Q29",
+    "start": {
+     "x": 2
+    },
+    "actions": [
+     "A0",
+     "A1",
+     "A1",
+     "B2",
+     "B1",
+     "B3"
+    ]
+   },
+   {
+    "id": "Q30",
+    "start": {
+     "x": 0
+    },
+    "actions": [
+     "B3",
+     "A3",
+     "A0",
+     "B2",
+     "B1",
+     "A1",
+     "B0",
+     "C",
+     "A2",
+     "B0"
+    ]
+   }
+  ]
+ },
+ "private": {
+  "story": "On a four-pad carousel, each tick moves a lone bead clockwise, while a pair leaves one bead seated and sends the other counterclockwise, with excess arrivals spilling beyond each pad\u2019s two-bead capacity.",
+  "world": {
+   "state": {
+    "x": {
+     "range": [
+      0,
+      2
+     ],
+     "boundary": "clamp",
+     "init": 0,
+     "settable": true
+    },
+    "a": {
+     "range": [
+      0,
+      2
+     ],
+     "boundary": "clamp",
+     "init": 0,
+     "settable": false
+    },
+    "b": {
+     "range": [
+      0,
+      2
+     ],
+     "boundary": "clamp",
+     "init": 0,
+     "settable": false
+    },
+    "c": {
+     "range": [
+      0,
+      2
+     ],
+     "boundary": "clamp",
+     "init": 0,
+     "settable": false
+    }
+   },
+   "actions": {
+    "A": {
+     "param": [
+      0,
+      3
+     ],
+     "rules": [
+      {
+       "if": "k < 1",
+       "set": {
+        "x": "x + 1"
+       }
+      },
+      {
+       "if": "k < 2",
+       "set": {
+        "a": "a + 1"
+       }
+      },
+      {
+       "if": "k < 3",
+       "set": {
+        "b": "b + 1"
+       }
+      },
+      {
+       "set": {
+        "c": "c + 1"
+       }
+      }
+     ]
+    },
+    "B": {
+     "param": [
+      0,
+      3
+     ],
+     "rules": [
+      {
+       "if": "k < 1",
+       "set": {
+        "x": "x - 1"
+       }
+      },
+      {
+       "if": "k < 2",
+       "set": {
+        "a": "a - 1"
+       }
+      },
+      {
+       "if": "k < 3",
+       "set": {
+        "b": "b - 1"
+       }
+      },
+      {
+       "set": {
+        "c": "c - 1"
+       }
+      }
+     ]
+    },
+    "C": {
+     "rules": [
+      {
+       "set": {
+        "x": "x"
+       }
+      }
+     ]
+    }
+   },
+   "tick": [
+    {
+     "set": {
+      "x": "(1 if x >= 2 else 0) + (1 if c >= 1 and c < 2 else 0) + (1 if a >= 2 else 0)",
+      "a": "(1 if a >= 2 else 0) + (1 if x >= 1 and x < 2 else 0) + (1 if b >= 2 else 0)",
+      "b": "(1 if b >= 2 else 0) + (1 if a >= 1 and a < 2 else 0) + (1 if c >= 2 else 0)",
+      "c": "(1 if c >= 2 else 0) + (1 if b >= 1 and b < 2 else 0) + (1 if x >= 2 else 0)"
+     }
+    }
+   ],
+   "readouts": {
+    "r1": "x + a + b + c"
+   },
+   "max_len": 10
+  },
+  "named_rivals": [
+   {
+    "label": "Uniform clockwise transport",
+    "world": {
+     "state": {
+      "x": {
+       "range": [
+        0,
+        2
+       ],
+       "boundary": "clamp",
+       "init": 0,
+       "settable": true
+      },
+      "a": {
+       "range": [
+        0,
+        2
+       ],
+       "boundary": "clamp",
+       "init": 0,
+       "settable": false
+      },
+      "b": {
+       "range": [
+        0,
+        2
+       ],
+       "boundary": "clamp",
+       "init": 0,
+       "settable": false
+      },
+      "c": {
+       "range": [
+        0,
+        2
+       ],
+       "boundary": "clamp",
+       "init": 0,
+       "settable": false
+      }
+     },
+     "actions": {
+      "A": {
+       "param": [
+        0,
+        3
+       ],
+       "rules": [
+        {
+         "if": "k < 1",
+         "set": {
+          "x": "x + 1"
+         }
+        },
+        {
+         "if": "k < 2",
+         "set": {
+          "a": "a + 1"
+         }
+        },
+        {
+         "if": "k < 3",
+         "set": {
+          "b": "b + 1"
+         }
+        },
+        {
+         "set": {
+          "c": "c + 1"
+         }
+        }
+       ]
+      },
+      "B": {
+       "param": [
+        0,
+        3
+       ],
+       "rules": [
+        {
+         "if": "k < 1",
+         "set": {
+          "x": "x - 1"
+         }
+        },
+        {
+         "if": "k < 2",
+         "set": {
+          "a": "a - 1"
+         }
+        },
+        {
+         "if": "k < 3",
+         "set": {
+          "b": "b - 1"
+         }
+        },
+        {
+         "set": {
+          "c": "c - 1"
+         }
+        }
+       ]
+      },
+      "C": {
+       "rules": [
+        {
+         "set": {
+          "x": "x"
+         }
+        }
+       ]
+      }
+     },
+     "tick": [
+      {
+       "set": {
+        "x": "c",
+        "a": "x",
+        "b": "a",
+        "c": "b"
+       }
+      }
+     ],
+     "readouts": {
+      "r1": "x + a + b + c"
+     },
+     "max_len": 10
+    }
+   },
+   {
+    "label": "Whole-pair reversal",
+    "world": {
+     "state": {
+      "x": {
+       "range": [
+        0,
+        2
+       ],
+       "boundary": "clamp",
+       "init": 0,
+       "settable": true
+      },
+      "a": {
+       "range": [
+        0,
+        2
+       ],
+       "boundary": "clamp",
+       "init": 0,
+       "settable": false
+      },
+      "b": {
+       "range": [
+        0,
+        2
+       ],
+       "boundary": "clamp",
+       "init": 0,
+       "settable": false
+      },
+      "c": {
+       "range": [
+        0,
+        2
+       ],
+       "boundary": "clamp",
+       "init": 0,
+       "settable": false
+      }
+     },
+     "actions": {
+      "A": {
+       "param": [
+        0,
+        3
+       ],
+       "rules": [
+        {
+         "if": "k < 1",
+         "set": {
+          "x": "x + 1"
+         }
+        },
+        {
+         "if": "k < 2",
+         "set": {
+          "a": "a + 1"
+         }
+        },
+        {
+         "if": "k < 3",
+         "set": {
+          "b": "b + 1"
+         }
+        },
+        {
+         "set": {
+          "c": "c + 1"
+         }
+        }
+       ]
+      },
+      "B": {
+       "param": [
+        0,
+        3
+       ],
+       "rules": [
+        {
+         "if": "k < 1",
+         "set": {
+          "x": "x - 1"
+         }
+        },
+        {
+         "if": "k < 2",
+         "set": {
+          "a": "a - 1"
+         }
+        },
+        {
+         "if": "k < 3",
+         "set": {
+          "b": "b - 1"
+         }
+        },
+        {
+         "set": {
+          "c": "c - 1"
+         }
+        }
+       ]
+      },
+      "C": {
+       "rules": [
+        {
+         "set": {
+          "x": "x"
+         }
+        }
+       ]
+      }
+     },
+     "tick": [
+      {
+       "set": {
+        "x": "(c if c < 2 else 0) + (a if a >= 2 else 0)",
+        "a": "(x if x < 2 else 0) + (b if b >= 2 else 0)",
+        "b": "(a if a < 2 else 0) + (c if c >= 2 else 0)",
+        "c": "(b if b < 2 else 0) + (x if x >= 2 else 0)"
+       }
+      }
+     ],
+     "readouts": {
+      "r1": "x + a + b + c"
+     },
+     "max_len": 10
+    }
+   },
+   {
+    "label": "Stationary half with clockwise emission",
+    "world": {
+     "state": {
+      "x": {
+       "range": [
+        0,
+        2
+       ],
+       "boundary": "clamp",
+       "init": 0,
+       "settable": true
+      },
+      "a": {
+       "range": [
+        0,
+        2
+       ],
+       "boundary": "clamp",
+       "init": 0,
+       "settable": false
+      },
+      "b": {
+       "range": [
+        0,
+        2
+       ],
+       "boundary": "clamp",
+       "init": 0,
+       "settable": false
+      },
+      "c": {
+       "range": [
+        0,
+        2
+       ],
+       "boundary": "clamp",
+       "init": 0,
+       "settable": false
+      }
+     },
+     "actions": {
+      "A": {
+       "param": [
+        0,
+        3
+       ],
+       "rules": [
+        {
+         "if": "k < 1",
+         "set": {
+          "x": "x + 1"
+         }
+        },
+        {
+         "if": "k < 2",
+         "set": {
+          "a": "a + 1"
+         }
+        },
+        {
+         "if": "k < 3",
+         "set": {
+          "b": "b + 1"
+         }
+        },
+        {
+         "set": {
+          "c": "c + 1"
+         }
+        }
+       ]
+      },
+      "B": {
+       "param": [
+        0,
+        3
+       ],
+       "rules": [
+        {
+         "if": "k < 1",
+         "set": {
+          "x": "x - 1"
+         }
+        },
+        {
+         "if": "k < 2",
+         "set": {
+          "a": "a - 1"
+         }
+        },
+        {
+         "if": "k < 3",
+         "set": {
+          "b": "b - 1"
+         }
+        },
+        {
+         "set": {
+          "c": "c - 1"
+         }
+        }
+       ]
+      },
+      "C": {
+       "rules": [
+        {
+         "set": {
+          "x": "x"
+         }
+        }
+       ]
+      }
+     },
+     "tick": [
+      {
+       "set": {
+        "x": "(1 if x >= 2 else 0) + (1 if c >= 1 else 0)",
+        "a": "(1 if a >= 2 else 0) + (1 if x >= 1 else 0)",
+        "b": "(1 if b >= 2 else 0) + (1 if a >= 1 else 0)",
+        "c": "(1 if c >= 2 else 0) + (1 if b >= 1 else 0)"
+       }
+      }
+     ],
+     "readouts": {
+      "r1": "x + a + b + c"
+     },
+     "max_len": 10
+    }
+   }
+  ],
+  "plan_experiments": [
+   {
+    "start": {
+     "x": 0
+    },
+    "inputs": [
+     [
+      "C"
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 1
+    },
+    "inputs": [
+     [
+      "C"
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 2
+    },
+    "inputs": [
+     [
+      "C"
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 0
+    },
+    "inputs": [
+     [
+      "A",
+      0
+     ],
+     [
+      "B",
+      1
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "B",
+      3
+     ],
+     [
+      "B",
+      2
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ],
+     [
+      "B",
+      0
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 0
+    },
+    "inputs": [
+     [
+      "A",
+      1
+     ],
+     [
+      "B",
+      2
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "B",
+      0
+     ],
+     [
+      "B",
+      3
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ],
+     [
+      "B",
+      1
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 0
+    },
+    "inputs": [
+     [
+      "A",
+      2
+     ],
+     [
+      "B",
+      3
+     ],
+     [
+      "A",
+      2
+     ],
+     [
+      "B",
+      1
+     ],
+     [
+      "B",
+      0
+     ],
+     [
+      "A",
+      2
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ],
+     [
+      "B",
+      2
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 0
+    },
+    "inputs": [
+     [
+      "A",
+      3
+     ],
+     [
+      "B",
+      0
+     ],
+     [
+      "A",
+      3
+     ],
+     [
+      "B",
+      2
+     ],
+     [
+      "B",
+      1
+     ],
+     [
+      "A",
+      3
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ],
+     [
+      "B",
+      3
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 0
+    },
+    "inputs": [
+     [
+      "A",
+      3
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "B",
+      3
+     ],
+     [
+      "B",
+      1
+     ],
+     [
+      "A",
+      3
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "B",
+      0
+     ],
+     [
+      "B",
+      0
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 0
+    },
+    "inputs": [
+     [
+      "A",
+      0
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "B",
+      0
+     ],
+     [
+      "B",
+      2
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "B",
+      1
+     ],
+     [
+      "B",
+      1
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 0
+    },
+    "inputs": [
+     [
+      "A",
+      1
+     ],
+     [
+      "A",
+      2
+     ],
+     [
+      "B",
+      1
+     ],
+     [
+      "B",
+      3
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "A",
+      2
+     ],
+     [
+      "B",
+      2
+     ],
+     [
+      "B",
+      2
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 0
+    },
+    "inputs": [
+     [
+      "A",
+      2
+     ],
+     [
+      "A",
+      3
+     ],
+     [
+      "B",
+      2
+     ],
+     [
+      "B",
+      0
+     ],
+     [
+      "A",
+      2
+     ],
+     [
+      "A",
+      3
+     ],
+     [
+      "B",
+      3
+     ],
+     [
+      "B",
+      3
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 0
+    },
+    "inputs": [
+     [
+      "A",
+      3
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "C"
+     ],
+     [
+      "B",
+      0
+     ],
+     [
+      "B",
+      0
+     ],
+     [
+      "B",
+      2
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 0
+    },
+    "inputs": [
+     [
+      "A",
+      0
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "C"
+     ],
+     [
+      "B",
+      1
+     ],
+     [
+      "B",
+      1
+     ],
+     [
+      "B",
+      3
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 0
+    },
+    "inputs": [
+     [
+      "A",
+      1
+     ],
+     [
+      "A",
+      2
+     ],
+     [
+      "A",
+      2
+     ],
+     [
+      "A",
+      2
+     ],
+     [
+      "C"
+     ],
+     [
+      "B",
+      2
+     ],
+     [
+      "B",
+      2
+     ],
+     [
+      "B",
+      0
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 0
+    },
+    "inputs": [
+     [
+      "A",
+      2
+     ],
+     [
+      "A",
+      3
+     ],
+     [
+      "A",
+      3
+     ],
+     [
+      "A",
+      3
+     ],
+     [
+      "C"
+     ],
+     [
+      "B",
+      3
+     ],
+     [
+      "B",
+      3
+     ],
+     [
+      "B",
+      1
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 1
+    },
+    "inputs": [
+     [
+      "B",
+      0
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ],
+     [
+      "B",
+      0
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 2
+    },
+    "inputs": [
+     [
+      "C"
+     ],
+     [
+      "B",
+      3
+     ],
+     [
+      "B",
+      1
+     ],
+     [
+      "A",
+      3
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "B",
+      0
+     ],
+     [
+      "B",
+      0
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 2
+    },
+    "inputs": [
+     [
+      "A",
+      0
+     ],
+     [
+      "B",
+      3
+     ],
+     [
+      "B",
+      1
+     ],
+     [
+      "A",
+      3
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "B",
+      0
+     ],
+     [
+      "B",
+      0
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 2
+    },
+    "inputs": [
+     [
+      "A",
+      1
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "A",
+      3
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 2
+    },
+    "inputs": [
+     [
+      "A",
+      1
+     ],
+     [
+      "C"
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "A",
+      3
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 2
+    },
+    "inputs": [
+     [
+      "A",
+      1
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "A",
+      3
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 2
+    },
+    "inputs": [
+     [
+      "A",
+      1
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "A",
+      3
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ],
+     [
+      "C"
+     ]
+    ]
+   }
+  ],
+  "queries": [
+   {
+    "id": "Q1",
+    "regime": "composition",
+    "start": {
+     "x": 2
+    },
+    "inputs": [
+     8,
+     1,
+     0,
+     2,
+     4,
+     4,
+     5,
+     7,
+     3,
+     6
+    ],
+    "answer": [
+     3
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q2",
+    "regime": "composition",
+    "start": {
+     "x": 1
+    },
+    "inputs": [
+     2,
+     0,
+     5,
+     3,
+     1,
+     4,
+     1,
+     7,
+     8,
+     6
+    ],
+    "answer": [
+     4
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q3",
+    "regime": "composition",
+    "start": {
+     "x": 2
+    },
+    "inputs": [
+     1,
+     3,
+     8,
+     4,
+     6,
+     5,
+     0,
+     5,
+     7,
+     2
+    ],
+    "answer": [
+     4
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q4",
+    "regime": "interpolation",
+    "start": {
+     "x": 2
+    },
+    "inputs": [
+     8,
+     1,
+     3,
+     8,
+     1,
+     4,
+     2,
+     6,
+     1,
+     0
+    ],
+    "answer": [
+     5
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q5",
+    "regime": "composition",
+    "start": {
+     "x": 1
+    },
+    "inputs": [
+     2,
+     5,
+     3,
+     1,
+     7,
+     6,
+     0,
+     8,
+     5,
+     4
+    ],
+    "answer": [
+     3
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q6",
+    "regime": "composition",
+    "start": {
+     "x": 0
+    },
+    "inputs": [
+     0,
+     1,
+     7,
+     2,
+     6,
+     3,
+     5,
+     1,
+     8,
+     4
+    ],
+    "answer": [
+     4
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q7",
+    "regime": "composition",
+    "start": {
+     "x": 1
+    },
+    "inputs": [
+     4,
+     2,
+     1,
+     3,
+     0,
+     2,
+     6,
+     7,
+     5,
+     8
+    ],
+    "answer": [
+     3
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q8",
+    "regime": "composition",
+    "start": {
+     "x": 2
+    },
+    "inputs": [
+     3,
+     2,
+     6,
+     1,
+     8,
+     4,
+     7,
+     5,
+     8,
+     0
+    ],
+    "answer": [
+     4
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q9",
+    "regime": "composition",
+    "start": {
+     "x": 1
+    },
+    "inputs": [
+     2,
+     6,
+     7,
+     6,
+     0,
+     1,
+     4,
+     5,
+     3,
+     8
+    ],
+    "answer": [
+     4
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q10",
+    "regime": "interpolation",
+    "start": {
+     "x": 2
+    },
+    "inputs": [
+     7,
+     3,
+     4,
+     0,
+     5,
+     6,
+     1,
+     8,
+     0,
+     2
+    ],
+    "answer": [
+     4
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q11",
+    "regime": "composition",
+    "start": {
+     "x": 2
+    },
+    "inputs": [
+     2,
+     1,
+     8,
+     4,
+     7,
+     0,
+     5,
+     6,
+     3,
+     4
+    ],
+    "answer": [
+     3
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q12",
+    "regime": "interpolation",
+    "start": {
+     "x": 1
+    },
+    "inputs": [
+     0,
+     8,
+     6,
+     3,
+     0,
+     5,
+     8,
+     2
+    ],
+    "answer": [
+     4
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q13",
+    "regime": "composition",
+    "start": {
+     "x": 2
+    },
+    "inputs": [
+     0,
+     3,
+     1,
+     2,
+     6,
+     7,
+     3,
+     8,
+     5,
+     4
+    ],
+    "answer": [
+     3
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q14",
+    "regime": "structured",
+    "start": {
+     "x": 1
+    },
+    "inputs": [
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     4
+    ],
+    "answer": [
+     3
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q15",
+    "regime": "composition",
+    "start": {
+     "x": 2
+    },
+    "inputs": [
+     6,
+     2,
+     5,
+     4,
+     3,
+     0,
+     7,
+     8,
+     1,
+     1
+    ],
+    "answer": [
+     3
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q16",
+    "regime": "interpolation",
+    "start": {
+     "x": 2
+    },
+    "inputs": [
+     5,
+     1,
+     2,
+     4,
+     0,
+     0,
+     0,
+     3,
+     4
+    ],
+    "answer": [
+     5
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q17",
+    "regime": "composition",
+    "start": {
+     "x": 1
+    },
+    "inputs": [
+     6,
+     7,
+     8,
+     3,
+     1,
+     5,
+     0,
+     4,
+     0,
+     2
+    ],
+    "answer": [
+     5
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q18",
+    "regime": "composition",
+    "start": {
+     "x": 1
+    },
+    "inputs": [
+     1,
+     2,
+     5,
+     0,
+     8,
+     3,
+     4,
+     7,
+     7,
+     6
+    ],
+    "answer": [
+     2
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q19",
+    "regime": "composition",
+    "start": {
+     "x": 0
+    },
+    "inputs": [
+     5,
+     8,
+     3,
+     1,
+     2,
+     1,
+     7,
+     4,
+     0,
+     6
+    ],
+    "answer": [
+     2
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q20",
+    "regime": "interpolation",
+    "start": {
+     "x": 2
+    },
+    "inputs": [
+     2,
+     2,
+     2,
+     3,
+     2,
+     3,
+     0,
+     8,
+     2
+    ],
+    "answer": [
+     5
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q21",
+    "regime": "composition",
+    "start": {
+     "x": 2
+    },
+    "inputs": [
+     1,
+     0,
+     8,
+     3,
+     0,
+     7,
+     2,
+     4,
+     5,
+     6
+    ],
+    "answer": [
+     2
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q22",
+    "regime": "composition",
+    "start": {
+     "x": 0
+    },
+    "inputs": [
+     2,
+     3,
+     6,
+     8,
+     0,
+     1,
+     0,
+     4,
+     7,
+     5
+    ],
+    "answer": [
+     1
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q23",
+    "regime": "interpolation",
+    "start": {
+     "x": 2
+    },
+    "inputs": [
+     7,
+     1,
+     1,
+     2,
+     2
+    ],
+    "answer": [
+     5
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q24",
+    "regime": "interpolation",
+    "start": {
+     "x": 1
+    },
+    "inputs": [
+     7,
+     1,
+     7,
+     8,
+     5,
+     5,
+     1,
+     0,
+     3
+    ],
+    "answer": [
+     5
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q25",
+    "regime": "composition",
+    "start": {
+     "x": 1
+    },
+    "inputs": [
+     5,
+     2,
+     0,
+     3,
+     7,
+     1,
+     6,
+     8,
+     1,
+     4
+    ],
+    "answer": [
+     2
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q26",
+    "regime": "interpolation",
+    "start": {
+     "x": 2
+    },
+    "inputs": [
+     4,
+     6,
+     2,
+     1,
+     6,
+     5
+    ],
+    "answer": [
+     2
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q27",
+    "regime": "structured",
+    "start": {
+     "x": 1
+    },
+    "inputs": [
+     3,
+     3,
+     3,
+     3,
+     0
+    ],
+    "answer": [
+     5
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q28",
+    "regime": "composition",
+    "start": {
+     "x": 1
+    },
+    "inputs": [
+     1,
+     6,
+     0,
+     3,
+     2,
+     5,
+     7,
+     8,
+     1,
+     4
+    ],
+    "answer": [
+     1
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q29",
+    "regime": "interpolation",
+    "start": {
+     "x": 2
+    },
+    "inputs": [
+     0,
+     1,
+     1,
+     6,
+     5,
+     7
+    ],
+    "answer": [
+     2
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q30",
+    "regime": "composition",
+    "start": {
+     "x": 0
+    },
+    "inputs": [
+     7,
+     3,
+     0,
+     6,
+     5,
+     1,
+     4,
+     8,
+     2,
+     4
+    ],
+    "answer": [
+     1
+    ],
+    "critical": true
+   }
+  ]
+ },
+ "results": {
+  "class": "frontier",
+  "reasons": [
+   "full-budget pilot critical accuracy 0.30"
+  ],
+  "pilot_critical_accuracy": {
+   "none": 0.0,
+   "quarter": 0.23333333333333334,
+   "full": 0.3
+  },
+  "pilot_experiments_used": {
+   "none": 0,
+   "quarter": 10,
+   "full": 40
+  },
+  "queries_dropped": 0,
+  "silent_fraction": 0.26,
+  "lever_profile": {
+   "time": true,
+   "cycle": false,
+   "alias": false,
+   "coupled": true,
+   "aggregate": true,
+   "alias_ratio": 0.127
+  },
+  "novelty": {
+   "behaviour": [],
+   "structure": []
+  },
+  "audit": {
+   "states": 81,
+   "inputs": 9,
+   "starts": 3,
+   "rivals": 148,
+   "interface_equivalent_rivals": 0,
+   "needles": 0,
+   "rivals_left_after_identifiability": 0,
+   "coverage": false,
+   "queries": {
+    "count": 30,
+    "critical": 30,
+    "extrapolation_diagnostic": 10,
+    "mode": "discriminating"
+   },
+   "plan_reaches": false,
+   "shortcut_falls_short": false
+  }
+ }
+}

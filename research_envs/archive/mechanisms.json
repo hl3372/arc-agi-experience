@@ -1,0 +1,495 @@
+[
+ {
+  "id": "thermostat",
+  "title": "thermostat with hysteresis: heater on below 3, off above 6",
+  "world": {
+   "state": {
+    "t": {
+     "range": [
+      0,
+      9
+     ],
+     "settable": true
+    },
+    "on": {
+     "range": [
+      0,
+      1
+     ]
+    }
+   },
+   "actions": {
+    "wait": {
+     "rules": [
+      {
+       "if": "on == 1",
+       "set": {
+        "t": "t + 1"
+       }
+      },
+      {
+       "set": {
+        "t": "t - 1"
+       }
+      }
+     ]
+    }
+   },
+   "tick": [
+    {
+     "if": "t <= 3",
+     "set": {
+      "on": "1"
+     }
+    },
+    {
+     "if": "t >= 6",
+     "set": {
+      "on": "0"
+     }
+    }
+   ],
+   "readouts": {
+    "temp": "t"
+   },
+   "max_len": 8
+  },
+  "structure": "07ca45a206980b2e"
+ },
+ {
+  "id": "counter_overflow",
+  "title": "counter mod 4 with an overflow lamp",
+  "world": {
+   "state": {
+    "c": {
+     "range": [
+      0,
+      3
+     ],
+     "boundary": "wrap"
+    },
+    "o": {
+     "range": [
+      0,
+      1
+     ]
+    }
+   },
+   "actions": {
+    "tick": {
+     "rules": [
+      {
+       "if": "c == 3",
+       "set": {
+        "c": "c + 1",
+        "o": "1"
+       }
+      },
+      {
+       "set": {
+        "c": "c + 1",
+        "o": "0"
+       }
+      }
+     ]
+    }
+   },
+   "readouts": {
+    "lamp": "o"
+   },
+   "max_len": 8
+  },
+  "structure": "db5bf3dd648dc9fc"
+ },
+ {
+  "id": "two_tank",
+  "title": "two tanks with a conserved transfer",
+  "world": {
+   "state": {
+    "a": {
+     "range": [
+      0,
+      8
+     ],
+     "settable": true
+    },
+    "b": {
+     "range": [
+      0,
+      8
+     ],
+     "settable": true
+    }
+   },
+   "actions": {
+    "pour_ab": {
+     "rules": [
+      {
+       "if": "a > 0 and b < 8",
+       "set": {
+        "a": "a - 1",
+        "b": "b + 1"
+       }
+      }
+     ]
+    },
+    "pour_ba": {
+     "rules": [
+      {
+       "if": "b > 0 and a < 8",
+       "set": {
+        "a": "a + 1",
+        "b": "b - 1"
+       }
+      }
+     ]
+    }
+   },
+   "readouts": {
+    "ra": "a",
+    "rb": "b"
+   },
+   "max_len": 6
+  },
+  "structure": "27294a92bfc26c2f"
+ },
+ {
+  "id": "combination_lock",
+  "title": "a lock that opens after the sequence X, Y, X",
+  "world": {
+   "state": {
+    "p": {
+     "range": [
+      0,
+      3
+     ]
+    }
+   },
+   "actions": {
+    "X": {
+     "rules": [
+      {
+       "if": "p == 0",
+       "set": {
+        "p": "1"
+       }
+      },
+      {
+       "if": "p == 2",
+       "set": {
+        "p": "3"
+       }
+      },
+      {
+       "set": {
+        "p": "0"
+       }
+      }
+     ]
+    },
+    "Y": {
+     "rules": [
+      {
+       "if": "p == 1",
+       "set": {
+        "p": "2"
+       }
+      },
+      {
+       "set": {
+        "p": "0"
+       }
+      }
+     ]
+    }
+   },
+   "readouts": {
+    "open": "p == 3"
+   },
+   "max_len": 6
+  },
+  "structure": "7c7f333406f0d437"
+ },
+ {
+  "id": "delay_line",
+  "title": "an input that shows up two steps later",
+  "world": {
+   "state": {
+    "d1": {
+     "range": [
+      0,
+      1
+     ]
+    },
+    "d2": {
+     "range": [
+      0,
+      1
+     ]
+    },
+    "out": {
+     "range": [
+      0,
+      1
+     ]
+    }
+   },
+   "actions": {
+    "send": {
+     "rules": [
+      {
+       "set": {
+        "d1": "1",
+        "d2": "d1",
+        "out": "d2"
+       }
+      }
+     ]
+    },
+    "idle": {
+     "rules": [
+      {
+       "set": {
+        "d1": "0",
+        "d2": "d1",
+        "out": "d2"
+       }
+      }
+     ]
+    }
+   },
+   "readouts": {
+    "r": "out"
+   },
+   "max_len": 6
+  },
+  "structure": "8b13f7702e4d75bf"
+ },
+ {
+  "id": "toggle",
+  "title": "a push-button toggle",
+  "world": {
+   "state": {
+    "s": {
+     "range": [
+      0,
+      1
+     ],
+     "boundary": "wrap"
+    }
+   },
+   "actions": {
+    "push": {
+     "rules": [
+      {
+       "set": {
+        "s": "s + 1"
+       }
+      }
+     ]
+    }
+   },
+   "readouts": {
+    "light": "s"
+   },
+   "max_len": 6
+  },
+  "structure": "15276d20a12ad5f7"
+ },
+ {
+  "id": "vending",
+  "title": "a machine that dispenses after 3 coins and resets",
+  "world": {
+   "state": {
+    "c": {
+     "range": [
+      0,
+      3
+     ]
+    },
+    "g": {
+     "range": [
+      0,
+      1
+     ]
+    }
+   },
+   "actions": {
+    "coin": {
+     "rules": [
+      {
+       "if": "c >= 2",
+       "set": {
+        "c": "0",
+        "g": "1"
+       }
+      },
+      {
+       "set": {
+        "c": "c + 1",
+        "g": "0"
+       }
+      }
+     ]
+    },
+    "refund": {
+     "rules": [
+      {
+       "set": {
+        "c": "0",
+        "g": "0"
+       }
+      }
+     ]
+    }
+   },
+   "readouts": {
+    "dispense": "g"
+   },
+   "max_len": 6
+  },
+  "structure": "8a3c7be1ae8b7842"
+ },
+ {
+  "id": "leaky_accumulator",
+  "title": "an accumulator that leaks one unit per step",
+  "world": {
+   "state": {
+    "x": {
+     "range": [
+      0,
+      9
+     ],
+     "settable": true
+    }
+   },
+   "actions": {
+    "add": {
+     "rules": [
+      {
+       "set": {
+        "x": "x + 3"
+       }
+      }
+     ]
+    },
+    "wait": {
+     "rules": [
+      {
+       "set": {
+        "x": "x"
+       }
+      }
+     ]
+    }
+   },
+   "tick": [
+    {
+     "set": {
+      "x": "x - 1"
+     }
+    }
+   ],
+   "readouts": {
+    "level": "x"
+   },
+   "max_len": 6
+  },
+  "structure": "9b56410cef4e562c"
+ },
+ {
+  "id": "ring_counter",
+  "title": "a ring of 5 positions with forward and back",
+  "world": {
+   "state": {
+    "p": {
+     "range": [
+      0,
+      4
+     ],
+     "boundary": "wrap",
+     "settable": true
+    }
+   },
+   "actions": {
+    "fwd": {
+     "rules": [
+      {
+       "set": {
+        "p": "p + 1"
+       }
+      }
+     ]
+    },
+    "back": {
+     "rules": [
+      {
+       "set": {
+        "p": "p - 1"
+       }
+      }
+     ]
+    }
+   },
+   "readouts": {
+    "pos": "p"
+   },
+   "max_len": 6
+  },
+  "structure": "ee329fa6e765bc79"
+ },
+ {
+  "id": "mode_switch",
+  "title": "a switch that selects whether a dial adds or subtracts",
+  "world": {
+   "state": {
+    "x": {
+     "range": [
+      0,
+      9
+     ],
+     "settable": true
+    },
+    "m": {
+     "range": [
+      0,
+      1
+     ],
+     "boundary": "wrap"
+    }
+   },
+   "actions": {
+    "flip": {
+     "rules": [
+      {
+       "set": {
+        "m": "m + 1"
+       }
+      }
+     ]
+    },
+    "turn": {
+     "rules": [
+      {
+       "if": "m == 0",
+       "set": {
+        "x": "x + 1"
+       }
+      },
+      {
+       "set": {
+        "x": "x - 1"
+       }
+      }
+     ]
+    }
+   },
+   "readouts": {
+    "r": "x",
+    "mode_lamp": "m"
+   },
+   "max_len": 6
+  },
+  "structure": "6f250c0d78eb1414"
+ }
+]

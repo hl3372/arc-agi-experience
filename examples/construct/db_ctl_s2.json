@@ -1,0 +1,190 @@
+{
+ "format": "research-envs/construct-problem/1",
+ "id": "db_ctl_s2",
+ "title": "Many frozen two-colorings at equal incidence budget",
+ "object": "set_system",
+ "request": {
+  "demand": null
+ },
+ "source_run": "demo_b",
+ "settings": {
+  "battery_budget": 20000,
+  "quality_bar": true,
+  "round_registry": true,
+  "improver": true
+ },
+ "public": {
+  "statement": "Construct a family F of distinct four-element subsets of {0,...,11}, with every point belonging to exactly four blocks. A red-blue coloring is proper if no block is monochromatic. It is frozen if changing the color of any single point makes some block monochromatic. Maximize the number of frozen proper colorings, counting a coloring and its color reversal separately. Every frozen proper coloring under these assumptions necessarily has six points of each color.",
+  "spec": {
+   "object": "set_system",
+   "kind": "optimize",
+   "params": {
+    "m": 12
+   },
+   "constraints": [
+    {
+     "name": "four_uniform",
+     "expr": "all(len(B) == 4 for B in F)"
+    },
+    {
+     "name": "four_regular",
+     "expr": "all(sum(1 for B in F if v in B) == 4 for v in ground)"
+    }
+   ],
+   "objective": {
+    "expr": "sum(1 for T in combinations(ground, m // 2) for C in (frozenset(T),) if all(0 < len(B & C) < 4 for B in F) and all(any(v in B and (len(B & C) == 1 if v in C else len(B - C) == 1) for B in F) for v in ground))",
+    "direction": "max"
+   }
+  }
+ },
+ "private": {
+  "sibling": {
+   "m": 6
+  },
+  "search_hint": {
+   "set_sizes": [
+    4
+   ]
+  },
+  "witness_program": "import json\n\nwith open('spec.json', encoding='utf-8') as f:\n    m = json.load(f)['params']['m']\n\nif m == 12:\n    # Six pairs P_j = {2*j, 2*j+1}, indexed modulo six.\n    # Block (j,b) contains (j,b), all of P_(j+1), and (j+3,b).\n    family = [\n        {2*j+b, 2*((j+1)%6), 2*((j+1)%6)+1,\n         2*((j+3)%6)+b}\n        for j in range(6) for b in range(2)\n    ]\nelif m == 6:\n    A, B = set(range(3)), set(range(3, 6))\n    family = [A | {b} for b in sorted(B)]\n    family += [B | {a} for a in sorted(A)]\nelse:\n    raise ValueError('This construction supports m=12 and sibling m=6.')\n\nsets = sorted(sorted(block) for block in family)\nassert len({tuple(block) for block in sets}) == m\nassert all(len(block) == 4 for block in sets)\nassert all(sum(v in block for block in sets) == 4 for v in range(m))\nprint(json.dumps({'m': m, 'sets': sets}, separators=(',', ':')))\n",
+  "witness_is_construction": true,
+  "witness": {
+   "m": 12,
+   "sets": [
+    [
+     0,
+     1,
+     4,
+     10
+    ],
+    [
+     0,
+     1,
+     5,
+     11
+    ],
+    [
+     0,
+     2,
+     3,
+     6
+    ],
+    [
+     0,
+     6,
+     8,
+     9
+    ],
+    [
+     1,
+     2,
+     3,
+     7
+    ],
+    [
+     1,
+     7,
+     8,
+     9
+    ],
+    [
+     2,
+     4,
+     5,
+     8
+    ],
+    [
+     2,
+     8,
+     10,
+     11
+    ],
+    [
+     3,
+     4,
+     5,
+     9
+    ],
+    [
+     3,
+     9,
+     10,
+     11
+    ],
+    [
+     4,
+     6,
+     7,
+     10
+    ],
+    [
+     5,
+     6,
+     7,
+     11
+    ]
+   ]
+  },
+  "reference": 16,
+  "best_known": {
+   "objective": 16,
+   "source": "witness"
+  },
+  "stated_bound": 16,
+  "bound_argument": "First, incidence counting gives exactly twelve blocks. A block can protect at most one point against a color flip. Thus, in a frozen proper coloring, every block has a 3\u20131 split and every point is protected by exactly one block. If r points are red, red incidences total both 4r and r+3(12-r), giving r=6.\n\nWe prove an upper bound of sixteen. If there is no frozen coloring the bound is immediate. Otherwise fix one, with color classes R and U of size six. Index each block by its uniquely protected point. The incidence matrix then has block form [I P; Q I], where P and Q are binary 6-by-6 matrices with every row and column containing three ones. All subsequent matrix arithmetic is over F_2; |x| denotes ordinary Hamming weight.\n\nFor another frozen coloring, let x and y be its red indicators on R and U. Every block has an odd number of red points, so x+Py=1 and Qx+y=1. Consequently y=1+Qx and Kx=0, where K=I+PQ. Balance requires |Qx|=|x|. Thus each frozen coloring injects into the vectors x satisfying these two conditions. If rank(K)>=2, there are at most 2^4=16 such vectors. Also rank(K)>=6-rank(Q), so only ranks five and six for Q need further consideration.\n\nSuppose Q is invertible. Its columns are distinct three-subsets of six rows, and no two are complementary: complementary columns would give Q(e_i+e_j)=1=Q1, contradicting invertibility. Their pairwise intersections therefore have size one or two. For each column, its intersections with the other five sum to six, so exactly one intersection has size two. These pairs form a perfect matching of the six columns. Weight-preserving vectors x consist of: the zero and all-one vectors; the three matched pairs and their three complements; and the eight triples choosing one column from each matched pair. To verify the last assertion, the weight of the XOR of three columns is 9-2s+4t, where s is the sum of their pairwise intersections and t their triple intersection. A triple containing a matched pair cannot have XOR weight three; a triple containing no matched pair necessarily does. Hence there are exactly sixteen weight-preserving vectors.\n\nNow suppose rank(Q)=5 and rank(K)<=1. Repeated columns would force rank(Q)<=4: if two columns have the same three-row support, some other column is disjoint from that support, since only three remaining incidences occur there among four columns. That column is complementary to the repeated column, giving two independent kernel relations. Thus Q has no repeated columns. If it also had no complementary columns, the preceding intersection argument would give Q^T Q=J+H over F_2, where J is the all-one matrix and H a perfect-matching permutation matrix. But (J+H)^2=I, contradicting singularity. Therefore Q has a complementary column pair, called a,b. It is unique because the kernel has dimension one. The kernel vector w is one on the other four columns and zero on a,b.\n\nThe other four columns have pairwise intersection one: their intersections with a and b sum to three, leaving a total of three for their intersections with the remaining three columns. Consequently the six rows on these four columns are precisely the six edges of K_4. The three rows containing a form a path, since their vertex degrees are all one or two. Relabeling the four columns 1,2,3,4, the row supports of Q are therefore {a,1,2}, {a,2,3}, {a,3,4}, {b,1,3}, {b,1,4}, {b,2,4}.\n\nSince Kw=w, K has rank one and can be written w t^T, with t\u00b7w=1. Also K1=0, so t\u00b71=0. The equation Kx=0 consequently takes the form a=XOR_{i in T} p_i or b=XOR_{i in T} p_i, where T is an odd subset of the four extra coordinates p_1,...,p_4. For the equation involving a, put j=|T intersect {2,3}|. Direct weight counting in the displayed six row supports gives 8+4j weight-preserving vectors: two with zero or four selected extra coordinates, 4+4j with one or three, and two with two. Thus there are at most sixteen. For the equation involving b, the same count uses j=|T intersect {1,4}| and again gives at most sixteen. This completes the universal upper bound.\n\nThe reference attains sixteen. Write its points as (j,b), with j modulo six and b in {0,1}. There are eight frozen colorings in which every pair is bichromatic and opposite pairs j,j+3 have identical color assignments. There are another eight in which every pair is monochromatic and opposite pairs have opposite colors. In either case every block has a unique minority, and each point is that minority in exactly one block. These sixteen colorings are distinct, so the optimum is exactly sixteen.",
+  "degenerate_exprs": []
+ },
+ "results": {
+  "class": "closed",
+  "reasons": [
+   "best known value meets the planner's proven bound 16"
+  ],
+  "audit_mode": null,
+  "audit_passes": true,
+  "pilot_outcomes": [
+   {
+    "arm": "object",
+    "class": "matches_reference",
+    "objective": 16,
+    "vs_best": "matches_best"
+   },
+   {
+    "arm": "code",
+    "class": "matches_reference",
+    "objective": 16,
+    "vs_best": "matches_best"
+   }
+  ],
+  "naturalness_rater_score": 4,
+  "sibling": {
+   "objects": 32768,
+   "valid": 70,
+   "optimum": 2,
+   "optimal_classes": 1,
+   "redundant_constraints": [
+    "four_uniform"
+   ]
+  },
+  "probe_adequacy": 0.966,
+  "novelty": {
+   "textbook_matches": [],
+   "zoo_match": null
+  },
+  "battery_best": {
+   "battery_20000": {
+    "anneal": 0,
+    "greedy_add": 0,
+    "hill_climb": 0,
+    "kick": 0,
+    "symmetric": 2
+   },
+   "battery_200000": {
+    "anneal": 0,
+    "greedy_add": 0,
+    "hill_climb": 2,
+    "kick": 0,
+    "symmetric": 8
+   }
+  }
+ }
+}

@@ -1,0 +1,3129 @@
+{
+ "format": "research-envs/discover-world/1",
+ "id": "da_alias_2",
+ "title": "The Stretching Detour",
+ "request": {
+  "demand": null,
+  "lever": "alias"
+ },
+ "source_run": "demo_a2",
+ "settings": {
+  "budget": 40,
+  "interface": "v2",
+  "query_mode": "discriminating",
+  "answer_cap": 0.4,
+  "trivial_cap": 0.3,
+  "quality_bar": true
+ },
+ "public": {
+  "description": "Choose an integer start setting x from 0 to 2. Available commands are A0\u2013A2, B1\u2013B3, and C1\u2013C3. The device displays integer readout r1 after the start and every command. Each experiment begins from reset and permits up to eight commands.",
+  "interface": {
+   "actions": [
+    "A(k) with k in 0..2",
+    "B(k) with k in 1..3",
+    "C(k) with k in 1..3"
+   ],
+   "readouts": [
+    "r1"
+   ],
+   "settable": [
+    "x in 0..2"
+   ],
+   "budget": 40,
+   "max_len": 8
+  },
+  "queries": [
+   {
+    "id": "Q1",
+    "start": {
+     "x": 1
+    },
+    "actions": [
+     "A2",
+     "C2",
+     "C1",
+     "A1",
+     "B3",
+     "B1",
+     "B2",
+     "A0"
+    ]
+   },
+   {
+    "id": "Q2",
+    "start": {
+     "x": 0
+    },
+    "actions": [
+     "A0",
+     "C2",
+     "A2",
+     "B1",
+     "C1",
+     "B2",
+     "B3",
+     "A1"
+    ]
+   },
+   {
+    "id": "Q3",
+    "start": {
+     "x": 1
+    },
+    "actions": [
+     "A2",
+     "C1",
+     "B2",
+     "B3",
+     "A1",
+     "B1",
+     "C2"
+    ]
+   },
+   {
+    "id": "Q4",
+    "start": {
+     "x": 2
+    },
+    "actions": [
+     "B2",
+     "A2",
+     "B3",
+     "C2",
+     "A1",
+     "A0",
+     "C1",
+     "B1"
+    ]
+   },
+   {
+    "id": "Q5",
+    "start": {
+     "x": 0
+    },
+    "actions": [
+     "C1",
+     "B1",
+     "A0",
+     "A1",
+     "A2",
+     "B3",
+     "C2",
+     "B2"
+    ]
+   },
+   {
+    "id": "Q6",
+    "start": {
+     "x": 1
+    },
+    "actions": [
+     "B3",
+     "A2",
+     "C2",
+     "A1",
+     "B1",
+     "B2",
+     "A0",
+     "C1"
+    ]
+   },
+   {
+    "id": "Q7",
+    "start": {
+     "x": 1
+    },
+    "actions": [
+     "A0",
+     "A2",
+     "B1",
+     "C2",
+     "B3",
+     "A1",
+     "C1",
+     "B2"
+    ]
+   },
+   {
+    "id": "Q8",
+    "start": {
+     "x": 1
+    },
+    "actions": [
+     "A2",
+     "B2",
+     "C3",
+     "A1",
+     "B3",
+     "B3",
+     "A2"
+    ]
+   },
+   {
+    "id": "Q9",
+    "start": {
+     "x": 1
+    },
+    "actions": [
+     "B2",
+     "B3",
+     "A0",
+     "C1",
+     "B1",
+     "A2",
+     "C2",
+     "A1"
+    ]
+   },
+   {
+    "id": "Q10",
+    "start": {
+     "x": 2
+    },
+    "actions": [
+     "B1",
+     "C1",
+     "A0",
+     "C2",
+     "A2",
+     "B3",
+     "A1",
+     "B2"
+    ]
+   },
+   {
+    "id": "Q11",
+    "start": {
+     "x": 2
+    },
+    "actions": [
+     "C1",
+     "B1",
+     "B3",
+     "A0",
+     "A1",
+     "C2",
+     "A2",
+     "B2"
+    ]
+   },
+   {
+    "id": "Q12",
+    "start": {
+     "x": 0
+    },
+    "actions": [
+     "C2",
+     "C1",
+     "A2",
+     "B2",
+     "B1",
+     "A1",
+     "B3",
+     "A0"
+    ]
+   },
+   {
+    "id": "Q13",
+    "start": {
+     "x": 2
+    },
+    "actions": [
+     "C2",
+     "C3",
+     "A1",
+     "B3",
+     "C1",
+     "B3"
+    ]
+   },
+   {
+    "id": "Q14",
+    "start": {
+     "x": 1
+    },
+    "actions": [
+     "B3",
+     "B2",
+     "C1",
+     "A0",
+     "C2",
+     "A2",
+     "B1",
+     "A1"
+    ]
+   },
+   {
+    "id": "Q15",
+    "start": {
+     "x": 2
+    },
+    "actions": [
+     "C1",
+     "B2",
+     "B2",
+     "B2",
+     "A0",
+     "C1",
+     "B2"
+    ]
+   },
+   {
+    "id": "Q16",
+    "start": {
+     "x": 0
+    },
+    "actions": [
+     "C2",
+     "A1",
+     "C1",
+     "B2",
+     "B3",
+     "B1",
+     "A0",
+     "A2"
+    ]
+   },
+   {
+    "id": "Q17",
+    "start": {
+     "x": 0
+    },
+    "actions": [
+     "B2",
+     "B2",
+     "B1",
+     "A0",
+     "C2",
+     "B3",
+     "C3",
+     "B3"
+    ]
+   },
+   {
+    "id": "Q18",
+    "start": {
+     "x": 1
+    },
+    "actions": [
+     "A2",
+     "C2",
+     "C1",
+     "B3",
+     "B1",
+     "B2",
+     "A0",
+     "A1"
+    ]
+   },
+   {
+    "id": "Q19",
+    "start": {
+     "x": 1
+    },
+    "actions": [
+     "A0",
+     "A2",
+     "B2",
+     "C2",
+     "B1",
+     "A1",
+     "C1",
+     "B3"
+    ]
+   },
+   {
+    "id": "Q20",
+    "start": {
+     "x": 0
+    },
+    "actions": [
+     "A2",
+     "B3",
+     "A1",
+     "A1",
+     "C3",
+     "A2",
+     "B2"
+    ]
+   },
+   {
+    "id": "Q21",
+    "start": {
+     "x": 1
+    },
+    "actions": [
+     "A1",
+     "C1",
+     "A2",
+     "B3",
+     "B2",
+     "C2",
+     "A0",
+     "B1"
+    ]
+   },
+   {
+    "id": "Q22",
+    "start": {
+     "x": 1
+    },
+    "actions": [
+     "C3",
+     "A2",
+     "C1",
+     "C3",
+     "B2",
+     "B1"
+    ]
+   },
+   {
+    "id": "Q23",
+    "start": {
+     "x": 1
+    },
+    "actions": [
+     "B1",
+     "A0",
+     "B2",
+     "A2",
+     "C1",
+     "C2",
+     "A1",
+     "B3"
+    ]
+   },
+   {
+    "id": "Q24",
+    "start": {
+     "x": 2
+    },
+    "actions": [
+     "B3",
+     "B1",
+     "B2",
+     "A2",
+     "B1",
+     "A2",
+     "A0"
+    ]
+   },
+   {
+    "id": "Q25",
+    "start": {
+     "x": 1
+    },
+    "actions": [
+     "B2",
+     "B2",
+     "C2"
+    ]
+   },
+   {
+    "id": "Q26",
+    "start": {
+     "x": 2
+    },
+    "actions": [
+     "C2",
+     "B1",
+     "B3",
+     "B2",
+     "C2",
+     "A1"
+    ]
+   },
+   {
+    "id": "Q27",
+    "start": {
+     "x": 0
+    },
+    "actions": [
+     "B2",
+     "B2",
+     "B2",
+     "B2",
+     "C2"
+    ]
+   },
+   {
+    "id": "Q28",
+    "start": {
+     "x": 2
+    },
+    "actions": [
+     "B2",
+     "C2"
+    ]
+   },
+   {
+    "id": "Q29",
+    "start": {
+     "x": 1
+    },
+    "actions": [
+     "C2",
+     "A0",
+     "A0",
+     "B2",
+     "A0",
+     "B2"
+    ]
+   },
+   {
+    "id": "Q30",
+    "start": {
+     "x": 2
+    },
+    "actions": [
+     "B3",
+     "A1",
+     "C2",
+     "B2",
+     "B2"
+    ]
+   }
+  ]
+ },
+ "private": {
+  "story": "A pull stretches each segment of the selected pair\u2019s shortest route by its commanded amount, preferring the direct route on ties, while local releases shorten that direct segment and the probe reports the current shortest-route length.",
+  "world": {
+   "state": {
+    "x": {
+     "range": [
+      0,
+      2
+     ],
+     "boundary": "clamp",
+     "init": 0,
+     "settable": true
+    },
+    "a": {
+     "range": [
+      1,
+      6
+     ],
+     "boundary": "clamp",
+     "init": 2,
+     "settable": false
+    },
+    "b": {
+     "range": [
+      1,
+      6
+     ],
+     "boundary": "clamp",
+     "init": 3,
+     "settable": false
+    },
+    "c": {
+     "range": [
+      1,
+      6
+     ],
+     "boundary": "clamp",
+     "init": 5,
+     "settable": false
+    }
+   },
+   "actions": {
+    "A": {
+     "param": [
+      0,
+      2
+     ],
+     "rules": [
+      {
+       "set": {
+        "x": "k"
+       }
+      }
+     ]
+    },
+    "B": {
+     "param": [
+      1,
+      3
+     ],
+     "rules": [
+      {
+       "if": "x == 0 and a <= b+c",
+       "set": {
+        "a": "a+k"
+       }
+      },
+      {
+       "if": "x == 1 and b <= a+c",
+       "set": {
+        "b": "b+k"
+       }
+      },
+      {
+       "if": "x == 2 and c <= a+b",
+       "set": {
+        "c": "c+k"
+       }
+      },
+      {
+       "if": "x == 0",
+       "set": {
+        "b": "b+k",
+        "c": "c+k"
+       }
+      },
+      {
+       "if": "x == 1",
+       "set": {
+        "a": "a+k",
+        "c": "c+k"
+       }
+      },
+      {
+       "set": {
+        "a": "a+k",
+        "b": "b+k"
+       }
+      }
+     ]
+    },
+    "C": {
+     "param": [
+      1,
+      3
+     ],
+     "rules": [
+      {
+       "if": "x == 0",
+       "set": {
+        "a": "a-k"
+       }
+      },
+      {
+       "if": "x == 1",
+       "set": {
+        "b": "b-k"
+       }
+      },
+      {
+       "set": {
+        "c": "c-k"
+       }
+      }
+     ]
+    }
+   },
+   "readouts": {
+    "r1": "min(a,b+c) if x == 0 else (min(b,a+c) if x == 1 else min(c,a+b))"
+   },
+   "max_len": 8
+  },
+  "named_rivals": [
+   {
+    "label": "Local stretch",
+    "world": {
+     "state": {
+      "x": {
+       "range": [
+        0,
+        2
+       ],
+       "boundary": "clamp",
+       "init": 0,
+       "settable": true
+      },
+      "a": {
+       "range": [
+        1,
+        6
+       ],
+       "boundary": "clamp",
+       "init": 2,
+       "settable": false
+      },
+      "b": {
+       "range": [
+        1,
+        6
+       ],
+       "boundary": "clamp",
+       "init": 3,
+       "settable": false
+      },
+      "c": {
+       "range": [
+        1,
+        6
+       ],
+       "boundary": "clamp",
+       "init": 5,
+       "settable": false
+      }
+     },
+     "actions": {
+      "A": {
+       "param": [
+        0,
+        2
+       ],
+       "rules": [
+        {
+         "set": {
+          "x": "k"
+         }
+        }
+       ]
+      },
+      "B": {
+       "param": [
+        1,
+        3
+       ],
+       "rules": [
+        {
+         "if": "x == 0",
+         "set": {
+          "a": "a+k"
+         }
+        },
+        {
+         "if": "x == 1",
+         "set": {
+          "b": "b+k"
+         }
+        },
+        {
+         "set": {
+          "c": "c+k"
+         }
+        }
+       ]
+      },
+      "C": {
+       "param": [
+        1,
+        3
+       ],
+       "rules": [
+        {
+         "if": "x == 0",
+         "set": {
+          "a": "a-k"
+         }
+        },
+        {
+         "if": "x == 1",
+         "set": {
+          "b": "b-k"
+         }
+        },
+        {
+         "set": {
+          "c": "c-k"
+         }
+        }
+       ]
+      }
+     },
+     "readouts": {
+      "r1": "min(a,b+c) if x == 0 else (min(b,a+c) if x == 1 else min(c,a+b))"
+     },
+     "max_len": 8
+    }
+   },
+   {
+    "label": "Detour on ties",
+    "world": {
+     "state": {
+      "x": {
+       "range": [
+        0,
+        2
+       ],
+       "boundary": "clamp",
+       "init": 0,
+       "settable": true
+      },
+      "a": {
+       "range": [
+        1,
+        6
+       ],
+       "boundary": "clamp",
+       "init": 2,
+       "settable": false
+      },
+      "b": {
+       "range": [
+        1,
+        6
+       ],
+       "boundary": "clamp",
+       "init": 3,
+       "settable": false
+      },
+      "c": {
+       "range": [
+        1,
+        6
+       ],
+       "boundary": "clamp",
+       "init": 5,
+       "settable": false
+      }
+     },
+     "actions": {
+      "A": {
+       "param": [
+        0,
+        2
+       ],
+       "rules": [
+        {
+         "set": {
+          "x": "k"
+         }
+        }
+       ]
+      },
+      "B": {
+       "param": [
+        1,
+        3
+       ],
+       "rules": [
+        {
+         "if": "x == 0 and a < b+c",
+         "set": {
+          "a": "a+k"
+         }
+        },
+        {
+         "if": "x == 1 and b < a+c",
+         "set": {
+          "b": "b+k"
+         }
+        },
+        {
+         "if": "x == 2 and c < a+b",
+         "set": {
+          "c": "c+k"
+         }
+        },
+        {
+         "if": "x == 0",
+         "set": {
+          "b": "b+k",
+          "c": "c+k"
+         }
+        },
+        {
+         "if": "x == 1",
+         "set": {
+          "a": "a+k",
+          "c": "c+k"
+         }
+        },
+        {
+         "set": {
+          "a": "a+k",
+          "b": "b+k"
+         }
+        }
+       ]
+      },
+      "C": {
+       "param": [
+        1,
+        3
+       ],
+       "rules": [
+        {
+         "if": "x == 0",
+         "set": {
+          "a": "a-k"
+         }
+        },
+        {
+         "if": "x == 1",
+         "set": {
+          "b": "b-k"
+         }
+        },
+        {
+         "set": {
+          "c": "c-k"
+         }
+        }
+       ]
+      }
+     },
+     "readouts": {
+      "r1": "min(a,b+c) if x == 0 else (min(b,a+c) if x == 1 else min(c,a+b))"
+     },
+     "max_len": 8
+    }
+   },
+   {
+    "label": "Route release",
+    "world": {
+     "state": {
+      "x": {
+       "range": [
+        0,
+        2
+       ],
+       "boundary": "clamp",
+       "init": 0,
+       "settable": true
+      },
+      "a": {
+       "range": [
+        1,
+        6
+       ],
+       "boundary": "clamp",
+       "init": 2,
+       "settable": false
+      },
+      "b": {
+       "range": [
+        1,
+        6
+       ],
+       "boundary": "clamp",
+       "init": 3,
+       "settable": false
+      },
+      "c": {
+       "range": [
+        1,
+        6
+       ],
+       "boundary": "clamp",
+       "init": 5,
+       "settable": false
+      }
+     },
+     "actions": {
+      "A": {
+       "param": [
+        0,
+        2
+       ],
+       "rules": [
+        {
+         "set": {
+          "x": "k"
+         }
+        }
+       ]
+      },
+      "B": {
+       "param": [
+        1,
+        3
+       ],
+       "rules": [
+        {
+         "if": "x == 0 and a <= b+c",
+         "set": {
+          "a": "a+k"
+         }
+        },
+        {
+         "if": "x == 1 and b <= a+c",
+         "set": {
+          "b": "b+k"
+         }
+        },
+        {
+         "if": "x == 2 and c <= a+b",
+         "set": {
+          "c": "c+k"
+         }
+        },
+        {
+         "if": "x == 0",
+         "set": {
+          "b": "b+k",
+          "c": "c+k"
+         }
+        },
+        {
+         "if": "x == 1",
+         "set": {
+          "a": "a+k",
+          "c": "c+k"
+         }
+        },
+        {
+         "set": {
+          "a": "a+k",
+          "b": "b+k"
+         }
+        }
+       ]
+      },
+      "C": {
+       "param": [
+        1,
+        3
+       ],
+       "rules": [
+        {
+         "if": "x == 0 and a <= b+c",
+         "set": {
+          "a": "a-k"
+         }
+        },
+        {
+         "if": "x == 1 and b <= a+c",
+         "set": {
+          "b": "b-k"
+         }
+        },
+        {
+         "if": "x == 2 and c <= a+b",
+         "set": {
+          "c": "c-k"
+         }
+        },
+        {
+         "if": "x == 0",
+         "set": {
+          "b": "b-k",
+          "c": "c-k"
+         }
+        },
+        {
+         "if": "x == 1",
+         "set": {
+          "a": "a-k",
+          "c": "c-k"
+         }
+        },
+        {
+         "set": {
+          "a": "a-k",
+          "b": "b-k"
+         }
+        }
+       ]
+      }
+     },
+     "readouts": {
+      "r1": "min(a,b+c) if x == 0 else (min(b,a+c) if x == 1 else min(c,a+b))"
+     },
+     "max_len": 8
+    }
+   },
+   {
+    "label": "Automatic slack removal",
+    "world": {
+     "state": {
+      "x": {
+       "range": [
+        0,
+        2
+       ],
+       "boundary": "clamp",
+       "init": 0,
+       "settable": true
+      },
+      "a": {
+       "range": [
+        1,
+        6
+       ],
+       "boundary": "clamp",
+       "init": 2,
+       "settable": false
+      },
+      "b": {
+       "range": [
+        1,
+        6
+       ],
+       "boundary": "clamp",
+       "init": 3,
+       "settable": false
+      },
+      "c": {
+       "range": [
+        1,
+        6
+       ],
+       "boundary": "clamp",
+       "init": 5,
+       "settable": false
+      }
+     },
+     "actions": {
+      "A": {
+       "param": [
+        0,
+        2
+       ],
+       "rules": [
+        {
+         "set": {
+          "x": "k"
+         }
+        }
+       ]
+      },
+      "B": {
+       "param": [
+        1,
+        3
+       ],
+       "rules": [
+        {
+         "if": "x == 0 and a <= b+c",
+         "set": {
+          "a": "a+k"
+         }
+        },
+        {
+         "if": "x == 1 and b <= a+c",
+         "set": {
+          "b": "b+k"
+         }
+        },
+        {
+         "if": "x == 2 and c <= a+b",
+         "set": {
+          "c": "c+k"
+         }
+        },
+        {
+         "if": "x == 0",
+         "set": {
+          "b": "b+k",
+          "c": "c+k"
+         }
+        },
+        {
+         "if": "x == 1",
+         "set": {
+          "a": "a+k",
+          "c": "c+k"
+         }
+        },
+        {
+         "set": {
+          "a": "a+k",
+          "b": "b+k"
+         }
+        }
+       ]
+      },
+      "C": {
+       "param": [
+        1,
+        3
+       ],
+       "rules": [
+        {
+         "if": "x == 0",
+         "set": {
+          "a": "a-k"
+         }
+        },
+        {
+         "if": "x == 1",
+         "set": {
+          "b": "b-k"
+         }
+        },
+        {
+         "set": {
+          "c": "c-k"
+         }
+        }
+       ]
+      }
+     },
+     "readouts": {
+      "r1": "min(a,b+c) if x == 0 else (min(b,a+c) if x == 1 else min(c,a+b))"
+     },
+     "max_len": 8,
+     "tick": [
+      {
+       "set": {
+        "a": "min(a,b+c)",
+        "b": "min(b,a+c)",
+        "c": "min(c,a+b)"
+       }
+      }
+     ]
+    }
+   }
+  ],
+  "plan_experiments": [
+   {
+    "start": {
+     "x": 0
+    },
+    "inputs": [
+     [
+      "B",
+      1
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "A",
+      2
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "C",
+      2
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "A",
+      2
+     ],
+     [
+      "A",
+      0
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 0
+    },
+    "inputs": [
+     [
+      "B",
+      2
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "A",
+      2
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "C",
+      2
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "A",
+      2
+     ],
+     [
+      "A",
+      0
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 0
+    },
+    "inputs": [
+     [
+      "B",
+      3
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "A",
+      2
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "C",
+      2
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "A",
+      2
+     ],
+     [
+      "A",
+      0
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 1
+    },
+    "inputs": [
+     [
+      "B",
+      1
+     ],
+     [
+      "A",
+      2
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "C",
+      2
+     ],
+     [
+      "A",
+      2
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "A",
+      1
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 1
+    },
+    "inputs": [
+     [
+      "B",
+      2
+     ],
+     [
+      "A",
+      2
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "C",
+      2
+     ],
+     [
+      "A",
+      2
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "A",
+      1
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 1
+    },
+    "inputs": [
+     [
+      "B",
+      3
+     ],
+     [
+      "A",
+      2
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "C",
+      2
+     ],
+     [
+      "A",
+      2
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "A",
+      1
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 2
+    },
+    "inputs": [
+     [
+      "B",
+      1
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "A",
+      2
+     ],
+     [
+      "C",
+      2
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "A",
+      2
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 2
+    },
+    "inputs": [
+     [
+      "B",
+      2
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "A",
+      2
+     ],
+     [
+      "C",
+      2
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "A",
+      2
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 2
+    },
+    "inputs": [
+     [
+      "B",
+      3
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "A",
+      2
+     ],
+     [
+      "C",
+      2
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "A",
+      2
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 0
+    },
+    "inputs": [
+     [
+      "C",
+      1
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "A",
+      2
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "B",
+      1
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "A",
+      2
+     ],
+     [
+      "A",
+      0
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 0
+    },
+    "inputs": [
+     [
+      "C",
+      2
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "A",
+      2
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "B",
+      1
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "A",
+      2
+     ],
+     [
+      "A",
+      0
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 0
+    },
+    "inputs": [
+     [
+      "C",
+      3
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "A",
+      2
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "B",
+      1
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "A",
+      2
+     ],
+     [
+      "A",
+      0
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 1
+    },
+    "inputs": [
+     [
+      "C",
+      1
+     ],
+     [
+      "A",
+      2
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "B",
+      1
+     ],
+     [
+      "A",
+      2
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "A",
+      1
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 1
+    },
+    "inputs": [
+     [
+      "C",
+      2
+     ],
+     [
+      "A",
+      2
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "B",
+      1
+     ],
+     [
+      "A",
+      2
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "A",
+      1
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 1
+    },
+    "inputs": [
+     [
+      "C",
+      3
+     ],
+     [
+      "A",
+      2
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "B",
+      1
+     ],
+     [
+      "A",
+      2
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "A",
+      1
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 2
+    },
+    "inputs": [
+     [
+      "C",
+      1
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "A",
+      2
+     ],
+     [
+      "B",
+      1
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "A",
+      2
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 2
+    },
+    "inputs": [
+     [
+      "C",
+      2
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "A",
+      2
+     ],
+     [
+      "B",
+      1
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "A",
+      2
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 2
+    },
+    "inputs": [
+     [
+      "C",
+      3
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "A",
+      2
+     ],
+     [
+      "B",
+      1
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "A",
+      2
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 0
+    },
+    "inputs": [
+     [
+      "C",
+      3
+     ],
+     [
+      "C",
+      3
+     ],
+     [
+      "C",
+      1
+     ],
+     [
+      "B",
+      1
+     ],
+     [
+      "B",
+      2
+     ],
+     [
+      "C",
+      1
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 1
+    },
+    "inputs": [
+     [
+      "C",
+      3
+     ],
+     [
+      "C",
+      3
+     ],
+     [
+      "C",
+      1
+     ],
+     [
+      "B",
+      1
+     ],
+     [
+      "B",
+      2
+     ],
+     [
+      "C",
+      1
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 2
+    },
+    "inputs": [
+     [
+      "C",
+      3
+     ],
+     [
+      "C",
+      3
+     ],
+     [
+      "C",
+      1
+     ],
+     [
+      "B",
+      1
+     ],
+     [
+      "B",
+      2
+     ],
+     [
+      "C",
+      1
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 0
+    },
+    "inputs": [
+     [
+      "B",
+      3
+     ],
+     [
+      "B",
+      3
+     ],
+     [
+      "B",
+      1
+     ],
+     [
+      "C",
+      1
+     ],
+     [
+      "C",
+      2
+     ],
+     [
+      "C",
+      3
+     ],
+     [
+      "C",
+      1
+     ],
+     [
+      "B",
+      1
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 1
+    },
+    "inputs": [
+     [
+      "B",
+      3
+     ],
+     [
+      "B",
+      3
+     ],
+     [
+      "B",
+      1
+     ],
+     [
+      "C",
+      1
+     ],
+     [
+      "C",
+      2
+     ],
+     [
+      "C",
+      3
+     ],
+     [
+      "C",
+      1
+     ],
+     [
+      "B",
+      1
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 2
+    },
+    "inputs": [
+     [
+      "C",
+      3
+     ],
+     [
+      "B",
+      3
+     ],
+     [
+      "B",
+      3
+     ],
+     [
+      "C",
+      2
+     ],
+     [
+      "C",
+      3
+     ],
+     [
+      "C",
+      1
+     ],
+     [
+      "B",
+      1
+     ],
+     [
+      "A",
+      0
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 0
+    },
+    "inputs": [
+     [
+      "A",
+      2
+     ],
+     [
+      "C",
+      3
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "B",
+      3
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "A",
+      2
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "B",
+      1
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 0
+    },
+    "inputs": [
+     [
+      "A",
+      2
+     ],
+     [
+      "C",
+      3
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "B",
+      3
+     ],
+     [
+      "B",
+      1
+     ],
+     [
+      "B",
+      1
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "A",
+      2
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 1
+    },
+    "inputs": [
+     [
+      "A",
+      2
+     ],
+     [
+      "C",
+      3
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "B",
+      1
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "A",
+      2
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "B",
+      1
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 1
+    },
+    "inputs": [
+     [
+      "A",
+      2
+     ],
+     [
+      "C",
+      3
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "B",
+      1
+     ],
+     [
+      "B",
+      1
+     ],
+     [
+      "B",
+      1
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "A",
+      2
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 2
+    },
+    "inputs": [
+     [
+      "B",
+      1
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "A",
+      2
+     ],
+     [
+      "B",
+      1
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "A",
+      2
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 0
+    },
+    "inputs": [
+     [
+      "C",
+      1
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "A",
+      2
+     ],
+     [
+      "B",
+      1
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "A",
+      1
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 2
+    },
+    "inputs": [
+     [
+      "C",
+      1
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "C",
+      1
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "A",
+      2
+     ],
+     [
+      "B",
+      1
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "A",
+      1
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 2
+    },
+    "inputs": [
+     [
+      "C",
+      1
+     ],
+     [
+      "B",
+      3
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "A",
+      2
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 2
+    },
+    "inputs": [
+     [
+      "C",
+      1
+     ],
+     [
+      "B",
+      1
+     ],
+     [
+      "B",
+      1
+     ],
+     [
+      "B",
+      1
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "A",
+      2
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 0
+    },
+    "inputs": [
+     [
+      "C",
+      1
+     ],
+     [
+      "A",
+      2
+     ],
+     [
+      "B",
+      2
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "A",
+      2
+     ],
+     [
+      "C",
+      1
+     ],
+     [
+      "A",
+      0
+     ]
+    ]
+   },
+   {
+    "start": {
+     "x": 0
+    },
+    "inputs": [
+     [
+      "C",
+      1
+     ],
+     [
+      "A",
+      2
+     ],
+     [
+      "C",
+      1
+     ],
+     [
+      "C",
+      1
+     ],
+     [
+      "A",
+      0
+     ],
+     [
+      "A",
+      1
+     ],
+     [
+      "A",
+      2
+     ]
+    ]
+   }
+  ],
+  "queries": [
+   {
+    "id": "Q1",
+    "regime": "composition",
+    "start": {
+     "x": 1
+    },
+    "inputs": [
+     2,
+     7,
+     6,
+     1,
+     5,
+     3,
+     4,
+     0
+    ],
+    "answer": [
+     3
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q2",
+    "regime": "composition",
+    "start": {
+     "x": 0
+    },
+    "inputs": [
+     0,
+     7,
+     2,
+     3,
+     6,
+     4,
+     5,
+     1
+    ],
+    "answer": [
+     4
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q3",
+    "regime": "interpolation",
+    "start": {
+     "x": 1
+    },
+    "inputs": [
+     2,
+     6,
+     4,
+     5,
+     1,
+     3,
+     7
+    ],
+    "answer": [
+     4
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q4",
+    "regime": "composition",
+    "start": {
+     "x": 2
+    },
+    "inputs": [
+     4,
+     2,
+     5,
+     7,
+     1,
+     0,
+     6,
+     3
+    ],
+    "answer": [
+     5
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q5",
+    "regime": "composition",
+    "start": {
+     "x": 0
+    },
+    "inputs": [
+     6,
+     3,
+     0,
+     1,
+     2,
+     5,
+     7,
+     4
+    ],
+    "answer": [
+     5
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q6",
+    "regime": "composition",
+    "start": {
+     "x": 1
+    },
+    "inputs": [
+     5,
+     2,
+     7,
+     1,
+     3,
+     4,
+     0,
+     6
+    ],
+    "answer": [
+     2
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q7",
+    "regime": "composition",
+    "start": {
+     "x": 1
+    },
+    "inputs": [
+     0,
+     2,
+     3,
+     7,
+     5,
+     1,
+     6,
+     4
+    ],
+    "answer": [
+     4
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q8",
+    "regime": "interpolation",
+    "start": {
+     "x": 1
+    },
+    "inputs": [
+     2,
+     4,
+     8,
+     1,
+     5,
+     5,
+     2
+    ],
+    "answer": [
+     6
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q9",
+    "regime": "composition",
+    "start": {
+     "x": 1
+    },
+    "inputs": [
+     4,
+     5,
+     0,
+     6,
+     3,
+     2,
+     7,
+     1
+    ],
+    "answer": [
+     5
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q10",
+    "regime": "composition",
+    "start": {
+     "x": 2
+    },
+    "inputs": [
+     3,
+     6,
+     0,
+     7,
+     2,
+     5,
+     1,
+     4
+    ],
+    "answer": [
+     6
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q11",
+    "regime": "composition",
+    "start": {
+     "x": 2
+    },
+    "inputs": [
+     6,
+     3,
+     5,
+     0,
+     1,
+     7,
+     2,
+     4
+    ],
+    "answer": [
+     6
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q12",
+    "regime": "composition",
+    "start": {
+     "x": 0
+    },
+    "inputs": [
+     7,
+     6,
+     2,
+     4,
+     3,
+     1,
+     5,
+     0
+    ],
+    "answer": [
+     3
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q13",
+    "regime": "interpolation",
+    "start": {
+     "x": 2
+    },
+    "inputs": [
+     7,
+     8,
+     1,
+     5,
+     6,
+     5
+    ],
+    "answer": [
+     5
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q14",
+    "regime": "composition",
+    "start": {
+     "x": 1
+    },
+    "inputs": [
+     5,
+     4,
+     6,
+     0,
+     7,
+     2,
+     3,
+     1
+    ],
+    "answer": [
+     5
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q15",
+    "regime": "interpolation",
+    "start": {
+     "x": 2
+    },
+    "inputs": [
+     6,
+     4,
+     4,
+     4,
+     0,
+     6,
+     4
+    ],
+    "answer": [
+     5
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q16",
+    "regime": "composition",
+    "start": {
+     "x": 0
+    },
+    "inputs": [
+     7,
+     1,
+     6,
+     4,
+     5,
+     3,
+     0,
+     2
+    ],
+    "answer": [
+     5
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q17",
+    "regime": "interpolation",
+    "start": {
+     "x": 0
+    },
+    "inputs": [
+     4,
+     4,
+     3,
+     0,
+     7,
+     5,
+     8,
+     5
+    ],
+    "answer": [
+     6
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q18",
+    "regime": "composition",
+    "start": {
+     "x": 1
+    },
+    "inputs": [
+     2,
+     7,
+     6,
+     5,
+     3,
+     4,
+     0,
+     1
+    ],
+    "answer": [
+     5
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q19",
+    "regime": "composition",
+    "start": {
+     "x": 1
+    },
+    "inputs": [
+     0,
+     2,
+     4,
+     7,
+     3,
+     1,
+     6,
+     5
+    ],
+    "answer": [
+     5
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q20",
+    "regime": "interpolation",
+    "start": {
+     "x": 0
+    },
+    "inputs": [
+     2,
+     5,
+     1,
+     1,
+     8,
+     2,
+     4
+    ],
+    "answer": [
+     6
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q21",
+    "regime": "composition",
+    "start": {
+     "x": 1
+    },
+    "inputs": [
+     1,
+     6,
+     2,
+     5,
+     4,
+     7,
+     0,
+     3
+    ],
+    "answer": [
+     6
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q22",
+    "regime": "interpolation",
+    "start": {
+     "x": 1
+    },
+    "inputs": [
+     8,
+     2,
+     6,
+     8,
+     4,
+     3
+    ],
+    "answer": [
+     3
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q23",
+    "regime": "composition",
+    "start": {
+     "x": 1
+    },
+    "inputs": [
+     3,
+     0,
+     4,
+     2,
+     6,
+     7,
+     1,
+     5
+    ],
+    "answer": [
+     6
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q24",
+    "regime": "interpolation",
+    "start": {
+     "x": 2
+    },
+    "inputs": [
+     5,
+     3,
+     4,
+     2,
+     3,
+     2,
+     0
+    ],
+    "answer": [
+     3
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q25",
+    "regime": "structured",
+    "start": {
+     "x": 1
+    },
+    "inputs": [
+     4,
+     4,
+     7
+    ],
+    "answer": [
+     4
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q26",
+    "regime": "interpolation",
+    "start": {
+     "x": 2
+    },
+    "inputs": [
+     7,
+     3,
+     5,
+     4,
+     7,
+     1
+    ],
+    "answer": [
+     5
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q27",
+    "regime": "structured",
+    "start": {
+     "x": 0
+    },
+    "inputs": [
+     4,
+     4,
+     4,
+     4,
+     7
+    ],
+    "answer": [
+     4
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q28",
+    "regime": "structured",
+    "start": {
+     "x": 2
+    },
+    "inputs": [
+     4,
+     7
+    ],
+    "answer": [
+     4
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q29",
+    "regime": "interpolation",
+    "start": {
+     "x": 1
+    },
+    "inputs": [
+     7,
+     0,
+     0,
+     4,
+     0,
+     4
+    ],
+    "answer": [
+     6
+    ],
+    "critical": true
+   },
+   {
+    "id": "Q30",
+    "regime": "interpolation",
+    "start": {
+     "x": 2
+    },
+    "inputs": [
+     5,
+     1,
+     7,
+     4,
+     4
+    ],
+    "answer": [
+     5
+    ],
+    "critical": true
+   }
+  ]
+ },
+ "results": {
+  "class": "frontier",
+  "reasons": [
+   "full-budget pilot critical accuracy 0.63"
+  ],
+  "pilot_critical_accuracy": {
+   "none": 0.0,
+   "quarter": 0.3333333333333333,
+   "full": 0.6333333333333333
+  },
+  "pilot_experiments_used": {
+   "none": 0,
+   "quarter": 10,
+   "full": 39
+  },
+  "queries_dropped": 0,
+  "silent_fraction": 0.17,
+  "lever_profile": {
+   "time": false,
+   "cycle": false,
+   "alias": true,
+   "coupled": true,
+   "aggregate": true,
+   "alias_ratio": 0.009
+  },
+  "novelty": {
+   "behaviour": [],
+   "structure": []
+  },
+  "audit": {
+   "states": 648,
+   "inputs": 9,
+   "starts": 3,
+   "rivals": 137,
+   "interface_equivalent_rivals": 1,
+   "needles": 0,
+   "rivals_left_after_identifiability": 11,
+   "coverage": false,
+   "queries": {
+    "count": 30,
+    "critical": 30,
+    "extrapolation_diagnostic": 10,
+    "mode": "discriminating"
+   },
+   "plan_reaches": false,
+   "shortcut_falls_short": false
+  }
+ }
+}

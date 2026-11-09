@@ -1,0 +1,268 @@
+{
+ "format": "research-envs/construct-problem/1",
+ "id": "db_ctl_s1",
+ "title": "Uniformly rare points with few local union failures",
+ "object": "set_system",
+ "request": {
+  "demand": null
+ },
+ "source_run": "demo_b",
+ "settings": {
+  "battery_budget": 20000,
+  "quality_bar": true,
+  "round_registry": true,
+  "improver": true
+ },
+ "public": {
+  "statement": "For odd m, construct a family F of exactly m distinct subsets of {0,...,m-1}, such that every point belongs to exactly (m-1)/2 members. Empty sets are allowed. For each A in F, define its union defect as the number of B in F for which A union B does not belong to F. Minimize the maximum union defect among members of F. The target is m=15.",
+  "spec": {
+   "object": "set_system",
+   "kind": "optimize",
+   "params": {
+    "m": 15
+   },
+   "constraints": [
+    {
+     "name": "odd_family_size",
+     "expr": "m % 2 == 1 and len(F) == m"
+    },
+    {
+     "name": "uniformly_rare_points",
+     "expr": "all(sum(1 for A in F if x in A) == (m - 1) // 2 for x in ground)"
+    }
+   ],
+   "objective": {
+    "expr": "max(sum(1 for B in F if not ((A | B) in F)) for A in F)",
+    "direction": "min"
+   }
+  }
+ },
+ "private": {
+  "sibling": {
+   "m": 3
+  },
+  "search_hint": {
+   "set_sizes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+   ]
+  },
+  "witness_program": "import json\n\nwith open('spec.json', encoding='utf-8') as f:\n    m = json.load(f)['params']['m']\n\nif m == 15:\n    groups = [list(range(3*i, 3*i + 3)) for i in range(5)]\n    template = [\n        [], [0], [1], [2], [3], [4],\n        [0, 4], [2, 3], [0, 2, 3], [1, 2, 3],\n        [0, 1, 4], [0, 1, 2, 4], [0, 1, 3, 4],\n        [1, 2, 3, 4], [0, 1, 2, 3, 4]\n    ]\n    expected_defect = 5\nelif m == 3:\n    groups = [[0], [1, 2]]\n    template = [[], [0], [1]]\n    expected_defect = 1\nelse:\n    raise ValueError('Reference construction supports m=15 and m=3')\n\nsets = [sorted(x for i in T for x in groups[i]) for T in template]\nF = {frozenset(A) for A in sets}\nassert len(F) == m\nassert all(sum(x in A for A in F) == (m - 1) // 2 for x in range(m))\nassert max(sum((A | B) not in F for B in F) for A in F) == expected_defect\n\nprint(json.dumps({'m': m, 'sets': sets}))\n",
+  "witness_is_construction": true,
+  "witness": {
+   "m": 15,
+   "sets": [
+    [],
+    [
+     0,
+     1,
+     2
+    ],
+    [
+     3,
+     4,
+     5
+    ],
+    [
+     6,
+     7,
+     8
+    ],
+    [
+     9,
+     10,
+     11
+    ],
+    [
+     12,
+     13,
+     14
+    ],
+    [
+     0,
+     1,
+     2,
+     12,
+     13,
+     14
+    ],
+    [
+     6,
+     7,
+     8,
+     9,
+     10,
+     11
+    ],
+    [
+     0,
+     1,
+     2,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11
+    ],
+    [
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11
+    ],
+    [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     12,
+     13,
+     14
+    ],
+    [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     12,
+     13,
+     14
+    ],
+    [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14
+    ],
+    [
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14
+    ],
+    [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14
+    ]
+   ]
+  },
+  "reference": 5,
+  "best_known": {
+   "objective": 5,
+   "source": "witness"
+  },
+  "stated_bound": 1,
+  "bound_argument": "For this minimization problem, 1 is a lower bound. Objective zero would make F union-closed. Frankl's half-frequency conclusion is proved for nontrivial union-closed families with at most 28 members; see [Poonen, Union-closed families](https://www.sciencedirect.com/science/article/pii/0097316592900686). Applied to 15 members, it forces some point to occur at least eight times, contradicting the required degree seven. Therefore OPT >= 1. The reference attains 5 and does not meet this lower bound: the certified range is 1 <= OPT <= 5, with no claim of optimality.",
+  "degenerate_exprs": []
+ },
+ "results": {
+  "class": "accepted",
+  "reasons": [],
+  "audit_mode": null,
+  "audit_passes": true,
+  "pilot_outcomes": [
+   {
+    "arm": "object",
+    "class": "matches_reference",
+    "objective": 5,
+    "vs_best": "matches_best"
+   },
+   {
+    "arm": "code",
+    "class": "invalid",
+    "objective": null
+   },
+   {
+    "arm": "code",
+    "class": "matches_reference",
+    "objective": 5,
+    "vs_best": "matches_best"
+   }
+  ],
+  "naturalness_rater_score": 4,
+  "sibling": {
+   "objects": 256,
+   "valid": 4,
+   "optimum": 1,
+   "optimal_classes": 1,
+   "redundant_constraints": []
+  },
+  "probe_adequacy": 1.0,
+  "novelty": {
+   "textbook_matches": [],
+   "zoo_match": null
+  },
+  "battery_best": {
+   "battery_20000": {
+    "anneal": null,
+    "greedy_add": null,
+    "hill_climb": 14,
+    "kick": null,
+    "symmetric": 14
+   },
+   "battery_200000": {
+    "anneal": null,
+    "greedy_add": null,
+    "hill_climb": 14,
+    "kick": null,
+    "symmetric": 14
+   }
+  }
+ }
+}

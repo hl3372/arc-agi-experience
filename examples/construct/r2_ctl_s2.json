@@ -1,0 +1,210 @@
+{
+ "format": "research-envs/construct-problem/1",
+ "id": "r2_ctl_s2",
+ "title": "Disjoint blocks that cannot share an exact cover",
+ "object": "set_system",
+ "request": {
+  "demand": null
+ },
+ "source_run": "round2_b",
+ "settings": {
+  "battery_budget": 20000,
+  "quality_bar": false,
+  "round_registry": true,
+  "improver": true
+ },
+ "public": {
+  "statement": "Construct a family F of distinct three-element subsets of {0,...,17}, with every point belonging to exactly three members. An exact cover is a subfamily of pairwise disjoint members whose union is the whole ground set. Every member of F must belong to at least one exact cover. Maximize the number of unordered pairs of disjoint members that occur together in no exact cover.",
+  "spec": {
+   "object": "set_system",
+   "kind": "optimize",
+   "params": {
+    "m": 18
+   },
+   "constraints": [
+    {
+     "name": "triples",
+     "expr": "all(len(A) == 3 for A in F)"
+    },
+    {
+     "name": "three_blocks_per_point",
+     "expr": "all(sum(1 for A in F if x in A) == 3 for x in ground)"
+    },
+    {
+     "name": "every_block_extends_to_an_exact_cover",
+     "expr": "frozenset(A for P in combinations(F, m // 3) if len(frozenset(x for B in P for x in B)) == m for A in P) == frozenset(F)"
+    }
+   ],
+   "objective": {
+    "expr": "sum(1 for covers in (tuple(P for P in combinations(F, m // 3) if len(frozenset(x for A in P for x in A)) == m),) for A, B in combinations(F, 2) if len(A & B) == 0 and not any(A in P and B in P for P in covers))",
+    "direction": "max"
+   }
+  }
+ },
+ "private": {
+  "sibling": {
+   "m": 6
+  },
+  "search_hint": {
+   "set_sizes": [
+    3
+   ]
+  },
+  "witness_program": "import json\n\nwith open('spec.json', encoding='utf-8') as f:\n    m = json.load(f)['params']['m']\nassert m >= 6 and m % 3 == 0\nq = m // 3\nblocks = []\nfor i in range(q):\n    j = (i + 1) % q\n    blocks.extend([\n        [3*i, 3*i+1, 3*i+2],\n        [3*i, 3*i+1, 3*j+2],\n        [3*i, 3*j+1, 3*j+2],\n    ])\nprint(json.dumps({'m': m, 'sets': [sorted(A) for A in blocks]}, separators=(',', ':')))\n",
+  "witness_is_construction": true,
+  "witness": {
+   "m": 18,
+   "sets": [
+    [
+     0,
+     1,
+     2
+    ],
+    [
+     0,
+     1,
+     5
+    ],
+    [
+     0,
+     4,
+     5
+    ],
+    [
+     3,
+     4,
+     5
+    ],
+    [
+     3,
+     4,
+     8
+    ],
+    [
+     3,
+     7,
+     8
+    ],
+    [
+     6,
+     7,
+     8
+    ],
+    [
+     6,
+     7,
+     11
+    ],
+    [
+     6,
+     10,
+     11
+    ],
+    [
+     9,
+     10,
+     11
+    ],
+    [
+     9,
+     10,
+     14
+    ],
+    [
+     9,
+     13,
+     14
+    ],
+    [
+     12,
+     13,
+     14
+    ],
+    [
+     12,
+     13,
+     17
+    ],
+    [
+     12,
+     16,
+     17
+    ],
+    [
+     15,
+     16,
+     17
+    ],
+    [
+     2,
+     15,
+     16
+    ],
+    [
+     1,
+     2,
+     15
+    ]
+   ]
+  },
+  "reference": 72,
+  "best_known": {
+   "objective": 72,
+   "source": "witness"
+  },
+  "stated_bound": null,
+  "bound_argument": null,
+  "degenerate_exprs": []
+ },
+ "results": {
+  "class": "accepted",
+  "reasons": [],
+  "audit_mode": null,
+  "audit_passes": true,
+  "pilot_outcomes": [
+   {
+    "arm": "object",
+    "class": "matches_reference",
+    "objective": 72,
+    "vs_best": "matches_best"
+   },
+   {
+    "arm": "code",
+    "class": "matches_reference",
+    "objective": 72,
+    "vs_best": "matches_best"
+   }
+  ],
+  "naturalness_rater_score": 4,
+  "sibling": {
+   "objects": 1048576,
+   "valid": 120,
+   "optimum": 0,
+   "optimal_classes": 2,
+   "redundant_constraints": [
+    "triples"
+   ]
+  },
+  "probe_adequacy": 0.906,
+  "novelty": {
+   "textbook_matches": [],
+   "zoo_match": null
+  },
+  "battery_best": {
+   "battery_20000": {
+    "anneal": null,
+    "greedy_add": 0,
+    "hill_climb": null,
+    "kick": null,
+    "symmetric": null
+   },
+   "battery_200000": {
+    "anneal": null,
+    "greedy_add": 6,
+    "hill_climb": null,
+    "kick": null,
+    "symmetric": null
+   }
+  }
+ }
+}
